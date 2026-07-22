@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arsiva — Asset Management &amp; Compliance OS for RWA Tokenization</title>
+<meta name="description" content="Arsiva is the compliance OS for RWA tokenization in Indonesia — live notary automation generating real revenue today, expanding module by module into SPV onboarding, legal structuring, and cross-border compliance.">
+<meta property="og:title" content="Arsiva — Asset Management &amp; Compliance OS for RWA Tokenization">
+<meta property="og:description" content="Live in Jakarta. Rp 18M MRR. Raising a US$500,000 seed round to complete the full six-module platform.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314213D' stroke='%23D4A62B' stroke-width='1.5'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='%23D4A62B' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -100,12 +105,20 @@
 
   .live-strip{background:var(--navy-2); border-top:1px solid rgba(212,166,43,0.2);}
   .live-strip .container{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:0; padding:34px 24px;
+    display:grid; grid-template-columns:repeat(5,1fr); gap:0; padding:34px 24px;
   }
   .live-stat{text-align:center; padding:0 12px; border-right:1px solid rgba(255,255,255,0.08);}
   .live-stat:last-child{border-right:none;}
   .live-stat .num{font-family:'Fraunces',serif; font-size:26px; font-weight:700; color:var(--gold);}
   .live-stat .label{font-size:12px; color:#AAB4D4; margin-top:4px;}
+  .live-note{
+    grid-column:1 / -1; text-align:center; font-size:12.5px; color:#8B96B8; font-style:italic;
+    margin-top:24px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.08);
+  }
+  .live-note b{color:var(--gold); font-style:normal;}
+  @media(max-width:960px){
+    .live-strip .container{grid-template-columns:repeat(3,1fr); gap:20px 0;}
+  }
   @media(max-width:700px){
     .live-strip .container{grid-template-columns:repeat(2,1fr); gap:20px;}
     .live-stat{border-right:none;}
@@ -175,6 +188,38 @@
   .market-card.dark .market-row .small{color:#AAB4D4;}
   .footnote{font-size:11px; color:var(--gray); font-style:italic; margin-top:10px;}
 
+  .pricing-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media(max-width:900px){ .pricing-grid{grid-template-columns:1fr;} }
+  .price-card{
+    background:var(--white); border:1px solid var(--line); border-radius:14px; padding:32px;
+    display:flex; flex-direction:column; gap:6px; position:relative; transition:transform .15s, border-color .15s;
+  }
+  .price-card:hover{transform:translateY(-2px); border-color:var(--gold);}
+  .price-card.featured{background:var(--navy); border-color:var(--navy); color:#fff;}
+  .price-card .tier-name{font-size:13px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--gold-dark);}
+  .price-card.featured .tier-name{color:var(--gold);}
+  .price-card .tier-badge{
+    position:absolute; top:-12px; right:24px; background:var(--gold); color:var(--navy);
+    font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:5px 12px; border-radius:20px;
+  }
+  .price-card .price{font-family:'Fraunces',serif; font-size:34px; font-weight:700; color:var(--navy); margin-top:6px;}
+  .price-card.featured .price{color:#fff;}
+  .price-card .price .unit{font-family:'Inter',sans-serif; font-size:14px; font-weight:500; color:var(--muted);}
+  .price-card.featured .price .unit{color:#AAB4D4;}
+  .price-card .tier-for{font-size:13px; color:var(--muted); margin-bottom:6px;}
+  .price-card.featured .tier-for{color:#C7D0E8;}
+  .price-card ul{list-style:none; margin-top:14px; display:flex; flex-direction:column; gap:9px; flex-grow:1;}
+  .price-card ul li{font-size:13.5px; color:var(--muted); padding-left:20px; position:relative;}
+  .price-card.featured ul li{color:#C7D0E8;}
+  .price-card ul li::before{content:"\2713"; position:absolute; left:0; color:var(--gold-dark); font-weight:700;}
+  .price-card.featured ul li::before{color:var(--gold);}
+  .price-card .price-cta{
+    margin-top:20px; text-align:center; padding:11px 20px; border-radius:8px; font-weight:700; font-size:14px;
+    background:var(--paper); color:var(--navy); border:1px solid var(--line);
+  }
+  .price-card.featured .price-cta{background:var(--gold); color:var(--navy); border:none;}
+  .price-note{margin-top:28px; font-size:13px; color:var(--muted); text-align:center;}
+
   .team-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
   @media(max-width:760px){ .team-grid{grid-template-columns:1fr;} }
   .team-card{background:var(--white); border:1px solid var(--line); border-radius:14px; padding:32px; display:flex; gap:18px;}
@@ -204,7 +249,9 @@
     <div class="brand"><span class="mark">A</span> Arsiva</div>
     <nav class="nav-links">
       <a href="#live">Live Product</a>
+      <a href="#trust">Trust &amp; Architecture</a>
       <a href="#modules">Platform Roadmap</a>
+      <a href="#pricing">Pricing</a>
       <a href="#market">Market</a>
       <a href="#team">Team</a>
     </nav>
@@ -229,10 +276,12 @@
 
 <div class="live-strip">
   <div class="container">
-    <div class="live-stat"><div class="num">Rp 18M</div><div class="label">Monthly Recurring Revenue</div></div>
-    <div class="live-stat"><div class="num">10</div><div class="label">Paying Clients</div></div>
+    <div class="live-stat"><div class="num">Rp 18M</div><div class="label">Monthly Recurring Revenue (~US$1,000)</div></div>
+    <div class="live-stat"><div class="num">~$12,000</div><div class="label">ARR Run-Rate on Current MRR</div></div>
+    <div class="live-stat"><div class="num">10</div><div class="label">Paying Clients (7 Essential &middot; 3 Professional)</div></div>
     <div class="live-stat"><div class="num">10+</div><div class="label">Notary Offices Piloted</div></div>
     <div class="live-stat"><div class="num">&lt;5 sec</div><div class="label">Average Search Time</div></div>
+    <div class="live-note">Our first 10 offices are on <b>early pilot pricing</b> (~US$100/mo avg). Renewing into our published tiers takes current MRR to <b>~US$2,500/mo</b> — before a single new client is added.</div>
   </div>
 </div>
 
@@ -261,6 +310,34 @@
         <div class="bubble bot"><b>ARSIVA:</b> "Ketemu Bu. 2 Dokumen. Mau tak buka?"</div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="trust" style="background:var(--white); border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Trust &amp; Architecture</div>
+      <h2>Compliance Isn't a Feature Here — It's How the System Is Built</h2>
+      <p>Most platforms add compliance controls after the fact, in application code that a future bug can quietly break. Arsiva enforces them at the database layer itself.</p>
+    </div>
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-num">Data Isolation</div>
+        <h4>Structural, Not Conventional</h4>
+        <p>Every client's data is walled off by row-level security enforced by the database itself — not just checked by our application code. Even a bug in a workflow can't return one client's records to another.</p>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Single Write Path</div>
+        <h4>Every Write Is Logged</h4>
+        <p>Client-facing forms and chat agents never write to the database directly. Every write passes through one automated pipeline, so there is always one consistent record of what happened and when.</p>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Audit Trail</div>
+        <h4>Immutable by Design</h4>
+        <p>Every significant event is recorded in an append-only log — not deletable, not editable, even by us. That's the actual evidence trail regulators and investors can rely on.</p>
+      </div>
+    </div>
+    <p class="footnote" style="margin-top:24px;">Built on Postgres (via Supabase) for the data layer and n8n for workflow automation — proven, auditable infrastructure rather than a custom stack no one outside the company can evaluate.</p>
   </div>
 </section>
 
@@ -316,7 +393,59 @@
       </div>
 
     </div>
-    <p class="footnote" style="margin-top:24px;">Status shown reflects current build state as of this page's last update — confirm exact status internally before publishing.</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Pricing</div>
+      <h2>One OS, Priced to Match What You Onboard</h2>
+      <p>Plans scale with module access and regulatory complexity — from a single notary office to institutions running full RWA tokenization and trading operations.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <div class="tier-name">Essential</div>
+        <div class="price">$250<span class="unit">/month</span></div>
+        <div class="tier-for">For individual notary offices and small operators getting started</div>
+        <ul>
+          <li>Core access to Module 02 (Notary Automation)</li>
+          <li>Searchable document archive, single office</li>
+          <li>Standard email &amp; WhatsApp support</li>
+        </ul>
+        <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Arsiva%20Essential%20plan." target="_blank" rel="noopener">Talk to Sales</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="tier-badge">Most Popular</div>
+        <div class="tier-name">Professional</div>
+        <div class="price">$500<span class="unit">/month</span></div>
+        <div class="tier-for">For growing firms that need compliance depth across offices</div>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Multi-office deployment</li>
+          <li>Module 01 (SPV &amp; Asset Onboarding) access</li>
+          <li>Priority support &amp; onboarding assistance</li>
+        </ul>
+        <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Arsiva%20Professional%20plan." target="_blank" rel="noopener">Talk to Sales</a>
+      </div>
+
+      <div class="price-card">
+        <div class="tier-name">Corporate</div>
+        <div class="price">$1,500&ndash;3,000<span class="unit">/month</span></div>
+        <div class="tier-for">For RWA tokenization platforms, exchanges, and financial institutions</div>
+        <ul>
+          <li>Full six-module suite</li>
+          <li>Cross-border compliance (Indonesia, Singapore, UAE)</li>
+          <li>Dedicated onboarding &amp; custom SLA</li>
+          <li>Priced to scope — final quote after a discovery call</li>
+        </ul>
+        <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20discuss%20the%20Arsiva%20Corporate%20plan." target="_blank" rel="noopener">Talk to Sales</a>
+      </div>
+
+    </div>
+    <p class="price-note">All plans billed monthly. Our first 10 offices are on early pilot pricing below Essential and are renewing into these published tiers. Corporate pricing depends on transaction volume, module mix, and jurisdictions covered.</p>
   </div>
 </section>
 
@@ -337,6 +466,7 @@
       <div class="market-card dark">
         <h4>TOP-DOWN &middot; THE RWA TAILWIND</h4>
         <div class="market-row"><div class="big">$33.5B</div><div class="small">On-chain RWA value globally, July 2026 — up 400%+ since early 2025</div></div>
+        <div class="market-row"><div class="big">$15.8B &rarr; $70.8B</div><div class="small">Global RegTech market by 2033, at an 18% CAGR</div></div>
         <div class="market-row"><div class="big">APAC</div><div class="small">Projected fastest-growing region for asset tokenization</div></div>
         <div class="market-row"><div class="big">POJK 3/2024</div><div class="small">OJK's DFA Sandbox formally recognizes tokenized RWA as "Backed DFA"</div></div>
       </div>
@@ -348,23 +478,15 @@
   <div class="container">
     <div class="section-head">
       <div class="kicker">Team</div>
-      <h2>Built by Practitioners, Not Outsiders</h2>
+      <h2>Built by a Practitioner, Not an Outsider</h2>
     </div>
-    <div class="team-grid">
+    <div class="team-grid" style="grid-template-columns:1fr; max-width:460px; margin:0 auto;">
       <div class="team-card">
         <div class="avatar">BS</div>
         <div>
           <h4>Bambang Satmoko, S.T., S.H.</h4>
           <div class="role">Founder &amp; CEO</div>
           <p>7 years structuring STO/RWA deals as Managing Partner, Satmoko Law Firm — OJK Sandbox advisory, SPV/TSPV structuring, ERC-3643/OnChainID compliance design.</p>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="avatar">AM</div>
-        <div>
-          <h4>Abdul Muin</h4>
-          <div class="role">Co-Founder &amp; CTO</div>
-          <p>20+ years as a senior software engineer. Has already shipped RAG-based, LangChain/FAISS-powered AI document platforms — the exact architecture ARSIVA runs on.</p>
         </div>
       </div>
     </div>
@@ -374,11 +496,12 @@
 <div class="cta-band">
   <div class="container">
     <h2>Building the Compliance Layer RWA Tokenization Runs On</h2>
-    <p>Raising a US$500,000 seed round to complete the full platform and scale beyond our first live module.</p>
+    <p>Raising a US$500,000 seed round to extend runway through our Full MVP launch — completing the full six-module platform and scaling beyond our first live module.</p>
     <div class="cta-buttons">
-      <a class="btn btn-primary" href="mailto:satmoko@arsiva.tech">Contact for Investor Deck</a>
+      <a class="btn btn-primary" href="mailto:satmoko@arsiva.tech?subject=Arsiva%20Investor%20Data%20Room%20Request">Request Investor Data Room</a>
       <a class="btn btn-secondary" href="https://wa.me/6580174461" target="_blank" rel="noopener">Chat WA Arsiva</a>
     </div>
+    <p class="footnote" style="margin-top:18px; color:#AAB4D4;">Financial model, cap table, and round terms are shared directly with qualified investors upon request.</p>
   </div>
 </div>
 
