@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arsiva — Asset Management &amp; Compliance OS for RWA Tokenization</title>
-<meta name="description" content="Arsiva is the compliance OS for RWA tokenization in Indonesia — live notary automation generating real revenue today, expanding module by module into SPV onboarding, legal structuring, and cross-border compliance.">
-<meta property="og:title" content="Arsiva — Asset Management &amp; Compliance OS for RWA Tokenization">
-<meta property="og:description" content="Live in Jakarta. Rp 18M MRR. Raising a US$500,000 seed round to complete the full six-module platform.">
+<title>Arsiva — On-Premise Compliance OS for Indonesia's Legal &amp; RWA Tokenization Sector</title>
+<meta name="description" content="Arsiva is Indonesia's on-premise, UU PDP-compliant compliance OS for notaries, law firms, and RWA tokenization — live notary automation generating real revenue today, expanding module by module into SPV onboarding, legal structuring, and cross-border compliance.">
+<meta property="og:title" content="Arsiva — On-Premise Compliance OS for Indonesia's Legal &amp; RWA Tokenization Sector">
+<meta property="og:description" content="Live in Jakarta. Rp 18M MRR. Raising a US$568,000 seed round to reach 100 Notaris at KPOI 70% on a fully on-premise, UU PDP-compliant architecture.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314213D' stroke='%23D4A62B' stroke-width='1.5'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='%23D4A62B' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -220,6 +220,52 @@
   .price-card.featured .price-cta{background:var(--gold); color:var(--navy); border:none;}
   .price-note{margin-top:28px; font-size:13px; color:var(--muted); text-align:center;}
 
+  .problem-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media(max-width:900px){ .problem-grid{grid-template-columns:1fr;} }
+  .problem-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:28px;}
+  .problem-card .num{font-family:'Fraunces',serif; font-size:32px; font-weight:700; color:var(--navy);}
+  .problem-card p{font-size:13.5px; color:var(--muted); margin-top:10px;}
+  .problem-banner{
+    margin-top:24px; background:var(--navy); color:#fff; border-radius:12px; padding:22px 26px; font-size:14.5px;
+  }
+  .problem-banner b{color:var(--gold);}
+
+  .timeline-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media(max-width:900px){ .timeline-grid{grid-template-columns:1fr;} }
+  .timeline-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:26px;}
+  .timeline-card .yr{font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--gold-dark);}
+  .timeline-card h4{font-size:16.5px; margin-top:6px;}
+  .timeline-card ul{list-style:none; margin-top:14px; display:flex; flex-direction:column; gap:8px;}
+  .timeline-card ul li{font-size:13px; color:var(--muted); padding-left:18px; position:relative;}
+  .timeline-card ul li::before{content:"\2192"; position:absolute; left:0; color:var(--gold-dark);}
+  .timeline-card.active{border-color:var(--gold); box-shadow:0 1px 3px rgba(20,33,61,0.06);}
+
+  .gtm-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:8px;}
+  @media(max-width:900px){ .gtm-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:560px){ .gtm-grid{grid-template-columns:1fr;} }
+  .gtm-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:22px; text-align:center;}
+  .gtm-card h4{font-size:14.5px;}
+  .gtm-card p{font-size:12.5px; color:var(--muted); margin-top:6px;}
+
+  .ask-stats{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:8px; max-width:460px;}
+  .ask-stat{background:var(--navy-2); border-radius:10px; padding:18px; text-align:center;}
+  .ask-stat .num{font-family:'Fraunces',serif; font-size:26px; font-weight:700; color:var(--gold);}
+  .ask-stat .lab{font-size:11.5px; color:#C7D0E8; margin-top:4px;}
+
+  .gated-box{
+    margin-top:28px; border:1.5px dashed var(--line); border-radius:12px; padding:26px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+    background:var(--paper);
+  }
+  .gated-box .lock{
+    width:38px; height:38px; border-radius:50%; background:var(--navy); color:var(--gold);
+    display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;
+  }
+  .gated-box-text{display:flex; gap:16px; align-items:flex-start;}
+  .gated-box h4{font-size:15px; color:var(--navy); font-family:'Fraunces',serif; font-weight:600;}
+  .gated-box p{font-size:13px; color:var(--muted); margin-top:4px; max-width:520px;}
+  .gated-box .price-cta{white-space:nowrap; padding:11px 22px; background:var(--gold); color:var(--navy); border-radius:8px; font-weight:700; font-size:13.5px;}
+
   .team-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
   @media(max-width:760px){ .team-grid{grid-template-columns:1fr;} }
   .team-card{background:var(--white); border:1px solid var(--line); border-radius:14px; padding:32px; display:flex; gap:18px;}
@@ -248,11 +294,13 @@
   <div class="nav-inner">
     <div class="brand"><span class="mark">A</span> Arsiva</div>
     <nav class="nav-links">
+      <a href="#problem">Problem</a>
       <a href="#live">Live Product</a>
       <a href="#trust">Trust &amp; Architecture</a>
       <a href="#modules">Platform Roadmap</a>
       <a href="#pricing">Pricing</a>
       <a href="#market">Market</a>
+      <a href="#funds">The Ask</a>
       <a href="#team">Team</a>
     </nav>
     <a class="nav-cta" href="https://wa.me/6580174461" target="_blank" rel="noopener">Talk to Us</a>
@@ -261,10 +309,10 @@
 
 <section class="hero">
   <div class="container">
-    <div class="eyebrow"><span class="dot"></span> Live in Jakarta &middot; Rp 18M MRR &middot; Raising Seed</div>
-    <h1>Asset Management &amp; <em>Compliance OS</em> for RWA Tokenization</h1>
-    <p class="sub">One platform for Property Companies, Notaries, Law Firms, and Singapore Holding entities — automating asset onboarding, BPN reporting, legal structuring, and compliance output for token issuance.</p>
-    <p class="id-line">Satu platform untuk Property, Notaris, Law Firm, dan SG Holding — dari pendataan aset hingga compliance penerbitan token.</p>
+    <div class="eyebrow"><span class="dot"></span> Live in Jakarta &middot; Rp 18M MRR &middot; Raising $568K Seed</div>
+    <h1>On-Premise <em>Compliance OS</em> for Notaries, Law Firms &amp; RWA Tokenization</h1>
+    <p class="sub">One platform for Notaries, Law Firms, Property/Asset Management companies, and Singapore Holding entities — automating document drafting, asset onboarding, legal structuring, and compliance output for token issuance, built on 100% on-premise infrastructure with zero data egress to external cloud AI providers.</p>
+    <p class="id-line">Satu platform untuk Notaris, Law Firm, Property, dan SG Holding — dari drafting dokumen hingga compliance penerbitan token, sepenuhnya on-premise di Indonesia.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="#live">See Our Live Product &rarr;</a>
       <a class="btn btn-secondary" href="https://wa.me/6580174461" target="_blank" rel="noopener">
@@ -278,12 +326,37 @@
   <div class="container">
     <div class="live-stat"><div class="num">Rp 18M</div><div class="label">Monthly Recurring Revenue (~US$1,000)</div></div>
     <div class="live-stat"><div class="num">~$12,000</div><div class="label">ARR Run-Rate on Current MRR</div></div>
-    <div class="live-stat"><div class="num">10</div><div class="label">Paying Clients (7 Essential &middot; 3 Professional)</div></div>
-    <div class="live-stat"><div class="num">10+</div><div class="label">Notary Offices Piloted</div></div>
+    <div class="live-stat"><div class="num">11</div><div class="label">Active Clients (10 Notary &middot; 1 Law Firm)</div></div>
+    <div class="live-stat"><div class="num">9</div><div class="label">Asset Management Companies in Pipeline</div></div>
     <div class="live-stat"><div class="num">&lt;5 sec</div><div class="label">Average Search Time</div></div>
-    <div class="live-note">Our first 10 offices are on <b>early pilot pricing</b> (~US$100/mo avg). Renewing into our published tiers takes current MRR to <b>~US$2,500/mo</b> — before a single new client is added.</div>
+    <div class="live-note">Our first 11 clients are on <b>early pilot pricing</b> (~US$90/mo avg). Renewing into our published tiers takes current MRR to <b>~US$2,750/mo</b> — before a single new client is added.</div>
   </div>
 </div>
+
+<section id="problem" style="background:var(--white); border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">The Problem</div>
+      <h2>Indonesia's Notaris Workflow Is Slow, Error-Prone, and Legally Exposed</h2>
+      <p>Every module we build starts from the same desk: a notary's office buried in physical and scanned archives, working against deadlines that manual drafting can't keep up with.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="num">30 Days</div>
+        <p>to complete a single akta (notarial deed) through manual document drafting and review.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">40%</div>
+        <p>of drafts require correction — inconsistent clause language, missed references, manual re-entry.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">UU PDP Risk</div>
+        <p>No on-premise AI option exists — cloud LLM tools route client data outside Indonesian jurisdiction.</p>
+      </div>
+    </div>
+    <div class="problem-banner">No incumbent offers a fully on-premise, <b>UU PDP No. 27/2022</b>-compliant AI platform purpose-built for the Notaris / Law Firm / Asset Management workflow.</div>
+  </div>
+</section>
 
 <section id="live">
   <div class="container">
@@ -337,7 +410,8 @@
         <p>Every significant event is recorded in an append-only log — not deletable, not editable, even by us. That's the actual evidence trail regulators and investors can rely on.</p>
       </div>
     </div>
-    <p class="footnote" style="margin-top:24px;">Built on Postgres (via Supabase) for the data layer and n8n for workflow automation — proven, auditable infrastructure rather than a custom stack no one outside the company can evaluate.</p>
+    <p class="footnote" style="margin-top:24px;">Built on Postgres (via Supabase) for the data layer and a Python application on Vercel for orchestration — proven, auditable infrastructure rather than a custom stack no one outside the company can evaluate.</p>
+    <div class="problem-banner" style="margin-top:28px;">This lean pilot stack proves the model. The <b>$568,000 seed round</b> funds ARSIVA V2.0 — the same three modules rebuilt on fully on-premise infrastructure (K3s, PostgreSQL+pgvector, MinIO, on-prem GPU inference) at a Tier 3 Indonesia data center, so 100% data residency and zero external cloud AI egress become structural properties of the deployment, not configuration choices.</div>
   </div>
 </section>
 
@@ -345,53 +419,91 @@
   <div class="container">
     <div class="section-head">
       <div class="kicker">The Platform Roadmap</div>
-      <h2>One OS. Six Modules. Built in Stages.</h2>
-      <p>Infrastructure for tokenization platforms, notaries, and financial institutions — starting from what's proven, expanding module by module.</p>
+      <h2>Three Modules Live. Three More at Full MVP.</h2>
+      <p>We sequence deliberately — proving each module with real, paying clients before building the next, rather than building six modules at once.</p>
     </div>
+
+    <p class="footnote" style="margin-bottom:12px; font-weight:700; color:var(--navy);">NOW — EARLY MVP</p>
     <div class="modules-grid">
 
       <div class="module-card">
-        <div class="module-num">Module 02</div>
-        <h4>Notary Automation</h4>
-        <p>Generate compliant legal documents and manage e-notarization workflows with licensed notaries.</p>
-        <span class="status-tag live">Live</span>
+        <div class="module-num">Module A</div>
+        <h4>NotaryAI</h4>
+        <p>Searchable, conversational archive for scanned notarial documents. Live and generating recurring revenue.</p>
+        <span class="status-tag live">Live &middot; 10 Clients</span>
       </div>
 
       <div class="module-card">
-        <div class="module-num">Module 01</div>
-        <h4>SPV &amp; Asset Onboarding</h4>
-        <p>Digitize asset documents and automate SPV setup — upload SHM, BPN, and PBG (Building Approval Certificate) records.</p>
-        <span class="status-tag dev">In Development</span>
+        <div class="module-num">Module B</div>
+        <h4>LawAI Investment</h4>
+        <p>Investment-focused legal workflow automation for law firms structuring RWA and tokenization deals.</p>
+        <span class="status-tag live">Live &middot; 1 Client</span>
       </div>
 
       <div class="module-card">
-        <div class="module-num">Module 05</div>
-        <h4>Research &amp; Valuation</h4>
-        <p>Institutional-grade compliance reports, powered by ARSIVA's own RAG engine trained on RWA data.</p>
-        <span class="status-tag dev">In Development</span>
+        <div class="module-num">Module C</div>
+        <h4>AssetAI Property</h4>
+        <p>Digitize asset documents and automate onboarding for property and asset management companies.</p>
+        <span class="status-tag dev">Reserved &middot; 9 Pipeline</span>
       </div>
 
-      <div class="module-card">
-        <div class="module-num">Module 03</div>
-        <h4>Legal &amp; Due Diligence</h4>
-        <p>Lawyer-verified templates and automated DD checklists aligned to POJK &amp; OJK standards.</p>
-        <span class="status-tag dev">In Development</span>
-      </div>
+    </div>
+
+    <p class="footnote" style="margin:32px 0 12px; font-weight:700; color:var(--navy);">NEXT — FULL MVP</p>
+    <div class="modules-grid">
 
       <div class="module-card">
-        <div class="module-num">Module 04</div>
         <h4>Exchange &amp; Secondary Market</h4>
         <p>Direct connections to licensed exchanges with full audit trails and reporting.</p>
-        <span class="status-tag dev">In Development</span>
+        <span class="status-tag dev">Roadmap</span>
       </div>
 
       <div class="module-card">
-        <div class="module-num">Module 06</div>
-        <h4>Cross-Border Compliance</h4>
-        <p>Manage KYC, AML, tax, and regulatory reporting across Indonesia, Singapore, and Dubai.</p>
-        <span class="status-tag dev">In Development</span>
+        <h4>Research &amp; Valuation</h4>
+        <p>Institutional-grade compliance reports, powered by ARSIVA's own RAG engine trained on RWA data.</p>
+        <span class="status-tag dev">Roadmap</span>
       </div>
 
+      <div class="module-card">
+        <h4>Cross-Border Compliance</h4>
+        <p>Manage KYC, AML, tax, and regulatory reporting across Indonesia, Singapore, and Dubai.</p>
+        <span class="status-tag dev">Roadmap</span>
+      </div>
+
+    </div>
+
+    <p class="footnote" style="margin:40px 0 12px; font-weight:700; color:var(--navy);">SCALE ROADMAP — INFRASTRUCTURE &amp; TEAM</p>
+    <div class="timeline-grid">
+      <div class="timeline-card active">
+        <div class="yr">Year 1</div>
+        <h4>KPOI 70% — This Raise</h4>
+        <ul>
+          <li>1x A100-class GPU, DCI Indonesia bare metal</li>
+          <li>6-person engineering team, fully staffed Q1</li>
+          <li>100 Notaris onboarded</li>
+          <li>Full MVP launch — Q2</li>
+        </ul>
+      </div>
+      <div class="timeline-card">
+        <div class="yr">Year 2</div>
+        <h4>Post-Series A → KPOI 90%</h4>
+        <ul>
+          <li>Scale to 2x Nvidia A100, tensor-parallel</li>
+          <li>Engineering team restored to 14 FTE</li>
+          <li>500 Notaris</li>
+          <li>Law Firm &amp; Asset Management segments activated</li>
+        </ul>
+      </div>
+      <div class="timeline-card">
+        <div class="yr">Year 3</div>
+        <h4>Enterprise Scale</h4>
+        <ul>
+          <li>2,000 Notaris across all three modules</li>
+          <li>Enterprise / BUMN-adjacent accounts</li>
+          <li>Regional expansion beyond Jakarta</li>
+          <li>Certified ISO/IEC 27001 posture</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -410,7 +522,7 @@
         <div class="price">$250<span class="unit">/month</span></div>
         <div class="tier-for">For individual notary offices and small operators getting started</div>
         <ul>
-          <li>Core access to Module 02 (Notary Automation)</li>
+          <li>Core access to NotaryAI</li>
           <li>Searchable document archive, single office</li>
           <li>Standard email &amp; WhatsApp support</li>
         </ul>
@@ -425,7 +537,7 @@
         <ul>
           <li>Everything in Starter</li>
           <li>Multi-office deployment</li>
-          <li>Module 01 (SPV &amp; Asset Onboarding) access</li>
+          <li>LawAI Investment or AssetAI Property access</li>
           <li>Priority support &amp; onboarding assistance</li>
         </ul>
         <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Arsiva%20Professional%20plan." target="_blank" rel="noopener">Talk to Sales</a>
@@ -445,7 +557,7 @@
       </div>
 
     </div>
-    <p class="price-note">All plans billed monthly. Our first 10 offices are on early pilot pricing below Essential and are renewing into these published tiers. Corporate pricing depends on transaction volume, module mix, and jurisdictions covered.</p>
+    <p class="price-note">All plans billed monthly, plus a one-time setup/onboarding fee. Our first 11 offices are on early pilot pricing below Essential and are renewing into these published tiers. Corporate pricing depends on transaction volume, module mix, and jurisdictions covered.</p>
   </div>
 </section>
 
@@ -457,11 +569,11 @@
     </div>
     <div class="market-grid">
       <div class="market-card light">
-        <h4>BOTTOM-UP &middot; INDONESIA NOTARY MARKET</h4>
-        <div class="market-row"><div class="big">17,000&ndash;20,000</div><div class="small">Registered notary offices in Indonesia</div></div>
-        <div class="market-row"><div class="big">~US$1.1M ARR</div><div class="small">Realistic SAM at 5% penetration (~850 offices)</div></div>
+        <h4>NOTARIS-FIRST &middot; TAM / SAM</h4>
+        <div class="market-row"><div class="big">$60M ARR</div><div class="small">TAM — 12,000 actively-targetable Notaris nationally x $5K/yr</div></div>
+        <div class="market-row"><div class="big">$500K</div><div class="small">Year 1 SAM — our 100-Notaris beachhead cohort</div></div>
         <div class="market-row"><div class="big">Rp 18M / month</div><div class="small">ARSIVA's current MRR — proof of willingness to pay</div></div>
-        <p class="footnote">Source: Ministry of Law / INI estimates, 2019&ndash;2024 range.</p>
+        <p class="footnote">Pitch deck market model, July 2026. A broader pool of 17,000&ndash;20,000 registered notary offices exists per Ministry of Law / INI estimates; 12,000 reflects the actively practicing, targetable segment used in our revenue model &mdash; not yet validated across the whole segment.</p>
       </div>
       <div class="market-card dark">
         <h4>TOP-DOWN &middot; THE RWA TAILWIND</h4>
@@ -470,6 +582,50 @@
         <div class="market-row"><div class="big">APAC</div><div class="small">Projected fastest-growing region for asset tokenization</div></div>
         <div class="market-row"><div class="big">POJK 3/2024</div><div class="small">OJK's DFA Sandbox formally recognizes tokenized RWA as "Backed DFA"</div></div>
       </div>
+    </div>
+
+    <p class="footnote" style="margin:36px 0 12px; font-weight:700; color:var(--navy);">GO-TO-MARKET — RELATIONSHIP-LED, NOT SPEND-LED</p>
+    <div class="gtm-grid">
+      <div class="gtm-card">
+        <h4>INI Partnership</h4>
+        <p>Ikatan Notaris Indonesia — our primary trusted channel into the Notaris community.</p>
+      </div>
+      <div class="gtm-card">
+        <h4>Direct WhatsApp</h4>
+        <p>WhatsApp Business outreach — the channel Notaris already use for client servicing.</p>
+      </div>
+      <div class="gtm-card">
+        <h4>Webinars</h4>
+        <p>Organic education content and product demos, no paid media.</p>
+      </div>
+      <div class="gtm-card">
+        <h4>CAC &lt; $500</h4>
+        <p>Modeled from INI-channel and WhatsApp-outreach cost structure — no paid acquisition run yet, so this is a cost-structure estimate, not a measured CAC.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="funds" style="background:var(--white); border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">The Ask</div>
+      <h2>Raising a $568,000 Seed Round</h2>
+      <p>Sized to fund the full Year 1 KPOI 70% plan on a fully on-premise, UU PDP-compliant architecture — extending runway through our Full MVP launch and toward the Series A milestone.</p>
+    </div>
+    <div class="ask-stats">
+      <div class="ask-stat"><div class="num">100</div><div class="lab">Notaris onboarded</div></div>
+      <div class="ask-stat"><div class="num">70%</div><div class="lab">KPOI target achieved</div></div>
+    </div>
+    <div class="gated-box">
+      <div class="gated-box-text">
+        <div class="lock">&#128274;</div>
+        <div>
+          <h4>Detailed financials, on request</h4>
+          <p>Use-of-funds breakdown by category, break-even timeline, 3-year financial model, and cap table are shared directly with qualified investors under NDA — not published here.</p>
+        </div>
+      </div>
+      <a class="price-cta" href="mailto:satmoko@arsiva.tech?subject=Arsiva%20Investor%20Data%20Room%20Request" style="flex-shrink:0;">Request Investor Data Room</a>
     </div>
   </div>
 </section>
@@ -490,13 +646,21 @@
         </div>
       </div>
     </div>
+    <p class="footnote" style="margin:32px 0 12px; font-weight:700; color:var(--navy); text-align:center;">Q1 HIRING PLAN — FUNDED BY THIS RAISE</p>
+    <div class="gtm-grid">
+      <div class="gtm-card"><h4>CTO</h4><p>Q1</p></div>
+      <div class="gtm-card"><h4>AI/LLM Engineer &times;2</h4><p>Q1</p></div>
+      <div class="gtm-card"><h4>DevOps / SRE</h4><p>Q1</p></div>
+      <div class="gtm-card"><h4>Backend &amp; QA Engineer</h4><p>Q1</p></div>
+    </div>
+    <p class="footnote" style="margin-top:16px; text-align:center;">Founder-led today; a 6-person core team fully staffed Q1, no phased delay. Advisors drawn from the Ikatan Notaris Indonesia (INI) network — providing domain credibility and the primary Year 1 go-to-market channel.</p>
   </div>
 </section>
 
 <div class="cta-band">
   <div class="container">
-    <h2>Building the Compliance Layer RWA Tokenization Runs On</h2>
-    <p>Raising a US$500,000 seed round to extend runway through our Full MVP launch — completing the full six-module platform and scaling beyond our first live module.</p>
+    <h2>Building the On-Premise Compliance Layer Indonesia's Legal &amp; RWA Sector Runs On</h2>
+    <p>Raising a US$568,000 seed round to reach 100 Notaris at KPOI 70% on a fully on-premise, UU PDP-compliant architecture — extending runway through our Full MVP launch and completing the full six-module platform.</p>
     <div class="cta-buttons">
       <a class="btn btn-primary" href="mailto:satmoko@arsiva.tech?subject=Arsiva%20Investor%20Data%20Room%20Request">Request Investor Data Room</a>
       <a class="btn btn-secondary" href="https://wa.me/6580174461" target="_blank" rel="noopener">Chat WA Arsiva</a>
