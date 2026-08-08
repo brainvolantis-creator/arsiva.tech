@@ -1,680 +1,1564 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arsiva — On-Premise Compliance OS for Indonesia's Legal &amp; RWA Tokenization Sector</title>
-<meta name="description" content="Arsiva is Indonesia's on-premise, UU PDP-compliant compliance OS for notaries, law firms, and RWA tokenization — live notary automation generating real revenue today, expanding module by module into SPV onboarding, legal structuring, and cross-border compliance.">
-<meta property="og:title" content="Arsiva — On-Premise Compliance OS for Indonesia's Legal &amp; RWA Tokenization Sector">
-<meta property="og:description" content="Live in Jakarta. Rp 18M MRR. Raising a US$568,000 seed round to reach 100 Notaris at KPOI 70% on a fully on-premise, UU PDP-compliant architecture.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314213D' stroke='%23D4A62B' stroke-width='1.5'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='%23D4A62B' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#14213D;
-    --navy-2:#1F3864;
-    --gold:#D4A62B;
-    --gold-dark:#B8860B;
-    --ink:#1A1A1A;
-    --muted:#5B6472;
-    --paper:#F7F7F5;
-    --white:#FFFFFF;
-    --line:#E5E5E0;
-    --green:#2E7D32;
-    --amber:#B8860B;
-    --gray:#94A0B4;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Inter', -apple-system, sans-serif;
-    color:var(--ink);
-    background:var(--paper);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,h4{font-family:'Fraunces', Georgia, serif; color:var(--navy); font-weight:600; line-height:1.15;}
-  .container{max-width:1120px; margin:0 auto; padding:0 24px;}
-  a{color:inherit; text-decoration:none;}
-  img{max-width:100%; display:block;}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arsiva — Legaltech Consultant & AI Compliance Engineering for RWA Tokenization</title>
+    <meta name="description" content="Navigate the OJK vs PFII Regulatory Fork. We combine legal expertise + AI engineering (RAG, Neo4j, FAISS) to build on-premise compliance OS for RWA tokenization projects. Available for 6-month remote engagements." />
+    <meta property="og:title" content="Arsiva — Legaltech Consultant & AI Compliance Engineering" />
+    <meta property="og:description" content="We analyze the regulatory fork (OJK Sandbox vs PFII) AND build the AI compliance system. Live clients, Rp 18M MRR. Available 6-month remote contracts." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arsiva.tech" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314213D' stroke='%23D4A62B' stroke-width='1.5'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='700' fill='%23D4A62B' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        /* ============================================================
+           CSS VARIABLES & RESET
+           ============================================================ */
+        :root {
+            --navy: #14213D;
+            --navy-2: #1F3864;
+            --navy-3: #0F1830;
+            --gold: #D4A62B;
+            --gold-dark: #B8860B;
+            --gold-light: #E8C84A;
+            --ink: #1A1A1A;
+            --muted: #5B6472;
+            --paper: #F7F7F5;
+            --white: #FFFFFF;
+            --line: #E5E5E0;
+            --green: #2E7D32;
+            --green-bg: rgba(46, 125, 50, 0.10);
+            --amber: #B8860B;
+            --gray: #94A0B4;
+            --red: #C62828;
+            --red-bg: rgba(198, 40, 40, 0.08);
+            --radius: 12px;
+            --radius-lg: 16px;
+            --shadow: 0 2px 8px rgba(20, 33, 61, 0.06);
+            --shadow-hover: 0 6px 20px rgba(20, 33, 61, 0.10);
+            --transition: 0.2s ease;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            color: var(--navy);
+            font-weight: 600;
+            line-height: 1.15;
+        }
+        a { color: inherit; text-decoration: none; }
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-head {
+            max-width: 700px;
+            margin-bottom: 44px;
+        }
+        .section-head .kicker {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+        }
+        .section-head h2 {
+            font-size: clamp(26px, 3.4vw, 38px);
+            margin-top: 8px;
+        }
+        .section-head p {
+            color: var(--muted);
+            font-size: 15.5px;
+            margin-top: 10px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14.5px;
+            transition: transform 0.12s, filter 0.12s, background 0.15s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover { transform: translateY(-1px); }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        .btn-primary:hover { filter: brightness(1.06); }
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 1.5px solid rgba(255, 255, 255, 0.30);
+        }
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--navy);
+            border: 1.5px solid var(--line);
+        }
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold-dark);
+        }
+        .btn-sm {
+            padding: 6px 16px;
+            font-size: 12px;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 6px;
+            font-weight: 700;
+        }
+        .btn-sm:hover { filter: brightness(1.06); }
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .tag-live {
+            background: var(--green-bg);
+            color: var(--green);
+        }
+        .tag-live .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+        }
+        .footnote {
+            font-size: 12px;
+            color: var(--gray);
+            font-style: italic;
+        }
+        section {
+            padding: 80px 0;
+        }
+        @media (max-width: 700px) {
+            section { padding: 56px 0; }
+        }
 
-  header.nav{
-    position:sticky; top:0; z-index:50;
-    background:rgba(20,33,61,0.96);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid rgba(212,166,43,0.25);
-  }
-  .nav-inner{
-    max-width:1120px; margin:0 auto; padding:16px 24px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:700; font-size:20px; color:#fff;}
-  .brand .mark{
-    width:32px; height:32px; border-radius:50%; border:1.5px solid var(--gold);
-    display:flex; align-items:center; justify-content:center;
-    font-size:14px; color:var(--gold); font-weight:700;
-  }
-  .nav-links{display:flex; gap:28px; font-size:14px; font-weight:500;}
-  .nav-links a{color:#C7D0E8; transition:color .15s;}
-  .nav-links a:hover{color:var(--gold);}
-  .nav-cta{
-    background:var(--gold); color:var(--navy); font-weight:700; font-size:13.5px;
-    padding:9px 18px; border-radius:6px; transition:filter .15s;
-  }
-  .nav-cta:hover{filter:brightness(1.08);}
-  @media(max-width:760px){ .nav-links{display:none;} }
+        /* ============================================================
+           NAVIGATION
+           ============================================================ */
+        header.nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(20, 33, 61, 0.96);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(212, 166, 43, 0.20);
+        }
+        .nav-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: #fff;
+        }
+        .brand .mark {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1.5px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            font-size: 13.5px;
+            font-weight: 500;
+        }
+        .nav-links a {
+            color: #C7D0E8;
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 13px;
+            padding: 8px 18px;
+            border-radius: 6px;
+            transition: filter 0.15s;
+        }
+        .nav-cta:hover { filter: brightness(1.08); }
+        @media (max-width: 860px) {
+            .nav-links { display: none; }
+        }
 
-  .hero{
-    background:radial-gradient(circle at 82% -10%, var(--navy-2) 0%, var(--navy) 55%);
-    color:#fff; padding:96px 0 88px; position:relative; overflow:hidden;
-  }
-  .hero::before{
-    content:""; position:absolute; right:-140px; top:-140px; width:420px; height:420px;
-    border-radius:50%; background:rgba(255,255,255,0.03);
-  }
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:8px;
-    font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
-    color:var(--gold); border:1px solid rgba(212,166,43,0.4); padding:6px 14px; border-radius:20px;
-    margin-bottom:28px;
-  }
-  .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--green); box-shadow:0 0 0 3px rgba(46,125,50,0.25);}
-  .hero h1{
-    font-size:clamp(34px, 5vw, 54px); color:#fff; max-width:820px; letter-spacing:-0.01em;
-  }
-  .hero h1 em{font-style:normal; color:var(--gold);}
-  .hero p.sub{
-    margin-top:22px; font-size:17px; color:#C7D0E8; max-width:640px; font-weight:400;
-  }
-  .hero .id-line{
-    margin-top:10px; font-size:14.5px; color:#8B96B8; max-width:640px; font-style:italic;
-  }
-  .hero-ctas{display:flex; gap:14px; margin-top:38px; flex-wrap:wrap;}
-  .btn{
-    display:inline-flex; align-items:center; gap:8px; padding:14px 26px; border-radius:8px;
-    font-weight:700; font-size:15px; transition:transform .12s, filter .12s; border:none; cursor:pointer;
-  }
-  .btn:hover{transform:translateY(-1px);}
-  .btn-primary{background:var(--gold); color:var(--navy);}
-  .btn-primary:hover{filter:brightness(1.06);}
-  .btn-secondary{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.35);}
-  .btn-secondary:hover{border-color:var(--gold); color:var(--gold);}
-  .btn-note{font-size:11.5px; font-weight:400; opacity:0.7; display:block; margin-top:2px;}
+        /* ============================================================
+           FLOATING MOBILE CTA
+           ============================================================ */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 200;
+            display: none;
+        }
+        .floating-cta a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 16px rgba(212, 166, 43, 0.35);
+            transition: transform 0.15s;
+        }
+        .floating-cta a:hover { transform: scale(1.03); }
+        @media (max-width: 700px) {
+            .floating-cta { display: block; }
+        }
 
-  .live-strip{background:var(--navy-2); border-top:1px solid rgba(212,166,43,0.2);}
-  .live-strip .container{
-    display:grid; grid-template-columns:repeat(5,1fr); gap:0; padding:34px 24px;
-  }
-  .live-stat{text-align:center; padding:0 12px; border-right:1px solid rgba(255,255,255,0.08);}
-  .live-stat:last-child{border-right:none;}
-  .live-stat .num{font-family:'Fraunces',serif; font-size:26px; font-weight:700; color:var(--gold);}
-  .live-stat .label{font-size:12px; color:#AAB4D4; margin-top:4px;}
-  .live-note{
-    grid-column:1 / -1; text-align:center; font-size:12.5px; color:#8B96B8; font-style:italic;
-    margin-top:24px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.08);
-  }
-  .live-note b{color:var(--gold); font-style:normal;}
-  @media(max-width:960px){
-    .live-strip .container{grid-template-columns:repeat(3,1fr); gap:20px 0;}
-  }
-  @media(max-width:700px){
-    .live-strip .container{grid-template-columns:repeat(2,1fr); gap:20px;}
-    .live-stat{border-right:none;}
-  }
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .hero {
+            background: radial-gradient(circle at 80% -10%, var(--navy-2) 0%, var(--navy) 55%);
+            color: #fff;
+            padding: 80px 0 72px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            right: -160px;
+            top: -160px;
+            width: 460px;
+            height: 460px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .hero .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(212, 166, 43, 0.35);
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+        .hero .eyebrow .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.25);
+        }
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            color: #fff;
+            max-width: 820px;
+            letter-spacing: -0.01em;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--gold);
+        }
+        .hero h1 .highlight {
+            background: rgba(212, 166, 43, 0.15);
+            padding: 0 8px;
+            border-radius: 4px;
+        }
+        .hero p.sub {
+            margin-top: 20px;
+            font-size: 17px;
+            color: #C7D0E8;
+            max-width: 680px;
+            font-weight: 400;
+        }
+        .hero .id-line {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #8B96B8;
+            max-width: 640px;
+            font-style: italic;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 14px;
+            margin-top: 34px;
+            flex-wrap: wrap;
+        }
+        .regulatory-alert {
+            margin-top: 30px;
+            background: rgba(212, 166, 43, 0.10);
+            border: 1px solid rgba(212, 166, 43, 0.25);
+            border-radius: var(--radius);
+            padding: 18px 22px;
+            max-width: 700px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .regulatory-alert .icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        .regulatory-alert .text {
+            font-size: 14px;
+            color: #C7D0E8;
+        }
+        .regulatory-alert .text strong {
+            color: var(--gold);
+        }
 
-  section{padding:88px 0;}
-  .section-head{max-width:680px; margin-bottom:48px;}
-  .section-head .kicker{
-    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--gold-dark);
-  }
-  .section-head h2{font-size:clamp(26px,3.4vw,36px); margin-top:10px;}
-  .section-head p{color:var(--muted); font-size:15.5px; margin-top:12px;}
+        /* Audience Tabs */
+        .audience-tabs {
+            display: flex;
+            gap: 6px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            padding: 6px;
+            max-width: 640px;
+        }
+        .audience-tabs a {
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #AAB4D4;
+            transition: background 0.15s, color 0.15s;
+        }
+        .audience-tabs a:hover,
+        .audience-tabs a.active {
+            background: rgba(212, 166, 43, 0.15);
+            color: var(--gold);
+        }
+        @media (max-width: 500px) {
+            .audience-tabs a { font-size: 12px; padding: 6px 12px; }
+        }
 
-  .live-product{
-    background:var(--white); border:1px solid var(--line); border-radius:14px;
-    padding:44px; display:grid; grid-template-columns:1.1fr 1fr; gap:40px; align-items:center;
-    box-shadow:0 1px 3px rgba(20,33,61,0.05);
-  }
-  .status-live{
-    display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700;
-    color:var(--green); background:rgba(46,125,50,0.08); padding:5px 12px; border-radius:20px; margin-bottom:16px;
-  }
-  .status-live .dot{width:6px; height:6px; border-radius:50%; background:var(--green);}
-  .live-product h3{font-size:24px;}
-  .live-product p{color:var(--muted); margin-top:12px; font-size:15px;}
-  .mini-chat{
-    background:var(--navy); border-radius:10px; padding:22px;
-  }
-  .mini-chat .tag{font-size:11.5px; color:var(--gold); font-weight:700; letter-spacing:.04em; text-transform:uppercase; margin-bottom:12px;}
-  .bubble{border-radius:8px; padding:12px 14px; font-size:13.5px; margin-bottom:10px;}
-  .bubble.user{background:var(--navy-2); color:#C7D0E8;}
-  .bubble.bot{background:#fff; color:var(--ink); border:1.5px solid var(--gold);}
-  .bubble b{color:var(--gold-dark);}
-  .bubble.user b{color:#AAB4D4;}
-  @media(max-width:820px){ .live-product{grid-template-columns:1fr;} }
+        /* ============================================================
+           LIVE STRIP (stats)
+           ============================================================ */
+        .live-strip {
+            background: var(--navy-2);
+            border-top: 1px solid rgba(212, 166, 43, 0.15);
+            border-bottom: 1px solid rgba(212, 166, 43, 0.10);
+        }
+        .live-strip .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            padding: 32px 24px;
+        }
+        .live-stat {
+            text-align: center;
+            padding: 0 12px;
+            border-right: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .live-stat:last-child { border-right: none; }
+        .live-stat .num {
+            font-family: 'Fraunces', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .live-stat .label {
+            font-size: 11.5px;
+            color: #AAB4D4;
+            margin-top: 4px;
+        }
+        .live-note {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 12.5px;
+            color: #8B96B8;
+            font-style: italic;
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .live-note b { color: var(--gold); font-style: normal; }
+        @media (max-width: 700px) {
+            .live-strip .container { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .live-stat { border-right: none; }
+        }
 
-  .modules-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-  @media(max-width:900px){ .modules-grid{grid-template-columns:repeat(2,1fr);} }
-  @media(max-width:620px){ .modules-grid{grid-template-columns:1fr;} }
-  .module-card{
-    background:var(--white); border:1px solid var(--line); border-radius:12px; padding:26px;
-    display:flex; flex-direction:column; gap:10px; transition:border-color .15s;
-  }
-  .module-card:hover{border-color:var(--gold);}
-  .module-num{font-family:'Fraunces',serif; font-size:13px; color:var(--gray); font-weight:600;}
-  .module-card h4{font-size:17px;}
-  .module-card p{font-size:13.5px; color:var(--muted); flex-grow:1;}
-  .status-tag{
-    align-self:flex-start; font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
-    padding:4px 10px; border-radius:20px; margin-top:4px;
-  }
-  .status-tag.live{background:rgba(46,125,50,0.1); color:var(--green);}
-  .status-tag.dev{background:rgba(184,134,11,0.1); color:var(--amber);}
-  .status-tag.roadmap{background:rgba(91,100,114,0.08); color:var(--muted);}
+        /* ============================================================
+           REGULATORY FORK — The Core Pitch
+           ============================================================ */
+        .fork-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .fork-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        .fork-card:hover {
+            border-color: var(--gold);
+            box-shadow: var(--shadow-hover);
+        }
+        .fork-card .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .fork-card h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .fork-card .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .fork-card .badge.ojk {
+            background: var(--navy);
+            color: #fff;
+        }
+        .fork-card .badge.pfii {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        .fork-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .fork-card .highlight {
+            margin-top: 14px;
+            padding: 14px 18px;
+            background: var(--navy);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 13.5px;
+        }
+        .fork-card .highlight b { color: var(--gold); }
+        .fork-card .highlight .check { color: var(--gold); margin-right: 6px; }
+        @media (max-width: 760px) {
+            .fork-grid { grid-template-columns: 1fr; }
+        }
 
-  .market-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  @media(max-width:820px){ .market-grid{grid-template-columns:1fr;} }
-  .market-card{border-radius:14px; padding:34px;}
-  .market-card.light{background:var(--white); border:1px solid var(--line);}
-  .market-card.dark{background:var(--navy); color:#fff;}
-  .market-card h4{font-size:15px; margin-bottom:20px;}
-  .market-card.dark h4{color:var(--gold);}
-  .market-row{margin-bottom:18px;}
-  .market-row .big{font-family:'Fraunces',serif; font-weight:700; font-size:22px; color:var(--gold-dark);}
-  .market-card.dark .market-row .big{color:#fff;}
-  .market-row .small{font-size:12.5px; color:var(--muted); margin-top:2px;}
-  .market-card.dark .market-row .small{color:#AAB4D4;}
-  .footnote{font-size:11px; color:var(--gray); font-style:italic; margin-top:10px;}
+        /* PMA Alert Box */
+        .pma-alert {
+            margin-top: 32px;
+            background: var(--navy-2);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            color: #fff;
+            border-left: 4px solid var(--gold);
+        }
+        .pma-alert h4 {
+            color: var(--gold);
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        .pma-alert p {
+            color: #C7D0E8;
+            font-size: 14px;
+        }
+        .pma-alert .pma-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .pma-alert .pma-item {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            padding: 14px 18px;
+            text-align: center;
+        }
+        .pma-alert .pma-item .big {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .pma-alert .pma-item .lab {
+            font-size: 12px;
+            color: #AAB4D4;
+            margin-top: 2px;
+        }
+        @media (max-width: 700px) {
+            .pma-alert .pma-grid { grid-template-columns: 1fr; }
+        }
 
-  .pricing-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-  @media(max-width:900px){ .pricing-grid{grid-template-columns:1fr;} }
-  .price-card{
-    background:var(--white); border:1px solid var(--line); border-radius:14px; padding:32px;
-    display:flex; flex-direction:column; gap:6px; position:relative; transition:transform .15s, border-color .15s;
-  }
-  .price-card:hover{transform:translateY(-2px); border-color:var(--gold);}
-  .price-card.featured{background:var(--navy); border-color:var(--navy); color:#fff;}
-  .price-card .tier-name{font-size:13px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--gold-dark);}
-  .price-card.featured .tier-name{color:var(--gold);}
-  .price-card .tier-badge{
-    position:absolute; top:-12px; right:24px; background:var(--gold); color:var(--navy);
-    font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:5px 12px; border-radius:20px;
-  }
-  .price-card .price{font-family:'Fraunces',serif; font-size:34px; font-weight:700; color:var(--navy); margin-top:6px;}
-  .price-card.featured .price{color:#fff;}
-  .price-card .price .unit{font-family:'Inter',sans-serif; font-size:14px; font-weight:500; color:var(--muted);}
-  .price-card.featured .price .unit{color:#AAB4D4;}
-  .price-card .tier-for{font-size:13px; color:var(--muted); margin-bottom:6px;}
-  .price-card.featured .tier-for{color:#C7D0E8;}
-  .price-card ul{list-style:none; margin-top:14px; display:flex; flex-direction:column; gap:9px; flex-grow:1;}
-  .price-card ul li{font-size:13.5px; color:var(--muted); padding-left:20px; position:relative;}
-  .price-card.featured ul li{color:#C7D0E8;}
-  .price-card ul li::before{content:"\2713"; position:absolute; left:0; color:var(--gold-dark); font-weight:700;}
-  .price-card.featured ul li::before{color:var(--gold);}
-  .price-card .price-cta{
-    margin-top:20px; text-align:center; padding:11px 20px; border-radius:8px; font-weight:700; font-size:14px;
-    background:var(--paper); color:var(--navy); border:1px solid var(--line);
-  }
-  .price-card.featured .price-cta{background:var(--gold); color:var(--navy); border:none;}
-  .price-note{margin-top:28px; font-size:13px; color:var(--muted); text-align:center;}
+        /* ============================================================
+           CONSULTING SERVICES
+           ============================================================ */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            transition: border-color 0.15s, box-shadow 0.15s;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            border-color: var(--gold);
+            box-shadow: var(--shadow-hover);
+        }
+        .service-card .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .service-card h4 {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        .service-card p {
+            font-size: 13.5px;
+            color: var(--muted);
+            flex-grow: 1;
+        }
+        .service-card .price-tag {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .service-card .price-tag .amount {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        .service-card .price-tag .unit {
+            font-size: 12px;
+            color: var(--muted);
+        }
+        @media (max-width: 860px) {
+            .services-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 560px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
 
-  .problem-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-  @media(max-width:900px){ .problem-grid{grid-template-columns:1fr;} }
-  .problem-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:28px;}
-  .problem-card .num{font-family:'Fraunces',serif; font-size:32px; font-weight:700; color:var(--navy);}
-  .problem-card p{font-size:13.5px; color:var(--muted); margin-top:10px;}
-  .problem-banner{
-    margin-top:24px; background:var(--navy); color:#fff; border-radius:12px; padding:22px 26px; font-size:14.5px;
-  }
-  .problem-banner b{color:var(--gold);}
+        /* ============================================================
+           TECHNICAL TEAM — The Stack
+           ============================================================ */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .tech-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            transition: border-color 0.15s;
+        }
+        .tech-card:hover {
+            border-color: var(--gold);
+        }
+        .tech-card .icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .tech-card h4 {
+            font-size: 16.5px;
+            margin-bottom: 6px;
+        }
+        .tech-card p {
+            font-size: 13.5px;
+            color: var(--muted);
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+        .tech-stack span {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 3px 10px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+        @media (max-width: 760px) {
+            .tech-grid { grid-template-columns: 1fr; }
+        }
 
-  .timeline-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-  @media(max-width:900px){ .timeline-grid{grid-template-columns:1fr;} }
-  .timeline-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:26px;}
-  .timeline-card .yr{font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--gold-dark);}
-  .timeline-card h4{font-size:16.5px; margin-top:6px;}
-  .timeline-card ul{list-style:none; margin-top:14px; display:flex; flex-direction:column; gap:8px;}
-  .timeline-card ul li{font-size:13px; color:var(--muted); padding-left:18px; position:relative;}
-  .timeline-card ul li::before{content:"\2192"; position:absolute; left:0; color:var(--gold-dark);}
-  .timeline-card.active{border-color:var(--gold); box-shadow:0 1px 3px rgba(20,33,61,0.06);}
+        /* ============================================================
+           CASE STUDIES
+           ============================================================ */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .case-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 26px;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        .case-card:hover {
+            border-color: var(--gold);
+            box-shadow: var(--shadow-hover);
+        }
+        .case-card .result {
+            font-family: 'Fraunces', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin-bottom: 6px;
+        }
+        .case-card p {
+            font-size: 13.5px;
+            color: var(--muted);
+        }
+        @media (max-width: 760px) {
+            .case-grid { grid-template-columns: 1fr; }
+        }
 
-  .gtm-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:8px;}
-  @media(max-width:900px){ .gtm-grid{grid-template-columns:repeat(2,1fr);} }
-  @media(max-width:560px){ .gtm-grid{grid-template-columns:1fr;} }
-  .gtm-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:22px; text-align:center;}
-  .gtm-card h4{font-size:14.5px;}
-  .gtm-card p{font-size:12.5px; color:var(--muted); margin-top:6px;}
+        /* ============================================================
+           PRICING
+           ============================================================ */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .price-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            position: relative;
+            transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+        }
+        .price-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-hover);
+        }
+        .price-card.featured {
+            background: var(--navy);
+            border-color: var(--navy);
+            color: #fff;
+        }
+        .price-card.featured:hover { border-color: var(--gold); }
+        .price-card .tier-name {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+        }
+        .price-card.featured .tier-name { color: var(--gold); }
+        .price-card .tier-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .price-card .price {
+            font-family: 'Fraunces', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-top: 4px;
+        }
+        .price-card.featured .price { color: #fff; }
+        .price-card .price .unit {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--muted);
+        }
+        .price-card.featured .price .unit { color: #AAB4D4; }
+        .price-card .tier-for {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+        .price-card.featured .tier-for { color: #C7D0E8; }
+        .price-card ul {
+            list-style: none;
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-grow: 1;
+        }
+        .price-card ul li {
+            font-size: 13.5px;
+            color: var(--muted);
+            padding-left: 20px;
+            position: relative;
+        }
+        .price-card.featured ul li { color: #C7D0E8; }
+        .price-card ul li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--gold-dark);
+            font-weight: 700;
+        }
+        .price-card.featured ul li::before { color: var(--gold); }
+        .price-card .price-cta {
+            margin-top: 18px;
+            text-align: center;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            background: var(--paper);
+            color: var(--navy);
+            border: 1px solid var(--line);
+            transition: background 0.15s, border-color 0.15s;
+        }
+        .price-card .price-cta:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--navy);
+        }
+        .price-card.featured .price-cta {
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+        }
+        .price-card.featured .price-cta:hover { filter: brightness(1.06); }
+        .price-note {
+            margin-top: 24px;
+            font-size: 13px;
+            color: var(--muted);
+            text-align: center;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (max-width: 860px) {
+            .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+        }
 
-  .ask-stats{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:8px; max-width:460px;}
-  .ask-stat{background:var(--navy-2); border-radius:10px; padding:18px; text-align:center;}
-  .ask-stat .num{font-family:'Fraunces',serif; font-size:26px; font-weight:700; color:var(--gold);}
-  .ask-stat .lab{font-size:11.5px; color:#C7D0E8; margin-top:4px;}
+        /* ============================================================
+           TEAM (Revised — No Hiring Plan)
+           ============================================================ */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .team-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            transition: border-color 0.15s;
+        }
+        .team-card:hover { border-color: var(--gold); }
+        .avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--navy);
+            border: 1.5px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            color: var(--gold);
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+        .team-card h4 { font-size: 16.5px; }
+        .team-card .role {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin: 2px 0 6px;
+        }
+        .team-card p {
+            font-size: 13.5px;
+            color: var(--muted);
+        }
+        @media (max-width: 760px) {
+            .team-grid { grid-template-columns: 1fr; }
+        }
 
-  .gated-box{
-    margin-top:28px; border:1.5px dashed var(--line); border-radius:12px; padding:26px 28px;
-    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
-    background:var(--paper);
-  }
-  .gated-box .lock{
-    width:38px; height:38px; border-radius:50%; background:var(--navy); color:var(--gold);
-    display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;
-  }
-  .gated-box-text{display:flex; gap:16px; align-items:flex-start;}
-  .gated-box h4{font-size:15px; color:var(--navy); font-family:'Fraunces',serif; font-weight:600;}
-  .gated-box p{font-size:13px; color:var(--muted); margin-top:4px; max-width:520px;}
-  .gated-box .price-cta{white-space:nowrap; padding:11px 22px; background:var(--gold); color:var(--navy); border-radius:8px; font-weight:700; font-size:13.5px;}
+        /* Complete Team — Available Now Block */
+        .team-ready-block {
+            margin-top: 36px;
+            background: var(--navy);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            color: #fff;
+        }
+        .team-ready-block h4 {
+            color: var(--gold);
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+        .team-ready-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 14px;
+            color: #C7D0E8;
+        }
+        .team-ready-grid strong {
+            color: #fff;
+        }
+        .team-ready-block .bottom-text {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #AAB4D4;
+            text-align: center;
+        }
+        .team-ready-block .bottom-text strong {
+            color: var(--gold);
+        }
+        @media (max-width: 600px) {
+            .team-ready-grid { grid-template-columns: 1fr; }
+        }
 
-  .team-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  @media(max-width:760px){ .team-grid{grid-template-columns:1fr;} }
-  .team-card{background:var(--white); border:1px solid var(--line); border-radius:14px; padding:32px; display:flex; gap:18px;}
-  .avatar{
-    width:56px; height:56px; border-radius:50%; background:var(--navy); border:1.5px solid var(--gold);
-    display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700;
-    color:var(--gold); flex-shrink:0; font-size:18px;
-  }
-  .team-card h4{font-size:16.5px;}
-  .team-card .role{font-size:12.5px; font-weight:700; color:var(--gold-dark); margin:2px 0 8px;}
-  .team-card p{font-size:13.5px; color:var(--muted);}
+        /* ============================================================
+           MARKET
+           ============================================================ */
+        .market-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .market-card {
+            border-radius: var(--radius-lg);
+            padding: 32px;
+        }
+        .market-card.light {
+            background: var(--white);
+            border: 1px solid var(--line);
+        }
+        .market-card.dark {
+            background: var(--navy);
+            color: #fff;
+        }
+        .market-card h4 {
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+        .market-card.dark h4 { color: var(--gold); }
+        .market-row { margin-bottom: 16px; }
+        .market-row .big {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--gold-dark);
+        }
+        .market-card.dark .market-row .big { color: #fff; }
+        .market-row .small {
+            font-size: 12.5px;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+        .market-card.dark .market-row .small { color: #AAB4D4; }
+        .market-card .footnote {
+            margin-top: 10px;
+            font-size: 11.5px;
+            color: var(--gray);
+        }
+        .market-card.dark .footnote { color: #8B96B8; }
+        @media (max-width: 760px) {
+            .market-grid { grid-template-columns: 1fr; }
+        }
 
-  .cta-band{background:var(--navy); color:#fff; text-align:center; padding:80px 0;}
-  .cta-band h2{color:#fff; font-size:clamp(26px,3.6vw,38px);}
-  .cta-band p{color:#AAB4D4; margin:14px auto 32px; max-width:520px; font-size:15.5px;}
-  .cta-buttons{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
-  footer{background:#0F1830; color:#7C88AC; padding:36px 0; font-size:13px;}
-  footer .container{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;}
-  footer a{color:#AAB4D4;}
-  footer a:hover{color:var(--gold);}
-</style>
+        /* USP Grid */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .usp-item {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+        }
+        .usp-item .icon {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+        .usp-item h4 {
+            font-size: 14.5px;
+        }
+        .usp-item p {
+            font-size: 12.5px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+        @media (max-width: 700px) {
+            .usp-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================================
+           CTA BAND
+           ============================================================ */
+        .cta-band {
+            background: var(--navy);
+            color: #fff;
+            text-align: center;
+            padding: 72px 0;
+        }
+        .cta-band h2 {
+            color: #fff;
+            font-size: clamp(26px, 3.6vw, 38px);
+        }
+        .cta-band p {
+            color: #AAB4D4;
+            margin: 14px auto 32px;
+            max-width: 560px;
+            font-size: 15.5px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            background: var(--navy-3);
+            color: #7C88AC;
+            padding: 32px 0;
+            font-size: 13px;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        footer a { color: #AAB4D4; transition: color 0.15s; }
+        footer a:hover { color: var(--gold); }
+    </style>
 </head>
 <body>
 
-<header class="nav">
-  <div class="nav-inner">
-    <div class="brand"><span class="mark">A</span> Arsiva</div>
-    <nav class="nav-links">
-      <a href="#problem">Problem</a>
-      <a href="#live">Live Product</a>
-      <a href="#trust">Trust &amp; Architecture</a>
-      <a href="#modules">Platform Roadmap</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#market">Market</a>
-      <a href="#funds">The Ask</a>
-      <a href="#team">Team</a>
-    </nav>
-    <a class="nav-cta" href="https://wa.me/6580174461" target="_blank" rel="noopener">Talk to Us</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container">
-    <div class="eyebrow"><span class="dot"></span> Live in Jakarta &middot; Rp 18M MRR &middot; Raising $568K Seed</div>
-    <h1>On-Premise <em>Compliance OS</em> for Notaries, Law Firms &amp; RWA Tokenization</h1>
-    <p class="sub">One platform for Notaries, Law Firms, Property/Asset Management companies, and Singapore Holding entities — automating document drafting, asset onboarding, legal structuring, and compliance output for token issuance, built on 100% on-premise infrastructure with zero data egress to external cloud AI providers.</p>
-    <p class="id-line">Satu platform untuk Notaris, Law Firm, Property, dan SG Holding — dari drafting dokumen hingga compliance penerbitan token, sepenuhnya on-premise di Indonesia.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-primary" href="#live">See Our Live Product &rarr;</a>
-      <a class="btn btn-secondary" href="https://wa.me/6580174461" target="_blank" rel="noopener">
-        Chat With Us
-      </a>
-    </div>
-  </div>
-</section>
-
-<div class="live-strip">
-  <div class="container">
-    <div class="live-stat"><div class="num">Rp 18M</div><div class="label">Monthly Recurring Revenue (~US$1,000)</div></div>
-    <div class="live-stat"><div class="num">~$12,000</div><div class="label">ARR Run-Rate on Current MRR</div></div>
-    <div class="live-stat"><div class="num">11</div><div class="label">Active Clients (10 Notary &middot; 1 Law Firm)</div></div>
-    <div class="live-stat"><div class="num">9</div><div class="label">Asset Management Companies in Pipeline</div></div>
-    <div class="live-stat"><div class="num">&lt;5 sec</div><div class="label">Average Search Time</div></div>
-    <div class="live-note">Our first 11 clients are on <b>early pilot pricing</b> (~US$90/mo avg). Renewing into our published tiers takes current MRR to <b>~US$2,750/mo</b> — before a single new client is added.</div>
-  </div>
-</div>
-
-<section id="problem" style="background:var(--white); border-top:1px solid var(--line);">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">The Problem</div>
-      <h2>Indonesia's Notaris Workflow Is Slow, Error-Prone, and Legally Exposed</h2>
-      <p>Every module we build starts from the same desk: a notary's office buried in physical and scanned archives, working against deadlines that manual drafting can't keep up with.</p>
-    </div>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="num">30 Days</div>
-        <p>to complete a single akta (notarial deed) through manual document drafting and review.</p>
-      </div>
-      <div class="problem-card">
-        <div class="num">40%</div>
-        <p>of drafts require correction — inconsistent clause language, missed references, manual re-entry.</p>
-      </div>
-      <div class="problem-card">
-        <div class="num">UU PDP Risk</div>
-        <p>No on-premise AI option exists — cloud LLM tools route client data outside Indonesian jurisdiction.</p>
-      </div>
-    </div>
-    <div class="problem-banner">No incumbent offers a fully on-premise, <b>UU PDP No. 27/2022</b>-compliant AI platform purpose-built for the Notaris / Law Firm / Asset Management workflow.</div>
-  </div>
-</section>
-
-<section id="live">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Proven Today</div>
-      <h2>The Notary AI Archive — Live, Paid, and Working</h2>
-      <p>Before we automate the full RWA compliance chain, we're proving the model where it's needed most: the notary's desk. This module is live, generating recurring revenue, and validated across 10+ offices in Jabodetabek.</p>
-    </div>
-    <div class="live-product">
-      <div>
-        <div class="status-live"><span class="dot"></span> LIVE PRODUCT</div>
-        <h3>Upload 1,000 PDFs. Ask in Plain Language.</h3>
-        <p>ARSIVA turns physical and scanned notarial archives into an instantly searchable, conversational system — no exact filenames, no rigid keywords. Every answer is pulled directly from the office's own documents, deployed on a private or dedicated server.</p>
-        <div class="hero-ctas" style="margin-top:24px;">
-          <a class="btn btn-primary" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20request%20a%20live%20walkthrough%20of%20ARSIVA." target="_blank" rel="noopener" style="flex-direction:column; align-items:flex-start; padding:12px 22px;">
-            Request a Live Walkthrough &rarr;
-            <span class="btn-note" style="color:var(--navy); opacity:0.65;">5-minute guided demo, direct with the founder</span>
-          </a>
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">
+                <span class="mark">A</span> Arsiva
+            </div>
+            <nav class="nav-links">
+                <a href="#regulatory-fork">Regulatory Fork</a>
+                <a href="#services">Services</a>
+                <a href="#tech-team">Tech Team</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#case-studies">Results</a>
+                <a href="#market">Market</a>
+            </nav>
+            <a class="nav-cta" href="https://wa.me/6580174461" target="_blank" rel="noopener">Book a Consultation</a>
         </div>
-      </div>
-      <div class="mini-chat">
-        <div class="tag">Contoh Percakapan</div>
-        <div class="bubble user"><b>User:</b> "Akta Hibah Siti Nurbaya 2020 dimana?"</div>
-        <div class="bubble bot"><b>ARSIVA:</b> "Ketemu Bu. 2 Dokumen. Mau tak buka?"</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<section id="trust" style="background:var(--white); border-top:1px solid var(--line);">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Trust &amp; Architecture</div>
-      <h2>Compliance Isn't a Feature Here — It's How the System Is Built</h2>
-      <p>Most platforms add compliance controls after the fact, in application code that a future bug can quietly break. Arsiva enforces them at the database layer itself.</p>
-    </div>
-    <div class="modules-grid">
-      <div class="module-card">
-        <div class="module-num">Data Isolation</div>
-        <h4>Structural, Not Conventional</h4>
-        <p>Every client's data is walled off by row-level security enforced by the database itself — not just checked by our application code. Even a bug in a workflow can't return one client's records to another.</p>
-      </div>
-      <div class="module-card">
-        <div class="module-num">Single Write Path</div>
-        <h4>Every Write Is Logged</h4>
-        <p>Client-facing forms and chat agents never write to the database directly. Every write passes through one automated pipeline, so there is always one consistent record of what happened and when.</p>
-      </div>
-      <div class="module-card">
-        <div class="module-num">Audit Trail</div>
-        <h4>Immutable by Design</h4>
-        <p>Every significant event is recorded in an append-only log — not deletable, not editable, even by us. That's the actual evidence trail regulators and investors can rely on.</p>
-      </div>
-    </div>
-    <p class="footnote" style="margin-top:24px;">Built on Postgres (via Supabase) for the data layer and a Python application on Vercel for orchestration — proven, auditable infrastructure rather than a custom stack no one outside the company can evaluate.</p>
-    <div class="problem-banner" style="margin-top:28px;">This lean pilot stack proves the model. The <b>$568,000 seed round</b> funds ARSIVA V2.0 — the same three modules rebuilt on fully on-premise infrastructure (K3s, PostgreSQL+pgvector, MinIO, on-prem GPU inference) at a Tier 3 Indonesia data center, so 100% data residency and zero external cloud AI egress become structural properties of the deployment, not configuration choices.</div>
-  </div>
-</section>
-
-<section id="modules" style="background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">The Platform Roadmap</div>
-      <h2>Three Modules Live. Three More at Full MVP.</h2>
-      <p>We sequence deliberately — proving each module with real, paying clients before building the next, rather than building six modules at once.</p>
+    <!-- ============================================================
+    FLOATING CTA (mobile)
+    ============================================================ -->
+    <div class="floating-cta">
+        <a href="https://wa.me/6580174461" target="_blank" rel="noopener">
+            💬 Book a Consultation
+        </a>
     </div>
 
-    <p class="footnote" style="margin-bottom:12px; font-weight:700; color:var(--navy);">NOW — EARLY MVP</p>
-    <div class="modules-grid">
+    <!-- ============================================================
+    HERO
+    ============================================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="eyebrow">
+                <span class="dot"></span> Live in Jakarta &middot; Rp 18M MRR &middot; Available 6-Month Contracts
+            </div>
+            <h1>
+                Legaltech Consultant &amp; <em>AI Compliance Engineering</em> for <span class="highlight">RWA Tokenization</span>
+            </h1>
+            <p class="sub">
+                We help RWA tokenization projects navigate the <strong>OJK vs PFII Regulatory Fork</strong> with AI-powered compliance analysis — then we <strong>build the on-premise system</strong> to automate it.
+            </p>
+            <p class="id-line">
+                Konsultan Legaltech + Tim Teknis AI untuk navigasi regulasi RWA Tokenization di Indonesia — dari OJK Sandbox ke PFII, dengan sistem on-premise dan audit trail.
+            </p>
+            <div class="hero-ctas">
+                <a class="btn btn-primary" href="#services">Explore Our Services &rarr;</a>
+                <a class="btn btn-secondary" href="https://wa.me/6580174461" target="_blank" rel="noopener">Book a Free Consultation</a>
+            </div>
 
-      <div class="module-card">
-        <div class="module-num">Module A</div>
-        <h4>NotaryAI</h4>
-        <p>Searchable, conversational archive for scanned notarial documents. Live and generating recurring revenue.</p>
-        <span class="status-tag live">Live &middot; 10 Clients</span>
-      </div>
+            <!-- Regulatory Alert -->
+            <div class="regulatory-alert">
+                <span class="icon">⚖️</span>
+                <span class="text">
+                    <strong>UU PFII Enacted July 2026.</strong> The market is frozen at a Regulatory Fork: 
+                    <strong>OJK Sandbox</strong> (proven, limited tax) vs <strong>PFII</strong> (tax incentives, pending implementing regs). 
+                    <strong>We help you choose — and build.</strong>
+                </span>
+            </div>
 
-      <div class="module-card">
-        <div class="module-num">Module B</div>
-        <h4>LawAI Investment</h4>
-        <p>Investment-focused legal workflow automation for law firms structuring RWA and tokenization deals.</p>
-        <span class="status-tag live">Live &middot; 1 Client</span>
-      </div>
-
-      <div class="module-card">
-        <div class="module-num">Module C</div>
-        <h4>AssetAI Property</h4>
-        <p>Digitize asset documents and automate onboarding for property and asset management companies.</p>
-        <span class="status-tag dev">Reserved &middot; 9 Pipeline</span>
-      </div>
-
-    </div>
-
-    <p class="footnote" style="margin:32px 0 12px; font-weight:700; color:var(--navy);">NEXT — FULL MVP</p>
-    <div class="modules-grid">
-
-      <div class="module-card">
-        <h4>Exchange &amp; Secondary Market</h4>
-        <p>Direct connections to licensed exchanges with full audit trails and reporting.</p>
-        <span class="status-tag dev">Roadmap</span>
-      </div>
-
-      <div class="module-card">
-        <h4>Research &amp; Valuation</h4>
-        <p>Institutional-grade compliance reports, powered by ARSIVA's own RAG engine trained on RWA data.</p>
-        <span class="status-tag dev">Roadmap</span>
-      </div>
-
-      <div class="module-card">
-        <h4>Cross-Border Compliance</h4>
-        <p>Manage KYC, AML, tax, and regulatory reporting across Indonesia, Singapore, and Dubai.</p>
-        <span class="status-tag dev">Roadmap</span>
-      </div>
-
-    </div>
-
-    <p class="footnote" style="margin:40px 0 12px; font-weight:700; color:var(--navy);">SCALE ROADMAP — INFRASTRUCTURE &amp; TEAM</p>
-    <div class="timeline-grid">
-      <div class="timeline-card active">
-        <div class="yr">Year 1</div>
-        <h4>KPOI 70% — This Raise</h4>
-        <ul>
-          <li>1x A100-class GPU, DCI Indonesia bare metal</li>
-          <li>6-person engineering team, fully staffed Q1</li>
-          <li>100 Notaris onboarded</li>
-          <li>Full MVP launch — Q2</li>
-        </ul>
-      </div>
-      <div class="timeline-card">
-        <div class="yr">Year 2</div>
-        <h4>Post-Series A → KPOI 90%</h4>
-        <ul>
-          <li>Scale to 2x Nvidia A100, tensor-parallel</li>
-          <li>Engineering team restored to 14 FTE</li>
-          <li>500 Notaris</li>
-          <li>Law Firm &amp; Asset Management segments activated</li>
-        </ul>
-      </div>
-      <div class="timeline-card">
-        <div class="yr">Year 3</div>
-        <h4>Enterprise Scale</h4>
-        <ul>
-          <li>2,000 Notaris across all three modules</li>
-          <li>Enterprise / BUMN-adjacent accounts</li>
-          <li>Regional expansion beyond Jakarta</li>
-          <li>Certified ISO/IEC 27001 posture</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Pricing</div>
-      <h2>One OS, Priced to Match What You Onboard</h2>
-      <p>Plans scale with module access and regulatory complexity — from a single notary office to institutions running full RWA tokenization and trading operations.</p>
-    </div>
-    <div class="pricing-grid">
-
-      <div class="price-card">
-        <div class="tier-name">Essential</div>
-        <div class="price">$250<span class="unit">/month</span></div>
-        <div class="tier-for">For individual notary offices and small operators getting started</div>
-        <ul>
-          <li>Core access to NotaryAI</li>
-          <li>Searchable document archive, single office</li>
-          <li>Standard email &amp; WhatsApp support</li>
-        </ul>
-        <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Arsiva%20Essential%20plan." target="_blank" rel="noopener">Talk to Sales</a>
-      </div>
-
-      <div class="price-card featured">
-        <div class="tier-badge">Most Popular</div>
-        <div class="tier-name">Professional</div>
-        <div class="price">$500<span class="unit">/month</span></div>
-        <div class="tier-for">For growing firms that need compliance depth across offices</div>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Multi-office deployment</li>
-          <li>LawAI Investment or AssetAI Property access</li>
-          <li>Priority support &amp; onboarding assistance</li>
-        </ul>
-        <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Arsiva%20Professional%20plan." target="_blank" rel="noopener">Talk to Sales</a>
-      </div>
-
-      <div class="price-card">
-        <div class="tier-name">Corporate</div>
-        <div class="price">$1,500&ndash;3,000<span class="unit">/month</span></div>
-        <div class="tier-for">For RWA tokenization platforms, exchanges, and financial institutions</div>
-        <ul>
-          <li>Full six-module suite</li>
-          <li>Cross-border compliance (Indonesia, Singapore, UAE)</li>
-          <li>Dedicated onboarding &amp; custom SLA</li>
-          <li>Priced to scope — final quote after a discovery call</li>
-        </ul>
-        <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20discuss%20the%20Arsiva%20Corporate%20plan." target="_blank" rel="noopener">Talk to Sales</a>
-      </div>
-
-    </div>
-    <p class="price-note">All plans billed monthly, plus a one-time setup/onboarding fee. Our first 11 offices are on early pilot pricing below Essential and are renewing into these published tiers. Corporate pricing depends on transaction volume, module mix, and jurisdictions covered.</p>
-  </div>
-</section>
-
-<section id="market">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Market</div>
-      <h2>A Concrete Wedge Inside a Fast-Growing Category</h2>
-    </div>
-    <div class="market-grid">
-      <div class="market-card light">
-        <h4>NOTARIS-FIRST &middot; TAM / SAM</h4>
-        <div class="market-row"><div class="big">$60M ARR</div><div class="small">TAM — 12,000 actively-targetable Notaris nationally x $5K/yr</div></div>
-        <div class="market-row"><div class="big">$500K</div><div class="small">Year 1 SAM — our 100-Notaris beachhead cohort</div></div>
-        <div class="market-row"><div class="big">Rp 18M / month</div><div class="small">ARSIVA's current MRR — proof of willingness to pay</div></div>
-        <p class="footnote">Pitch deck market model, July 2026. A broader pool of 17,000&ndash;20,000 registered notary offices exists per Ministry of Law / INI estimates; 12,000 reflects the actively practicing, targetable segment used in our revenue model &mdash; not yet validated across the whole segment.</p>
-      </div>
-      <div class="market-card dark">
-        <h4>TOP-DOWN &middot; THE RWA TAILWIND</h4>
-        <div class="market-row"><div class="big">$33.5B</div><div class="small">On-chain RWA value globally, July 2026 — up 400%+ since early 2025</div></div>
-        <div class="market-row"><div class="big">$15.8B &rarr; $70.8B</div><div class="small">Global RegTech market by 2033, at an 18% CAGR</div></div>
-        <div class="market-row"><div class="big">APAC</div><div class="small">Projected fastest-growing region for asset tokenization</div></div>
-        <div class="market-row"><div class="big">POJK 3/2024</div><div class="small">OJK's DFA Sandbox formally recognizes tokenized RWA as "Backed DFA"</div></div>
-      </div>
-    </div>
-
-    <p class="footnote" style="margin:36px 0 12px; font-weight:700; color:var(--navy);">GO-TO-MARKET — RELATIONSHIP-LED, NOT SPEND-LED</p>
-    <div class="gtm-grid">
-      <div class="gtm-card">
-        <h4>INI Partnership</h4>
-        <p>Ikatan Notaris Indonesia — our primary trusted channel into the Notaris community.</p>
-      </div>
-      <div class="gtm-card">
-        <h4>Direct WhatsApp</h4>
-        <p>WhatsApp Business outreach — the channel Notaris already use for client servicing.</p>
-      </div>
-      <div class="gtm-card">
-        <h4>Webinars</h4>
-        <p>Organic education content and product demos, no paid media.</p>
-      </div>
-      <div class="gtm-card">
-        <h4>CAC &lt; $500</h4>
-        <p>Modeled from INI-channel and WhatsApp-outreach cost structure — no paid acquisition run yet, so this is a cost-structure estimate, not a measured CAC.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="funds" style="background:var(--white); border-top:1px solid var(--line);">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">The Ask</div>
-      <h2>Raising a $568,000 Seed Round</h2>
-      <p>Sized to fund the full Year 1 KPOI 70% plan on a fully on-premise, UU PDP-compliant architecture — extending runway through our Full MVP launch and toward the Series A milestone.</p>
-    </div>
-    <div class="ask-stats">
-      <div class="ask-stat"><div class="num">100</div><div class="lab">Notaris onboarded</div></div>
-      <div class="ask-stat"><div class="num">70%</div><div class="lab">KPOI target achieved</div></div>
-    </div>
-    <div class="gated-box">
-      <div class="gated-box-text">
-        <div class="lock">&#128274;</div>
-        <div>
-          <h4>Detailed financials, on request</h4>
-          <p>Use-of-funds breakdown by category, break-even timeline, 3-year financial model, and cap table are shared directly with qualified investors under NDA — not published here.</p>
+            <div class="audience-tabs">
+                <a href="#services" class="active">For RWA Projects / Investors</a>
+                <a href="#tech-team">For Technical Teams</a>
+                <a href="#market">For Market Insights</a>
+            </div>
         </div>
-      </div>
-      <a class="price-cta" href="mailto:satmoko@arsiva.tech?subject=Arsiva%20Investor%20Data%20Room%20Request" style="flex-shrink:0;">Request Investor Data Room</a>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="team" style="background:var(--white); border-top:1px solid var(--line);">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Team</div>
-      <h2>Built by a Practitioner, Not an Outsider</h2>
-    </div>
-    <div class="team-grid" style="grid-template-columns:1fr; max-width:460px; margin:0 auto;">
-      <div class="team-card">
-        <div class="avatar">BS</div>
-        <div>
-          <h4>Bambang Satmoko, S.T., S.H.</h4>
-          <div class="role">Founder &amp; CEO</div>
-          <p>7 years structuring STO/RWA deals as Managing Partner, Satmoko Law Firm — OJK Sandbox advisory, SPV/TSPV structuring, ERC-3643/OnChainID compliance design.</p>
+    <!-- ============================================================
+    LIVE STRIP (stats)
+    ============================================================ -->
+    <div class="live-strip">
+        <div class="container">
+            <div class="live-stat"><div class="num">Rp 18M</div><div class="label">Monthly Recurring Revenue (~US$1,000)</div></div>
+            <div class="live-stat"><div class="num">11</div><div class="label">Active Clients (10 Notary &middot; 1 Law Firm)</div></div>
+            <div class="live-stat"><div class="num">9</div><div class="label">Asset Management Companies in Pipeline</div></div>
+            <div class="live-stat"><div class="num">6 Mos</div><div class="label">Available Remote Contracts</div></div>
+            <div class="live-note">
+                <b>We are a pre-assembled, battle-tested unit.</b> Legal expertise + AI engineering (Python, Neo4j, FAISS, Supabase) — available for focused 6-month engagements.
+            </div>
         </div>
-      </div>
     </div>
-    <p class="footnote" style="margin:32px 0 12px; font-weight:700; color:var(--navy); text-align:center;">Q1 HIRING PLAN — FUNDED BY THIS RAISE</p>
-    <div class="gtm-grid">
-      <div class="gtm-card"><h4>CTO</h4><p>Q1</p></div>
-      <div class="gtm-card"><h4>AI/LLM Engineer &times;2</h4><p>Q1</p></div>
-      <div class="gtm-card"><h4>DevOps / SRE</h4><p>Q1</p></div>
-      <div class="gtm-card"><h4>Backend &amp; QA Engineer</h4><p>Q1</p></div>
-    </div>
-    <p class="footnote" style="margin-top:16px; text-align:center;">Founder-led today; a 6-person core team fully staffed Q1, no phased delay. Advisors drawn from the Ikatan Notaris Indonesia (INI) network — providing domain credibility and the primary Year 1 go-to-market channel.</p>
-  </div>
-</section>
 
-<div class="cta-band">
-  <div class="container">
-    <h2>Building the On-Premise Compliance Layer Indonesia's Legal &amp; RWA Sector Runs On</h2>
-    <p>Raising a US$568,000 seed round to reach 100 Notaris at KPOI 70% on a fully on-premise, UU PDP-compliant architecture — extending runway through our Full MVP launch and completing the full six-module platform.</p>
-    <div class="cta-buttons">
-      <a class="btn btn-primary" href="mailto:satmoko@arsiva.tech?subject=Arsiva%20Investor%20Data%20Room%20Request">Request Investor Data Room</a>
-      <a class="btn btn-secondary" href="https://wa.me/6580174461" target="_blank" rel="noopener">Chat WA Arsiva</a>
-    </div>
-    <p class="footnote" style="margin-top:18px; color:#AAB4D4;">Financial model, cap table, and round terms are shared directly with qualified investors upon request.</p>
-  </div>
-</div>
+    <!-- ============================================================
+    REGULATORY FORK — The Core Pitch
+    ============================================================ -->
+    <section id="regulatory-fork" style="background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+        <div class="container">
+            <div class="section-head">
+                <div class="kicker">The Regulatory Fork</div>
+                <h2>OJK Sandbox vs. PFII — Which Path Should You Take?</h2>
+                <p>
+                    On July 21, 2026, Indonesia enacted <strong>UU PFII</strong>. Every RWA tokenization project now faces a critical choice:
+                    proceed via the proven <strong>OJK Sandbox</strong> (POJK 3/2024) or wait for the new <strong>PFII</strong> pathway (tax incentives, global flexibility).
+                    <strong style="color:var(--navy);">Arsiva is the only team that can analyze both and build your compliance system.</strong>
+                </p>
+                <p style="font-size:14px; color:var(--gray); margin-top:6px;">
+                    <a href="https://www.linkedin.com/pulse/uu-pfii-baru-disahkan-mengapa-pasar-tokenisasi-rwa-justru-satmoko-ts82c/" target="_blank" rel="noopener" style="color:var(--gold-dark); text-decoration:underline;">
+                        Read the full market analysis &rarr;
+                    </a>
+                </p>
+            </div>
 
-<footer>
-  <div class="container">
-    <div>&copy; 2026 Arsiva Tech. All rights reserved.</div>
-    <div><a href="mailto:satmoko@arsiva.tech">satmoko@arsiva.tech</a> &nbsp;&middot;&nbsp; <a href="https://wa.me/6580174461" target="_blank" rel="noopener">+65 8017 4461</a></div>
-  </div>
-</footer>
+            <div class="fork-grid">
+                <div class="fork-card">
+                    <div class="icon">🏛️</div>
+                    <span class="badge ojk">OJK Sandbox (POJK 3/2024)</span>
+                    <h4>Proven, Operational, Limited Tax</h4>
+                    <p>
+                        The existing regulatory sandbox. Recognized as "Backed DFA" by OJK. 
+                        Proven pathway with clear procedures — but limited tax incentives and less global structuring flexibility.
+                    </p>
+                    <div class="highlight">
+                        <span class="check">✓</span> <b>Arsiva advantage:</b> We've structured STO/RWA deals through OJK Sandbox. 
+                        Our compliance OS automates reporting, audit trails, and legal structuring — <b>reducing preparation time by up to 60%</b>.
+                    </div>
+                </div>
+                <div class="fork-card">
+                    <div class="icon">📜</div>
+                    <span class="badge pfii">UU PFII (New Pathway)</span>
+                    <h4>Tax Incentives, Global Flexibility — Pending Regs</h4>
+                    <p>
+                        The newly enacted UU PFII offers significant tax incentives and greater flexibility for cross-border structures. 
+                        <strong>But implementing regulations are still pending</strong> — creating uncertainty for investors.
+                    </p>
+                    <div class="highlight">
+                        <span class="check">✓</span> <b>Arsiva advantage:</b> Once PFII implementing regulations are released, 
+                        our <b>Neo4j Knowledge Graph + FAISS RAG</b> system will analyze trade-offs in real-time — 
+                        recommending the optimal pathway with <b>hard data, not guesswork</b>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- PMA Regulation Alert -->
+            <div class="pma-alert">
+                <h4>🔑 The PMA Regulation Dilemma — Why You Need a Consultant</h4>
+                <p>
+                    <strong>Permen Investasi &amp; Hilirisasi/BKPM No. 5 Tahun 2025</strong> requires all PMA (Foreign Investment) entities to have:
+                </p>
+                <div class="pma-grid">
+                    <div class="pma-item">
+                        <div class="big">&gt; Rp 10B</div>
+                        <div class="lab">Minimum Investment (excluding land &amp; buildings)</div>
+                    </div>
+                    <div class="pma-item">
+                        <div class="big">Rp 2.5B</div>
+                        <div class="lab">Paid-up Capital (12-month lock-up)</div>
+                    </div>
+                    <div class="pma-item">
+                        <div class="big">PT Only</div>
+                        <div class="lab">PMA must be a Limited Liability Company (PT)</div>
+                    </div>
+                </div>
+                <p style="margin-top:14px; font-size:14px;">
+                    <strong style="color:var(--gold);">Key insight:</strong> Without UU PFII implementing regulations, investors <strong>don't need to follow PMA rules yet</strong> — 
+                    but they don't know which pathway (OJK vs PFII) will require what. 
+                    <strong style="color:var(--gold);">That's where we come in.</strong> We analyze the regulatory fork and build the compliance system that works for both scenarios.
+                </p>
+            </div>
+
+            <div style="margin-top:32px; background:var(--navy-2); border-radius:var(--radius); padding:24px 28px; color:#fff; text-align:center;">
+                <p style="font-size:15px; max-width:700px; margin:0 auto;">
+                    <strong style="color:var(--gold);">The market isn't stalled — it's waiting.</strong> 
+                    We turn regulatory uncertainty into a competitive advantage.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SERVICES — Consulting & Implementation
+    ============================================================ -->
+    <section id="services">
+        <div class="container">
+            <div class="section-head">
+                <div class="kicker">What We Offer</div>
+                <h2>Legaltech Consulting + AI Implementation</h2>
+                <p>
+                    We are a complete unit: <strong>legal expertise</strong> (founder is a lawyer with 7 years STO/RWA structuring experience) 
+                    + <strong>AI engineering</strong> (Python, Neo4j, FAISS, Supabase, LangChain). 
+                    We don't just advise — we build.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">⚖️</div>
+                    <h4>Regulatory Fork Analysis</h4>
+                    <p>
+                        We analyze your specific RWA tokenization project against both OJK Sandbox and PFII frameworks. 
+                        We deliver a <strong>data-driven recommendation</strong> on which pathway optimizes your tax position, 
+                        compliance cost, and global structuring flexibility.
+                    </p>
+                    <div class="price-tag">
+                        <span><span class="amount">$1,500</span> <span class="unit">/ analysis</span></span>
+                        <a class="btn-sm" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Regulatory%20Fork%20Analysis." target="_blank" rel="noopener">Book</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🤖</div>
+                    <h4>AI Compliance OS Build</h4>
+                    <p>
+                        We build your <strong>on-premise compliance system</strong> — RAG + Knowledge Graph (Neo4j) + FAISS. 
+                        Automates regulatory reporting, audit trails, legal document drafting, and compliance monitoring. 
+                        <strong>Zero data egress</strong> to external cloud providers — fully UU PDP compliant.
+                    </p>
+                    <div class="price-tag">
+                        <span><span class="amount">$25K–50K</span> <span class="unit">/ 6-month sprint</span></span>
+                        <a class="btn-sm" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20Compliance%20OS%20build." target="_blank" rel="noopener">Discuss</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📄</div>
+                    <h4>Legal Document Automation</h4>
+                    <p>
+                        We automate the most time-consuming work in legal practice: <strong>document drafting, review, and search</strong>. 
+                        Our NotaryAI module is live with 10+ notary offices — reducing document search time from 30 days to 5 seconds.
+                    </p>
+                    <div class="price-tag">
+                        <span><span class="amount">$10K–25K</span> <span class="unit">/ per module</span></span>
+                        <a class="btn-sm" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20discuss%20document%20automation." target="_blank" rel="noopener">Discuss</a>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top:24px; text-align:center; font-size:14px; color:var(--muted);">
+                All services include <strong>full-stack delivery</strong>: Python FastAPI backend, Supabase database, Neo4j knowledge graph, 
+                FAISS vector search, and custom <strong>JavaScript/HTML/CSS</strong> dashboards and embeddable widgets.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    TECHNICAL TEAM — The Stack
+    ============================================================ -->
+    <section id="tech-team" style="background:var(--white); border-top:1px solid var(--line);">
+        <div class="container">
+            <div class="section-head">
+                <div class="kicker">The Technical Team</div>
+                <h2>We Build What We Advise</h2>
+                <p>
+                    We are a <strong>pre-assembled, battle-tested team</strong> of legal-AI engineers. 
+                    Our stack is production-grade and proven with 11+ live clients.
+                </p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="icon">🧠</div>
+                    <h4>AI &amp; RAG Engineering</h4>
+                    <p>
+                        We build <strong>hybrid retrieval systems</strong> combining vector search (FAISS) with knowledge graph traversal (Neo4j). 
+                        Our RAG pipelines eliminate hallucination by grounding LLM responses in structured legal relationships.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>FAISS</span>
+                        <span>Neo4j</span>
+                        <span>LangChain</span>
+                        <span>LangGraph</span>
+                        <span>HuggingFace</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="icon">🗄️</div>
+                    <h4>Backend &amp; Data Infrastructure</h4>
+                    <p>
+                        We build <strong>on-premise, UU PDP-compliant infrastructure</strong> with PostgreSQL (Supabase), MinIO, and K3s. 
+                        Database-layer enforcement of data isolation, immutable audit trails, and single write paths.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python FastAPI</span>
+                        <span>Supabase</span>
+                        <span>PostgreSQL</span>
+                        <span>MinIO</span>
+                        <span>K3s</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="icon">🎨</div>
+                    <h4>Frontend &amp; Embeddable Widgets</h4>
+                    <p>
+                        We build <strong>custom, lightweight embeddable chat widgets</strong> and admin dashboards using Vanilla JavaScript, HTML, and CSS. 
+                        Real-time streaming responses, live typing indicators, and brandable UI — <strong>zero third-party dependencies</strong>.
+                    </p>
+                    <div class="tech-stack">
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>WebSockets</span>
+                        <span>Server-Sent Events</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="icon">🔐</div>
+                    <h4>Compliance &amp; Audit</h4>
+                    <p>
+                        We enforce compliance <strong>at the database layer</strong> — not just in application code. 
+                        Row-level security, immutable audit logs, and on-premise GPU inference. 
+                        <strong>Zero data egress</strong> to external cloud AI providers — regulator-ready.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Supabase RLS</span>
+                        <span>Audit Logs</span>
+                        <span>On-Prem GPU</span>
+                        <span>UU PDP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:32px; background:var(--navy-2); border-radius:var(--radius); padding:24px 28px; color:#fff; text-align:center;">
+                <p style="font-size:15px; max-width:700px; margin:0 auto;">
+                    <strong style="color:var(--gold);">6-Month Availability:</strong> 
+                    We are a complete 3-person team (AI Engineer, Backend/DevOps, Frontend/QA) available for focused remote engagements. 
+                    <strong style="color:var(--gold);">No ramp-up time — we deliver Day 1.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CASE STUDIES
+    ============================================================ -->
+    <section id="case-studies" style="background:var(--white); border-bottom:1px solid var(--line);">
+        <div class="container">
+            <div class="section-head">
+                <div class="kicker">Proven Results</div>
+                <h2>Live Results from Real Clients</h2>
+                <p>Anonymized case studies from our first 11 clients — proving the model before we scale.</p>
+            </div>
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="result">30 days → 5 seconds</div>
+                    <p><strong>Jakarta Notary Office</strong> — Reduced document search time from 30 days to 5 seconds using NotaryAI's conversational archive (RAG + FAISS + Neo4j).</p>
+                </div>
+                <div class="case-card">
+                    <div class="result">40% fewer errors</div>
+                    <p><strong>Jakarta Law Firm</strong> — Automated clause drafting and reference checking using LawAI, cutting manual revision cycles by 40%.</p>
+                </div>
+                <div class="case-card">
+                    <div class="result">9 in pipeline</div>
+                    <p><strong>Asset Management Companies</strong> — 9 firms in active pipeline for AssetAI Property module, representing ~$45K annualized revenue at full pricing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    PRICING — Consulting & Implementation
+    ============================================================ -->
+    <section id="pricing" style="background:var(--white); border-top:1px solid var(--line);">
+        <div class="container">
+            <div class="section-head">
+                <div class="kicker">Investment &amp; Engagement</div>
+                <h2>Flexible Engagement Models</h2>
+                <p>
+                    From a one-off regulatory analysis to a full 6-month compliance OS build — we structure our engagement to match your project's stage and complexity.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="tier-name">Consulting</div>
+                    <div class="price">$1,500<span class="unit">/ analysis</span></div>
+                    <div class="tier-for">Regulatory Fork Analysis — OJK vs PFII recommendation</div>
+                    <ul>
+                        <li>Deep-dive analysis of your RWA tokenization project</li>
+                        <li>OJK Sandbox vs PFII pathway comparison</li>
+                        <li>Tax position &amp; compliance cost modeling</li>
+                        <li>Written recommendation with implementation roadmap</li>
+                        <li>45-minute strategy call with founder</li>
+                    </ul>
+                    <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Consulting%20engagement." target="_blank" rel="noopener">Book Now</a>
+                </div>
+
+                <div class="price-card featured">
+                    <div class="tier-badge">Most Popular</div>
+                    <div class="tier-name">Implementation Sprint</div>
+                    <div class="price">$25K<span class="unit">/ 3 months</span></div>
+                    <div class="tier-for">Full compliance OS build — RAG + Knowledge Graph + Dashboard</div>
+                    <ul>
+                        <li>End-to-end system architecture &amp; design</li>
+                        <li>RAG pipeline with FAISS + Neo4j integration</li>
+                        <li>On-premise deployment (UU PDP compliant)</li>
+                        <li>Custom dashboard &amp; embeddable widget</li>
+                        <li>Audit trail &amp; data isolation enforcement</li>
+                        <li>Complete handover &amp; documentation</li>
+                    </ul>
+                    <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20discuss%20an%20Implementation%20Sprint." target="_blank" rel="noopener">Let's Talk</a>
+                </div>
+
+                <div class="price-card">
+                    <div class="tier-name">Full 6-Month Engagement</div>
+                    <div class="price">$50K<span class="unit">/ 6 months</span></div>
+                    <div class="tier-for">Complete platform delivery — ready for production</div>
+                    <ul>
+                        <li>Everything in Implementation Sprint</li>
+                        <li>Multi-agent orchestration (LangGraph)</li>
+                        <li>Cross-border compliance (Indonesia, Singapore, UAE)</li>
+                        <li>Exchange &amp; secondary market integrations</li>
+                        <li>Admin dashboard with real-time monitoring</li>
+                        <li>Training &amp; handover to your internal team</li>
+                    </ul>
+                    <a class="price-cta" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%206-month%20engagement." target="_blank" rel="noopener">Let's Talk</a>
+                </div>
+            </div>
+            <p class="price-note">
+                All engagements include full-stack delivery: Python FastAPI, Supabase, Neo4j, FAISS, and custom JavaScript/HTML/CSS frontend. 
+                On-premise deployment with zero data egress. <strong>Available for remote work starting immediately.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    MARKET
+    ============================================================ -->
+    <section id="market">
+        <div class="container">
+            <div class="section-head">
+                <div class="kicker">Market Opportunity</div>
+                <h2>Why RWA Tokenization Needs Legaltech AI Now</h2>
+                <p>
+                    The regulatory fork created by UU PFII is a <strong>once-in-a-generation opportunity</strong> for legaltech consultants 
+                    who can combine legal expertise with AI engineering.
+                </p>
+            </div>
+            <div class="market-grid">
+                <div class="market-card light">
+                    <h4>THE REGULATORY FORK</h4>
+                    <div class="market-row"><div class="big">UU PFII</div><div class="small">Enacted July 21, 2026 — market frozen in "Wait and See"</div></div>
+                    <div class="market-row"><div class="big">OJK Sandbox</div><div class="small">Proven pathway (POJK 3/2024) — limited tax benefits</div></div>
+                    <div class="market-row"><div class="big">PFII Pathway</div><div class="small">Tax incentives, global flexibility — implementing regs pending</div></div>
+                    <p class="footnote">Companies are frozen. They need data-driven guidance on which pathway to choose.</p>
+                </div>
+                <div class="market-card dark">
+                    <h4>TOP-DOWN &middot; THE RWA TAILWIND</h4>
+                    <div class="market-row"><div class="big">$33.5B</div><div class="small">On-chain RWA value globally, July 2026 — up 400%+ since early 2025</div></div>
+                    <div class="market-row"><div class="big">$15.8B → $70.8B</div><div class="small">Global RegTech market by 2033, at an 18% CAGR</div></div>
+                    <div class="market-row"><div class="big">APAC</div><div class="small">Projected fastest-growing region for asset tokenization</div></div>
+                    <div class="market-row"><div class="big">POJK 3/2024</div><div class="small">OJK's DFA Sandbox formally recognizes tokenized RWA as "Backed DFA"</div></div>
+                </div>
+            </div>
+
+            <p class="footnote" style="margin:36px 0 12px; font-weight:700; color:var(--navy);">OUR UNIQUE POSITIONING</p>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div class="icon">⚖️</div>
+                    <h4>Legal Expertise</h4>
+                    <p>7 years STO/RWA structuring — OJK Sandbox advisory, SPV/TSPV structuring</p>
+                </div>
+                <div class="usp-item">
+                    <div class="icon">🤖</div>
+                    <h4>AI Engineering</h4>
+                    <p>RAG + Neo4j + FAISS — production-grade, live with 11+ clients</p>
+                </div>
+                <div class="usp-item">
+                    <div class="icon">🏗️</div>
+                    <h4>On-Premise by Design</h4>
+                    <p>Zero data egress — UU PDP compliant, regulator-ready</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    TEAM — Revised (No Hiring Plan)
+    ============================================================ -->
+    <section id="team" style="background:var(--white); border-top:1px solid var(--line);">
+        <div class="container">
+            <div class="section-head">
+                <div class="kicker">Team</div>
+                <h2>Built by a Practitioner, Not an Outsider</h2>
+                <p>Arsiva was founded by a lawyer who spent 7 years structuring STO and RWA deals — not a tech team building a product for a market they don't understand.</p>
+            </div>
+            <div class="team-grid" style="max-width:600px; margin:0 auto;">
+                <div class="team-card">
+                    <div class="avatar">BS</div>
+                    <div>
+                        <h4>Bambang Satmoko, S.T., S.H.</h4>
+                        <div class="role">Founder &amp; CEO</div>
+                        <p>7 years structuring STO/RWA deals as Managing Partner, Satmoko Law Firm — OJK Sandbox advisory, SPV/TSPV structuring, ERC-3643/OnChainID compliance design. Direct OJK Sandbox experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Replaces Hiring Plan -->
+            <div class="team-ready-block">
+                <h4>✅ Complete Team — Available Now</h4>
+                <div class="team-ready-grid">
+                    <div><strong>⚖️ Legal &amp; Regulatory</strong><br />7 years STO/RWA structuring, OJK Sandbox advisory</div>
+                    <div><strong>🤖 AI Engineering</strong><br />Production RAG + Neo4j + FAISS — 11+ live clients</div>
+                    <div><strong>🗄️ Backend &amp; DevOps</strong><br />On-premise, UU PDP compliant, K3s, Supabase, MinIO</div>
+                    <div><strong>🎨 Frontend &amp; UX</strong><br />Custom dashboards, embeddable widgets, real-time streaming</div>
+                </div>
+                <p class="bottom-text">
+                    <strong>Ready Day 1.</strong> Available for 6-month remote engagements immediately.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CTA BAND
+    ============================================================ -->
+    <div class="cta-band">
+        <div class="container">
+            <h2>Navigate the Regulatory Fork — and Build the Compliance OS</h2>
+            <p>
+                We help RWA tokenization projects choose between OJK Sandbox and PFII — then we build the on-premise AI system that automates compliance.
+                <strong style="color:var(--gold);">Available for 6-month remote engagements starting immediately.</strong>
+            </p>
+            <div class="cta-buttons">
+                <a class="btn btn-primary" href="https://wa.me/6580174461?text=Hi%2C%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener">Book a Free Consultation</a>
+                <a class="btn btn-secondary" href="mailto:satmoko@arsiva.tech?subject=Arsiva%20Consulting%20Inquiry">Email Us</a>
+            </div>
+            <p class="footnote" style="margin-top:18px; color:#AAB4D4;">
+                We are a pre-assembled, battle-tested team. Legal expertise + AI engineering. On-premise by design. Ready Day 1.
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
+        <div class="container">
+            <div>&copy; 2026 Arsiva Tech. All rights reserved.</div>
+            <div>
+                <a href="mailto:satmoko@arsiva.tech">satmoko@arsiva.tech</a> &nbsp;&middot;&nbsp;
+                <a href="https://wa.me/6580174461" target="_blank" rel="noopener">+65 8017 4461</a> &nbsp;&middot;&nbsp;
+                <a href="https://www.linkedin.com/company/arsiva" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
