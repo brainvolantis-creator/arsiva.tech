@@ -6,7 +6,7 @@
     <title>Arsiva — Compliance Engine for B2B SME Export (Certiva) &amp; RWA Tokenization</title>
     <meta name="description" content="Arsiva: Infrastructure AI LegalTech deterministik. Certiva untuk kepatuhan ekspor B2B UMKM (Accio Work Alibaba.com) & Arsiva On-Premise GraphRAG untuk Pra-Tokenisasi RWA." />
     <meta property="og:title" content="Arsiva — Compliance Engine for B2B SME Export (Certiva) & RWA Tokenization" />
-    <meta property="og:description" content="Dua mesin kepatuhan bisnis: Dual-Engine MCP Server v3.1 (Latensi 17.3ms, 100% Recall) & On-Premise GraphRAG (TSPV PT PMA + Singapore VCC)." />
+    <meta property="og:description" content="Dua mesin kepatuhan bisnis: Dual-Engine MCP Server v3.1 (Latensi 16.9ms, 100% Recall) & On-Premise GraphRAG (TSPV PT PMA + Singapore VCC)." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://arsiva.tech" />
     <link rel="canonical" href="https://arsiva.tech" />
@@ -121,7 +121,7 @@
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-blue">
                     <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Search Latency</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span class="text-3xl font-bold font-mono text-white">17.3 ms</span>
+                        <span class="text-3xl font-bold font-mono text-white">16.9 ms</span>
                         <span class="text-emerald-400 text-xs font-semibold">⚡ Ultra-Fast</span>
                     </div>
                     <p class="mt-1 text-slate-400 text-xs">Internal hybrid search average (12.6 – 29.5 ms range)</p>
@@ -132,19 +132,19 @@
                     <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Retrieval Accuracy</div>
                     <div class="mt-2 flex items-baseline gap-2">
                         <span class="text-3xl font-bold font-mono text-emerald-400">100% Recall</span>
-                        <span class="text-xs text-slate-400 font-mono">24/24 PASS</span>
+                        <span class="text-xs text-slate-400 font-mono">31/31 PASS</span>
                     </div>
-                    <p class="mt-1 text-slate-400 text-xs">Verified across 24 test set regulatory queries</p>
+                    <p class="mt-1 text-slate-400 text-xs">Verified across 31 test set regulatory queries</p>
                 </div>
 
                 <!-- Metric 3 -->
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-teal">
                     <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Indexed Corpus</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span class="text-3xl font-bold font-mono text-white">9 Regs</span>
-                        <span class="text-teal-400 text-xs font-semibold">33 Articles</span>
+                        <span class="text-3xl font-bold font-mono text-white">11 Regs</span>
+                        <span class="text-teal-400 text-xs font-semibold">36 Articles</span>
                     </div>
-                    <p class="mt-1 text-slate-400 text-xs">12 relational edges (Verified Cross-Reference Graph)</p>
+                    <p class="mt-1 text-slate-400 text-xs">13 relational edges (Verified Cross-Reference Graph)</p>
                 </div>
 
                 <!-- Metric 4 -->
@@ -213,7 +213,7 @@
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold text-sm">9 Regulasi Primer & Hybrid Search Engine</h4>
+                                <h4 class="text-white font-semibold text-sm">11 Regulasi Primer & Hybrid Search Engine</h4>
                                 <p class="text-slate-400 text-xs mt-1">Menggabungkan leksikal BM25 dan Dense Vector via Reciprocal Rank Fusion (RRF k=60) mencakup UU Kepabeanan 17/2006, PMK 155/2022, UU PDP, UU ITE, PP PSTE, & Permendag PMSE.</p>
                             </div>
                         </div>
@@ -229,12 +229,12 @@
                         <div class="p-3 rounded-lg bg-slate-950 text-slate-300">
                             <span class="text-blue-400">"server_version"</span>: <span class="text-emerald-300">"3.1-Production"</span>,<br/>
                             <span class="text-blue-400">"active_tools"</span>: [<span class="text-amber-300">"search_compliance"</span>, <span class="text-amber-300">"analyze_cross_regulation"</span>, <span class="text-amber-300">"analyze_article_relations"</span>],<br/>
-                            <span class="text-blue-400">"ram_footprint"</span>: <span class="text-emerald-300">"827 MB"</span>,<br/>
-                            <span class="text-blue-400">"avg_latency"</span>: <span class="text-emerald-300">"17.3 ms"</span>,<br/>
-                            <span class="text-blue-400">"export_corps"</span>: <span class="text-emerald-300">"UU 17/2006, PMK 155/2022, PMK 4/2025"</span>
+                            <span class="text-blue-400">"ram_footprint"</span>: <span class="text-emerald-300">"832 MB"</span>,<br/>
+                            <span class="text-blue-400">"avg_latency"</span>: <span class="text-emerald-300">"16.9 ms"</span>,<br/>
+                            <span class="text-blue-400">"regulatory_corpus"</span>: <span class="text-emerald-300">"11 regulasi: Kepabeanan, PDP, ITE, PSTE, PMSE, Fintech, Pajak, Impor"</span>
                         </div>
                         <div class="p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
-                            ✓ Verified Test-Set: 24/24 PASS (100% Recall)<br/>
+                            ✓ Verified Test-Set: 31/31 PASS (100% Recall)<br/>
                             ✓ Guardrail P1-2 Injected: Citation Prohibition Enforced
                         </div>
                     </div>
@@ -346,7 +346,7 @@
                     <div class="ml-12 p-4 rounded-xl bg-slate-900 border border-blue-500/30 space-y-2 font-mono text-xs">
                         <div class="flex items-center justify-between text-blue-400">
                             <span class="font-semibold">⚡ [MCP Tool Execution] search_compliance()</span>
-                            <span class="text-slate-500">Execution Time: 17.3 ms</span>
+                            <span class="text-slate-500">Execution Time: 16.9 ms</span>
                         </div>
                         <div class="text-slate-400">
                             Query: <span class="text-emerald-300">"PMK 4/2025 barang kiriman ekspor 25kg lartas non-kegiatan usaha"</span><br/>
