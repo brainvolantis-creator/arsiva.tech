@@ -65,7 +65,11 @@
 
             <!-- Dual CTA Buttons -->
             <div class="flex items-center gap-3">
-                <a href="https://wa.me/6285692904399?text=Halo%20Certiva%2C%20saya%20ingin%20mencoba%20MCP%20Server." target="_blank" rel="noopener" class="hidden lg:inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-semibold bg-brand-blue hover:bg-blue-600 text-white transition-all shadow-md shadow-blue-500/20">
+                <button id="lang-toggle" onclick="toggleLang()" type="button" class="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+                    <span id="lang-toggle-label">EN</span>
+                </button>
+                <a data-i18n-href="cta.waMcp" href="https://wa.me/6285692904399?text=Halo%20Certiva%2C%20saya%20ingin%20mencoba%20MCP%20Server." target="_blank" rel="noopener" class="hidden lg:inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-semibold bg-brand-blue hover:bg-blue-600 text-white transition-all shadow-md shadow-blue-500/20">
                     Launch MCP Engine
                 </a>
                 <a href="#enterprise" class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-brand-gold border border-brand-gold/30 transition-all">
@@ -99,7 +103,7 @@
             </h1>
 
             <!-- Dual Subheadline -->
-            <p class="mt-6 text-center text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-normal leading-relaxed">
+            <p data-i18n-html="hero.subheadline" class="mt-6 text-center text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-normal leading-relaxed">
                 Satu infrastruktur hukum, dua mesin terspesialisasi: <strong class="text-white">Certiva</strong> mengorkestrasi kepatuhan ekspor UMKM via Accio Work (Alibaba.com) berbasis PMK 4/2025, sementara <strong class="text-brand-gold">Arsiva Enterprise</strong> menyediakan On-Premise GraphRAG untuk restrukturisasi hukum RWA lintas batas (PT PMA TSPV + Singapore VCC).
             </p>
 
@@ -168,8 +172,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Dua Mesin Kepatuhan, Satu Standard Keandalan</h2>
-                <p class="mt-4 text-slate-400 text-sm sm:text-base">
+                <h2 data-i18n="tabs.title" class="font-serif text-3xl sm:text-4xl font-bold text-white">Dua Mesin Kepatuhan, Satu Standard Keandalan</h2>
+                <p data-i18n="tabs.subtitle" class="mt-4 text-slate-400 text-sm sm:text-base">
                     Pilih modul Arsiva yang dirancang khusus untuk skala operasional dan kebutuhan yurisdiksi bisnis Anda.
                 </p>
                 
@@ -190,10 +194,10 @@
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950 border border-blue-500/30 text-blue-400 text-xs font-mono">
                         <span>COCREATE PITCH 2026 JAKARTA (ALIBABA.COM)</span>
                     </div>
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+                    <h3 data-i18n="impex.heading" class="font-serif text-2xl sm:text-3xl font-bold text-white">
                         Infrastruktur MCP Server v3.1 untuk Ekspor B2B UMKM via Accio Work
                     </h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
+                    <p data-i18n-html="impex.desc" class="text-slate-300 text-sm leading-relaxed">
                         Certiva memecahkan hambatan kepabeanan ekspor lintas batas bagi UMKM Indonesia. Terintegrasi secara langsung dengan platform agen cerdas <strong class="text-white">Accio Work</strong> menggunakan standar <strong class="text-white">Model Context Protocol (MCP)</strong> via transmisi JSON-RPC.
                     </p>
 
@@ -204,7 +208,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold text-sm">PMK No. 4/2025 Consignment Note (CN) Integration</h4>
-                                <p class="text-slate-400 text-xs mt-1">Mengunci skenario barang kiriman ekspor ≤ 30 kg dengan pembebasan Lartas otomatis untuk non-kegiatan usaha, selaras dengan pola transaksi B2B Alibaba.com.</p>
+                                <p data-i18n="impex.card1" class="text-slate-400 text-xs mt-1">Mengunci skenario barang kiriman ekspor ≤ 30 kg dengan pembebasan Lartas otomatis untuk non-kegiatan usaha, selaras dengan pola transaksi B2B Alibaba.com.</p>
                             </div>
                         </div>
 
@@ -213,8 +217,8 @@
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold text-sm">11 Regulasi Primer & Hybrid Search Engine</h4>
-                                <p class="text-slate-400 text-xs mt-1">Menggabungkan leksikal BM25 dan Dense Vector via Reciprocal Rank Fusion (RRF k=60) mencakup UU Kepabeanan 17/2006, PMK 155/2022, UU PDP, UU ITE, PP PSTE, & Permendag PMSE.</p>
+                                <h4 data-i18n="impex.card2title" class="text-white font-semibold text-sm">11 Regulasi Primer & Hybrid Search Engine</h4>
+                                <p data-i18n="impex.card2" class="text-slate-400 text-xs mt-1">Menggabungkan leksikal BM25 dan Dense Vector via Reciprocal Rank Fusion (RRF k=60) mencakup UU Kepabeanan 17/2006, PMK 155/2022, UU PDP, UU ITE, PP PSTE, & Permendag PMSE.</p>
                             </div>
                         </div>
                     </div>
@@ -231,7 +235,7 @@
                             <span class="text-blue-400">"active_tools"</span>: [<span class="text-amber-300">"search_compliance"</span>, <span class="text-amber-300">"analyze_cross_regulation"</span>, <span class="text-amber-300">"analyze_article_relations"</span>],<br/>
                             <span class="text-blue-400">"ram_footprint"</span>: <span class="text-emerald-300">"832 MB"</span>,<br/>
                             <span class="text-blue-400">"avg_latency"</span>: <span class="text-emerald-300">"16.9 ms"</span>,<br/>
-                            <span class="text-blue-400">"regulatory_corpus"</span>: <span class="text-emerald-300">"11 regulasi: Kepabeanan, PDP, ITE, PSTE, PMSE, Fintech, Pajak, Impor"</span>
+                            <span class="text-blue-400">"regulatory_corpus"</span>: <span data-i18n="impex.corpusList" class="text-emerald-300">"11 regulasi: Kepabeanan, PDP, ITE, PSTE, PMSE, Fintech, Pajak, Impor"</span>
                         </div>
                         <div class="p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
                             ✓ Verified Test-Set: 31/31 PASS (100% Recall)<br/>
@@ -247,10 +251,10 @@
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-950 border border-amber-500/30 text-brand-gold text-xs font-mono">
                         <span>REAL WORLD ASSET PRE-TOKENIZATION PLATFORM</span>
                     </div>
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+                    <h3 data-i18n="enterprise.heading" class="font-serif text-2xl sm:text-3xl font-bold text-white">
                         Orkestrasi Hukum Lintas Batas: TSPV PT PMA & HoldCo Singapore VCC
                     </h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
+                    <p data-i18n="enterprise.desc" class="text-slate-300 text-sm leading-relaxed">
                         Mewujudkan pembebasan kapital mati (Dead Capital) properti dan tanah di Indonesia melalui struktur korporasi legal yang tidak membentur restruksi asas nasionalitas Pasal 21 UUPA 1960.
                     </p>
 
@@ -261,7 +265,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold text-sm">Target Special Purpose Vehicle (TSPV) PT PMA</h4>
-                                <p class="text-slate-400 text-xs mt-1">Aset fisik di Indonesia dikelola penuh oleh PT PMA (badan hukum domestik) yang memegang status legal Hak Guna Bangunan (HGB) / Hak Pakai sesuai kedaulatan teritorial.</p>
+                                <p data-i18n="enterprise.card1" class="text-slate-400 text-xs mt-1">Aset fisik di Indonesia dikelola penuh oleh PT PMA (badan hukum domestik) yang memegang status legal Hak Guna Bangunan (HGB) / Hak Pakai sesuai kedaulatan teritorial.</p>
                             </div>
                         </div>
 
@@ -270,15 +274,15 @@
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5 5 0 006 0l-3-9eM6 7l6-2m6 2l3-1m-3 1l-3 9a5 5 0 006 0l-3-9m-6 2l6-2m-6 2v6a2 2 0 002 2h2a2 2 0 002-2v-6m-6 0H6"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold text-sm">Singapore VCC (Variable Capital Company) & Optimasi DTA</h4>
-                                <p class="text-slate-400 text-xs mt-1">Saham PT PMA dimiliki HoldCo VCC Singapura. Menikmati fasilitas pemotongan withholding tax dividen 10% (vs 20% Cayman non-DTA) dan statutory ring-fencing antar sub-dana.</p>
+                                <h4 data-i18n="enterprise.card2title" class="text-white font-semibold text-sm">Singapore VCC (Variable Capital Company) & Optimasi DTA</h4>
+                                <p data-i18n="enterprise.card2" class="text-slate-400 text-xs mt-1">Saham PT PMA dimiliki HoldCo VCC Singapura. Menikmati fasilitas pemotongan withholding tax dividen 10% (vs 20% Cayman non-DTA) dan statutory ring-fencing antar sub-dana.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:col-span-6 glass-card-gold p-6 rounded-2xl">
-                    <h4 class="text-brand-gold font-serif text-lg font-bold mb-4">Graf Ontologi Hukum (Triplet SPO)</h4>
+                    <h4 data-i18n="enterprise.graphTitle" class="text-brand-gold font-serif text-lg font-bold mb-4">Graf Ontologi Hukum (Triplet SPO)</h4>
                     <div class="space-y-3 font-mono text-xs">
                         <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">
                             <span class="text-amber-400">[Hak Guna Bangunan]</span> <span class="text-slate-400">--only_owned_by--></span> <span class="text-blue-400">[WNI / PT PMA Indonesia]</span>
@@ -310,8 +314,8 @@
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950 text-brand-blue text-xs font-mono uppercase tracking-widest mb-3">
                     LIVE MCP INTERACTION SIMULATOR
                 </div>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Simulasi Eksekusi Certiva MCP Server di Accio Work</h2>
-                <p class="mt-3 text-slate-400 text-sm">
+                <h2 data-i18n="sim.title" class="font-serif text-3xl sm:text-4xl font-bold text-white">Simulasi Eksekusi Certiva MCP Server di Accio Work</h2>
+                <p data-i18n="sim.subtitle" class="mt-3 text-slate-400 text-sm">
                     Lihat bagaimana agen AI Accio Work memanggil tool Certiva secara real-time untuk menghasilkan jawaban hukum terverifikasi tanpa halusinasi.
                 </p>
             </div>
@@ -337,7 +341,7 @@
                         <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center shrink-0 text-white font-bold text-xs">
                             UMKM
                         </div>
-                        <div class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-200 max-w-2xl border border-slate-700">
+                        <div data-i18n="sim.userMsg" class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-200 max-w-2xl border border-slate-700">
                             "Saya mau kirim sampel produk tekstil olahan ke pembeli B2B di Eropa lewat Alibaba.com beratnya sekitar 25 kg. Apakah kena prosedur Lartas ekspor dan regulasi apa yang berlaku?"
                         </div>
                     </div>
@@ -349,7 +353,7 @@
                             <span class="text-slate-500">Execution Time: 16.9 ms</span>
                         </div>
                         <div class="text-slate-400">
-                            Query: <span class="text-emerald-300">"PMK 4/2025 barang kiriman ekspor 25kg lartas non-kegiatan usaha"</span><br/>
+                            Query: <span data-i18n="sim.query" class="text-emerald-300">"PMK 4/2025 barang kiriman ekspor 25kg lartas non-kegiatan usaha"</span><br/>
                             Corpus: <span class="text-slate-300">UU 17/2006 (Kepabeanan), PMK 155/2022, PMK 4/2025</span><br/>
                             Fusion: <span class="text-slate-300">BM25 + Semantic Vector (RRF k=60)</span>
                         </div>
@@ -365,13 +369,13 @@
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 <span>VERIFIED LEGAL COMPLIANCE RESPONSE</span>
                             </div>
-                            <p class="text-slate-300">
+                            <p data-i18n-html="sim.responseIntro" class="text-slate-300">
                                 Pengiriman sampel tekstil Anda sebesar <strong>25 kg</strong> dikategorikan sebagai <strong>Barang Kiriman Ekspor</strong> dan mendapatkan fasilitas khusus:
                             </p>
                             <ul class="list-disc pl-5 space-y-1 text-xs text-slate-300">
-                                <li><strong>PMK No. 4/2025 (Pasal 3 & 5):</strong> Menggunakan dokumen kepabeanan sederhana berupa <em>Consignment Note (CN)</em> karena berat ≤ 30 kg.</li>
-                                <li><strong>Pengecualian Lartas (Pasal 8 PMK 4/2025):</strong> Barang kiriman untuk sampel non-kegiatan usaha dibebaskan dari persyaratan Larangan dan Pembatasan (Lartas) ekspor standar.</li>
-                                <li><strong>UU No. 17/2006 (Pasal 2 ayat 2):</strong> Pemberitahuan ekspor tetap wajib disampaikan secara elektronik via sistem PDE Kepabeanan.</li>
+                                <li data-i18n-html="sim.point1"><strong>PMK No. 4/2025 (Pasal 3 & 5):</strong> Menggunakan dokumen kepabeanan sederhana berupa <em>Consignment Note (CN)</em> karena berat ≤ 30 kg.</li>
+                                <li data-i18n-html="sim.point2"><strong>Pengecualian Lartas (Pasal 8 PMK 4/2025):</strong> Barang kiriman untuk sampel non-kegiatan usaha dibebaskan dari persyaratan Larangan dan Pembatasan (Lartas) ekspor standar.</li>
+                                <li data-i18n-html="sim.point3"><strong>UU No. 17/2006 (Pasal 2 ayat 2):</strong> Pemberitahuan ekspor tetap wajib disampaikan secara elektronik via sistem PDE Kepabeanan.</li>
                             </ul>
                             
                             <!-- Guardrail Banner -->
@@ -395,8 +399,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Arsitektur GraphRAG & Benteng Hukum (Legal Moat)</h2>
-                <p class="mt-4 text-slate-400 text-sm">
+                <h2 data-i18n="arch.title" class="font-serif text-3xl sm:text-4xl font-bold text-white">Arsitektur GraphRAG & Benteng Hukum (Legal Moat)</h2>
+                <p data-i18n="arch.subtitle" class="mt-4 text-slate-400 text-sm">
                     Mengapa pendekatan Vector RAG standar gagal dalam analisis hukum regulasi dan bagaimana Arsiva melindungi privasi data korporasi Anda.
                 </p>
             </div>
@@ -408,22 +412,22 @@
                     <div class="flex items-center gap-3 pb-4 border-b border-slate-800">
                         <div class="w-8 h-8 rounded-lg bg-red-950 border border-red-500/30 flex items-center justify-center text-red-400 font-bold">✕</div>
                         <div>
-                            <h3 class="text-white font-semibold text-base">Vector RAG Konvensional</h3>
-                            <span class="text-xs font-mono text-slate-400">Embeddings & Vector Database Biasa</span>
+                            <h3 data-i18n="arch.vecTitle" class="text-white font-semibold text-base">Vector RAG Konvensional</h3>
+                            <span data-i18n="arch.vecSub" class="text-xs font-mono text-slate-400">Embeddings & Vector Database Biasa</span>
                         </div>
                     </div>
                     <ul class="mt-6 space-y-4 text-xs text-slate-300">
                         <li class="flex gap-3">
                             <span class="text-red-400 font-bold">✕</span>
-                            <span><strong>Meratakan Hierarki Hukum:</strong> Tidak mampu menghubungkan aturan khusus (<em>Lex Specialis</em>) dengan undang-undang induk.</span>
+                            <span data-i18n-html="arch.con1"><strong>Meratakan Hierarki Hukum:</strong> Tidak mampu menghubungkan aturan khusus (<em>Lex Specialis</em>) dengan undang-undang induk.</span>
                         </li>
                         <li class="flex gap-3">
                             <span class="text-red-400 font-bold">✕</span>
-                            <span><strong>Tinggi Risiko Halusinasi:</strong> LLM sering mengarang nomor pasal atau interpretasi hukum yang salah secara fatal.</span>
+                            <span data-i18n-html="arch.con2"><strong>Tinggi Risiko Halusinasi:</strong> LLM sering mengarang nomor pasal atau interpretasi hukum yang salah secara fatal.</span>
                         </li>
                         <li class="flex gap-3">
                             <span class="text-red-400 font-bold">✕</span>
-                            <span><strong>Cloud Data Leakage:</strong> Mengirimkan salinan sertifikat dan dokumen rahasia ke API AI publik eksternal.</span>
+                            <span data-i18n-html="arch.con3"><strong>Cloud Data Leakage:</strong> Mengirimkan salinan sertifikat dan dokumen rahasia ke API AI publik eksternal.</span>
                         </li>
                     </ul>
                 </div>
@@ -440,15 +444,15 @@
                     <ul class="mt-6 space-y-4 text-xs text-slate-300">
                         <li class="flex gap-3">
                             <span class="text-emerald-400 font-bold">✓</span>
-                            <span><strong>Penalaran Multi-Lompatan (Multi-Hop):</strong> Navigasi presisi antar pasal UUPA 1960, VCC Act 2018, dan DTA Pajak secara deterministik.</span>
+                            <span data-i18n-html="arch.pro1"><strong>Penalaran Multi-Lompatan (Multi-Hop):</strong> Navigasi presisi antar pasal UUPA 1960, VCC Act 2018, dan DTA Pajak secara deterministik.</span>
                         </li>
                         <li class="flex gap-3">
                             <span class="text-emerald-400 font-bold">✓</span>
-                            <span><strong>Verifiable Audit Trail:</strong> Setiap keluaran sistem terikat secara absolut pada sumber pasal resmi (JDIH BPK/Kemenkeu).</span>
+                            <span data-i18n-html="arch.pro2"><strong>Verifiable Audit Trail:</strong> Setiap keluaran sistem terikat secara absolut pada sumber pasal resmi (JDIH BPK/Kemenkeu).</span>
                         </li>
                         <li class="flex gap-3">
                             <span class="text-emerald-400 font-bold">✓</span>
-                            <span><strong>On-Premise & Local-First:</strong> Selaras dengan ketentuan UU PDP No. 27/2022 tentang transfer data pribadi lintas batas — Zero Data Egress.</span>
+                            <span data-i18n-html="arch.pro3"><strong>On-Premise & Local-First:</strong> Selaras dengan ketentuan UU PDP No. 27/2022 tentang transfer data pribadi lintas batas — Zero Data Egress.</span>
                         </li>
                     </ul>
                 </div>
@@ -457,23 +461,23 @@
             <!-- Validation Consortium Banner -->
             <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-slate-950 via-slate-850 to-slate-950 border border-slate-800">
                 <div class="text-center max-w-2xl mx-auto space-y-3">
-                    <h3 class="font-serif text-xl font-bold text-white">Konsorsium Validasi Data Hukum Ground-Truth</h3>
-                    <p class="text-slate-400 text-xs">
+                    <h3 data-i18n="consortium.title" class="font-serif text-xl font-bold text-white">Konsorsium Validasi Data Hukum Ground-Truth</h3>
+                    <p data-i18n="consortium.desc" class="text-slate-400 text-xs">
                         Knowledge Graph Arsiva dipasok dan divalidasi secara langsung oleh ekosistem hukum perdata dan penataan aset terverifikasi di Indonesia:
                     </p>
                 </div>
                 <div class="mt-8 grid grid-cols-3 gap-4 text-center">
                     <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
                         <div class="text-2xl font-bold font-mono text-brand-gold">10</div>
-                        <div class="text-xs text-slate-300 mt-1">Kantor Notaris Partner</div>
+                        <div data-i18n="consortium.stat1" class="text-xs text-slate-300 mt-1">Kantor Notaris Partner</div>
                     </div>
                     <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
                         <div class="text-2xl font-bold font-mono text-brand-blue">1</div>
-                        <div class="text-xs text-slate-300 mt-1">Firma Hukum (Satmoko Law Firm)</div>
+                        <div data-i18n="consortium.stat2" class="text-xs text-slate-300 mt-1">Firma Hukum (Satmoko Law Firm)</div>
                     </div>
                     <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
                         <div class="text-2xl font-bold font-mono text-emerald-400">9</div>
-                        <div class="text-xs text-slate-300 mt-1">Perusahaan Aset (Pipeline RWA)</div>
+                        <div data-i18n="consortium.stat3" class="text-xs text-slate-300 mt-1">Perusahaan Aset (Pipeline RWA)</div>
                     </div>
                 </div>
             </div>
@@ -488,8 +492,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Pilihan Paket & Model Pengadaan</h2>
-                <p class="mt-4 text-slate-400 text-sm">
+                <h2 data-i18n="pricing.title" class="font-serif text-3xl sm:text-4xl font-bold text-white">Pilihan Paket & Model Pengadaan</h2>
+                <p data-i18n="pricing.subtitle" class="mt-4 text-slate-400 text-sm">
                     Dari pencarian gratis untuk eksportir UMKM hingga penataan RWA kelas enterprise.
                 </p>
             </div>
@@ -503,18 +507,18 @@
                         <h3 class="text-xl font-bold text-white mt-1">Starter Free</h3>
                         <div class="mt-4 flex items-baseline gap-1">
                             <span class="text-4xl font-bold font-serif text-white">Rp 0</span>
-                            <span class="text-slate-400 text-xs">/ selamanya</span>
+                            <span data-i18n="pricing.t1period" class="text-slate-400 text-xs">/ selamanya</span>
                         </div>
-                        <p class="mt-3 text-slate-400 text-xs">Untuk UMKM yang ingin mencoba pencarian kepatuhan ekspor dasar via MCP Server.</p>
+                        <p data-i18n="pricing.t1desc" class="mt-3 text-slate-400 text-xs">Untuk UMKM yang ingin mencoba pencarian kepatuhan ekspor dasar via MCP Server.</p>
 
                         <ul class="mt-6 space-y-3 text-xs text-slate-300">
-                            <li class="flex items-center gap-2">✓ <span>20 query compliance / bulan</span></li>
-                            <li class="flex items-center gap-2">✓ <span>Akses 9 Regulasi Ekspor & Digital</span></li>
-                            <li class="flex items-center gap-2">✓ <span>Sitasi pasal terverifikasi</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t1f1">20 query compliance / bulan</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t1f2">Akses 9 Regulasi Ekspor & Digital</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t1f3">Sitasi pasal terverifikasi</span></li>
                             <li class="flex items-center gap-2">✓ <span>Integrasi Accio Work Ready</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/6285692904399?text=Halo%20Certiva%2C%20saya%20ingin%20mencoba%20Certiva%20Free." target="_blank" rel="noopener" class="mt-8 block text-center py-3 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-white transition-all">
+                    <a data-i18n-href="cta.waFree" href="https://wa.me/6285692904399?text=Halo%20Certiva%2C%20saya%20ingin%20mencoba%20Certiva%20Free." target="_blank" rel="noopener" class="mt-8 block text-center py-3 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-white transition-all">
                         Start Free Trial
                     </a>
                 </div>
@@ -529,19 +533,19 @@
                         <h3 class="text-xl font-bold text-white mt-1">Pro SME Exporter</h3>
                         <div class="mt-4 flex items-baseline gap-1">
                             <span class="text-4xl font-bold font-serif text-white">Rp 99.000</span>
-                            <span class="text-slate-400 text-xs">/ bulan</span>
+                            <span data-i18n="pricing.t2period" class="text-slate-400 text-xs">/ bulan</span>
                         </div>
-                        <p class="mt-3 text-slate-300 text-xs">Untuk eksportir aktif B2B di marketplace internasional (Alibaba.com).</p>
+                        <p data-i18n="pricing.t2desc" class="mt-3 text-slate-300 text-xs">Untuk eksportir aktif B2B di marketplace internasional (Alibaba.com).</p>
 
                         <ul class="mt-6 space-y-3 text-xs text-slate-200">
                             <li class="flex items-center gap-2 text-emerald-400 font-semibold">✓ <span>Unlimited Query Compliance</span></li>
-                            <li class="flex items-center gap-2">✓ <span>Auto-Update Regulasi Kepabeanan & PMSE</span></li>
-                            <li class="flex items-center gap-2">✓ <span>Export Ringkasan Kepatuhan ke PDF</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t2f2">Auto-Update Regulasi Kepabeanan & PMSE</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t2f3">Export Ringkasan Kepatuhan ke PDF</span></li>
                             <li class="flex items-center gap-2">✓ <span>Priority MCP Routing (&lt; 15 ms latency)</span></li>
-                            <li class="flex items-center gap-2">✓ <span>Guardrail P1-2 Anti-Halusinasi Enforced</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t2f5">Guardrail P1-2 Anti-Halusinasi Enforced</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/6285692904399?text=Halo%20Certiva%2C%20saya%20ingin%20langganan%20Certiva%20Pro." target="_blank" rel="noopener" class="mt-8 block text-center py-3 rounded-xl text-xs font-semibold bg-brand-blue hover:bg-blue-600 text-white transition-all shadow-md shadow-blue-500/20">
+                    <a data-i18n-href="cta.waPro" href="https://wa.me/6285692904399?text=Halo%20Certiva%2C%20saya%20ingin%20langganan%20Certiva%20Pro." target="_blank" rel="noopener" class="mt-8 block text-center py-3 rounded-xl text-xs font-semibold bg-brand-blue hover:bg-blue-600 text-white transition-all shadow-md shadow-blue-500/20">
                         Subscribe Pro Plan
                     </a>
                 </div>
@@ -553,19 +557,19 @@
                         <h3 class="text-xl font-bold text-white mt-1">RWA Structuring OS</h3>
                         <div class="mt-4 flex items-baseline gap-1">
                             <span class="text-4xl font-bold font-serif text-brand-gold">$ 25,000</span>
-                            <span class="text-slate-400 text-xs">/ 3 bulan engagement</span>
+                            <span data-i18n="pricing.t3period" class="text-slate-400 text-xs">/ 3 bulan engagement</span>
                         </div>
-                        <p class="mt-3 text-slate-300 text-xs">Untuk pengembang aset fisik, family office, dan firma hukum Web3.</p>
+                        <p data-i18n="pricing.t3desc" class="mt-3 text-slate-300 text-xs">Untuk pengembang aset fisik, family office, dan firma hukum Web3.</p>
 
                         <ul class="mt-6 space-y-3 text-xs text-slate-200">
                             <li class="flex items-center gap-2">✓ <span>Full GraphRAG On-Premise Deployment</span></li>
-                            <li class="flex items-center gap-2">✓ <span>Struktur Hukum TSPV PT PMA + HoldCo VCC</span></li>
-                            <li class="flex items-center gap-2">✓ <span>Audit Due Diligence 10 Notaris Partner</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t3f2">Struktur Hukum TSPV PT PMA + HoldCo VCC</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t3f3">Audit Due Diligence 10 Notaris Partner</span></li>
                             <li class="flex items-center gap-2">✓ <span>Custom Knowledge Graph & Legal Triplet</span></li>
-                            <li class="flex items-center gap-2">✓ <span>Full Technical & Legal Counsel Dedicated</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t3f5">Full Technical & Legal Counsel Dedicated</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/6580174461?text=Halo%20Arsiva%2C%20saya%20ingin%20konsultasi%20Enterprise%20RWA." target="_blank" rel="noopener" class="mt-8 block text-center py-3 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-brand-gold border border-brand-gold/40 transition-all">
+                    <a data-i18n-href="cta.waEnterprise" href="https://wa.me/6580174461?text=Halo%20Arsiva%2C%20saya%20ingin%20konsultasi%20Enterprise%20RWA." target="_blank" rel="noopener" class="mt-8 block text-center py-3 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-brand-gold border border-brand-gold/40 transition-all">
                         Contact Sales Advisory
                     </a>
                 </div>
@@ -599,7 +603,7 @@
                     <p class="text-slate-400 text-xs max-w-sm leading-relaxed">
                         Deterministic Compliance Engine for B2B SME Export & Real World Asset Tokenization. Built by legal practitioners and AI engineers.
                     </p>
-                    <p class="text-slate-500 text-[11px] max-w-sm leading-relaxed italic">
+                    <p data-i18n-html="footer.brandNote" class="text-slate-500 text-[11px] max-w-sm leading-relaxed italic">
                         Arsiva adalah entitas induk teknologi kepatuhan hukum kami — mencakup Arsiva Enterprise RWA. <strong class="text-white">Certiva</strong> adalah nama produk yang kami gunakan khusus untuk program CoCreate Pitch 2026 bersama Accio Work (Alibaba.com).
                     </p>
                     <div class="text-slate-300 pt-2">
@@ -633,7 +637,7 @@
 
             <!-- Regulatory & Legal Disclaimer -->
             <div class="pt-8 space-y-3 text-[11px] text-slate-400 leading-relaxed">
-                <p>
+                <p data-i18n-html="footer.disclaimer">
                     <strong>DISCLAIMER KEPATUHAN HUKUM:</strong> Seluruh informasi regulasi, sitasi pasal (termasuk UU Kepabeanan 17/2006, PMK 155/2022, PMK 4/2025, UUPA 1960, UU PDP 27/2022, dan POJK Fintech), serta analisis analisis penataan aset lintas batas (TSPV PT PMA & Singapore VCC) pada platform ini disediakan untuk tujuan dokumentasi teknis dan kepatuhan sistem. Pengambilan keputusan investasi atau restrukturisasi korporat tetap disarankan melalui verifikasi firma hukum berlisensi.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 text-slate-400">
@@ -648,6 +652,142 @@
 
         </div>
     </footer>
+
+    <!-- ============================================================
+         I18N ENGINE (ID/EN Toggle — auto-detect + remembered choice)
+         ============================================================ -->
+    <script>
+        const translations = {
+            en: {
+                "hero.subheadline": 'One legal infrastructure, two specialized engines: <strong class="text-white">Certiva</strong> orchestrates SME export compliance via Accio Work (Alibaba.com) based on PMK 4/2025, while <strong class="text-brand-gold">Arsiva Enterprise</strong> provides On-Premise GraphRAG for cross-border RWA legal restructuring (PT PMA TSPV + Singapore VCC).',
+                "tabs.title": "Two Compliance Engines, One Standard of Reliability",
+                "tabs.subtitle": "Choose the Arsiva module built specifically for your business's operational scale and jurisdictional needs.",
+                "impex.heading": "MCP Server v3.1 Infrastructure for B2B SME Export via Accio Work",
+                "impex.desc": 'Certiva solves cross-border customs friction for Indonesian SMEs. Integrated directly with the <strong class="text-white">Accio Work</strong> intelligent-agent platform using the <strong class="text-white">Model Context Protocol (MCP)</strong> standard via JSON-RPC transmission.',
+                "impex.card1": "Locks in the ≤ 30 kg export consignment scenario with automatic Lartas (import/export restriction) exemption for non-commercial shipments, matching Alibaba.com's B2B transaction pattern.",
+                "impex.card2title": "11 Primary Regulations & Hybrid Search Engine",
+                "impex.card2": "Combines lexical BM25 and Dense Vector search via Reciprocal Rank Fusion (RRF k=60), covering Customs Law 17/2006, PMK 155/2022, PDP Law, ITE Law, PSTE Regulation, & PMSE Ministerial Regulation.",
+                "impex.corpusList": '"11 regulations: Customs, Data Protection, ITE, PSTE, PMSE, Fintech, Tax, Import"',
+                "enterprise.heading": "Cross-Border Legal Orchestration: TSPV PT PMA & Singapore VCC HoldCo",
+                "enterprise.desc": "Unlocking dead capital in Indonesian property and land through a legal corporate structure that does not breach the nationality principle of Article 21 of the 1960 Basic Agrarian Law (UUPA).",
+                "enterprise.card1": "Physical assets in Indonesia are fully managed by a PT PMA (domestic legal entity) holding legal Hak Guna Bangunan (HGB) / Hak Pakai land-rights status in line with territorial sovereignty.",
+                "enterprise.card2title": "Singapore VCC (Variable Capital Company) & DTA Optimization",
+                "enterprise.card2": "PT PMA shares are held by a Singapore VCC HoldCo, benefiting from a 10% dividend withholding tax (vs. 20% for non-DTA Cayman structures) and statutory ring-fencing between sub-funds.",
+                "enterprise.graphTitle": "Legal Ontology Graph (SPO Triplet)",
+                "sim.title": "Live Simulation: Certiva MCP Server Execution on Accio Work",
+                "sim.subtitle": "See how the Accio Work AI agent calls Certiva's tools in real time to produce verified legal answers without hallucination.",
+                "sim.userMsg": '"I want to send a sample of processed textile products to a B2B buyer in Europe via Alibaba.com, weighing about 25 kg. Is it subject to export Lartas procedures, and which regulations apply?"',
+                "sim.query": '"PMK 4/2025 export consignment 25kg lartas non-commercial use"',
+                "sim.responseIntro": "Your <strong>25 kg</strong> textile sample shipment is categorized as an <strong>Export Consignment</strong> and qualifies for special facilities:",
+                "sim.point1": "<strong>PMK No. 4/2025 (Article 3 & 5):</strong> Uses a simplified customs document in the form of a <em>Consignment Note (CN)</em> since weight is ≤ 30 kg.",
+                "sim.point2": "<strong>Lartas Exemption (Article 8, PMK 4/2025):</strong> Consignments of non-commercial samples are exempt from standard export Prohibition & Restriction (Lartas) requirements.",
+                "sim.point3": "<strong>Law No. 17/2006 (Article 2, paragraph 2):</strong> Export declarations must still be submitted electronically via the PDE Customs system.",
+                "arch.title": "GraphRAG Architecture & Legal Moat",
+                "arch.subtitle": "Why standard Vector RAG approaches fail at regulatory legal analysis, and how Arsiva protects your corporate data privacy.",
+                "arch.vecTitle": "Conventional Vector RAG",
+                "arch.vecSub": "Ordinary Embeddings & Vector Database",
+                "arch.con1": "<strong>Flattens Legal Hierarchy:</strong> Unable to connect specific rules (<em>Lex Specialis</em>) with their parent statutes.",
+                "arch.con2": "<strong>High Hallucination Risk:</strong> LLMs often fabricate article numbers or produce fatally incorrect legal interpretations.",
+                "arch.con3": "<strong>Cloud Data Leakage:</strong> Sends copies of confidential certificates and documents to external public AI APIs.",
+                "arch.pro1": "<strong>Multi-Hop Reasoning:</strong> Precise, deterministic navigation across articles of the 1960 UUPA, the VCC Act 2018, and tax DTAs.",
+                "arch.pro2": "<strong>Verifiable Audit Trail:</strong> Every system output is absolutely tied to an official article source (JDIH BPK/Kemenkeu).",
+                "arch.pro3": "<strong>On-Premise & Local-First:</strong> Aligned with PDP Law No. 27/2022 on cross-border personal data transfer — Zero Data Egress.",
+                "consortium.title": "Ground-Truth Legal Data Validation Consortium",
+                "consortium.desc": "Arsiva's Knowledge Graph is supplied and directly validated by a verified civil-law and asset-structuring ecosystem in Indonesia:",
+                "consortium.stat1": "Partner Notary Offices",
+                "consortium.stat2": "Law Firm (Satmoko Law Firm)",
+                "consortium.stat3": "Asset Companies (RWA Pipeline)",
+                "pricing.title": "Plans & Procurement Models",
+                "pricing.subtitle": "From free search for SME exporters to enterprise-grade RWA structuring.",
+                "pricing.t1period": "/ forever",
+                "pricing.t1desc": "For SMEs who want to try basic export compliance search via the MCP Server.",
+                "pricing.t1f1": "20 compliance queries / month",
+                "pricing.t1f2": "Access to 9 Export & Digital Regulations",
+                "pricing.t1f3": "Verified article citations",
+                "pricing.t2period": "/ month",
+                "pricing.t2desc": "For active B2B exporters on international marketplaces (Alibaba.com).",
+                "pricing.t2f2": "Auto-updated Customs & PMSE Regulations",
+                "pricing.t2f3": "Export Compliance Summary to PDF",
+                "pricing.t2f5": "Guardrail P1-2 Anti-Hallucination Enforced",
+                "pricing.t3period": "/ 3-month engagement",
+                "pricing.t3desc": "For physical asset developers, family offices, and Web3 law firms.",
+                "pricing.t3f2": "TSPV PT PMA + HoldCo VCC Legal Structure",
+                "pricing.t3f3": "Due Diligence Audit with 10 Partner Notaries",
+                "pricing.t3f5": "Full Technical & Legal Counsel Dedicated",
+                "footer.brandNote": 'Arsiva is our parent legal-compliance technology entity — encompassing Arsiva Enterprise RWA. <strong class="text-white">Certiva</strong> is the product name we use specifically for the CoCreate Pitch 2026 program with Accio Work (Alibaba.com).',
+                "footer.disclaimer": "<strong>LEGAL COMPLIANCE DISCLAIMER:</strong> All regulatory information, article citations (including Customs Law 17/2006, PMK 155/2022, PMK 4/2025, UUPA 1960, PDP Law 27/2022, and POJK Fintech regulations), and cross-border asset structuring analysis (TSPV PT PMA & Singapore VCC) on this platform are provided for technical documentation and system-compliance purposes. Investment or corporate restructuring decisions should still be verified through a licensed law firm.",
+                "cta.waMcp": "https://wa.me/6285692904399?text=Hello%20Certiva%2C%20I%27d%20like%20to%20try%20the%20MCP%20Server.",
+                "cta.waFree": "https://wa.me/6285692904399?text=Hello%20Certiva%2C%20I%27d%20like%20to%20try%20Certiva%20Free.",
+                "cta.waPro": "https://wa.me/6285692904399?text=Hello%20Certiva%2C%20I%27d%20like%20to%20subscribe%20to%20Certiva%20Pro.",
+                "cta.waEnterprise": "https://wa.me/6580174461?text=Hello%20Arsiva%2C%20I%27d%20like%20to%20consult%20on%20Enterprise%20RWA.",
+                "meta.title": "Arsiva — Compliance Engine for B2B SME Export (Certiva) & RWA Tokenization",
+                "meta.description": "Arsiva: deterministic AI LegalTech infrastructure. Certiva for B2B SME export compliance (Accio Work, Alibaba.com) & Arsiva On-Premise GraphRAG for RWA pre-tokenization."
+            }
+        };
+        const originalMeta = {
+            title: document.title,
+            description: document.querySelector('meta[name="description"]')?.getAttribute('content') || ''
+        };
+
+        function getInitialLang() {
+            const saved = localStorage.getItem('arsiva_lang');
+            if (saved === 'id' || saved === 'en') return saved;
+            const nav = (navigator.language || 'id').toLowerCase();
+            return nav.startsWith('id') ? 'id' : 'en';
+        }
+
+        // Cache original Indonesian content on first load so we can always
+        // restore it exactly, regardless of how many times the user toggles.
+        const originalStore = { text: {}, html: {}, href: {} };
+        function cacheOriginals() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                originalStore.text[el.getAttribute('data-i18n')] = el.textContent;
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                originalStore.html[el.getAttribute('data-i18n-html')] = el.innerHTML;
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                originalStore.href[el.getAttribute('data-i18n-href')] = el.getAttribute('href');
+            });
+        }
+
+        function applyLang(lang) {
+            const dict = lang === 'en' ? translations.en : null;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.textContent = dict && dict[key] ? dict[key] : originalStore.text[key];
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                el.innerHTML = dict && dict[key] ? dict[key] : originalStore.html[key];
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                const key = el.getAttribute('data-i18n-href');
+                el.setAttribute('href', dict && dict[key] ? dict[key] : originalStore.href[key]);
+            });
+
+            document.title = dict && dict['meta.title'] ? dict['meta.title'] : originalMeta.title;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', dict && dict['meta.description'] ? dict['meta.description'] : originalMeta.description);
+
+            document.documentElement.setAttribute('lang', lang);
+            const label = document.getElementById('lang-toggle-label');
+            if (label) label.textContent = lang === 'en' ? 'ID' : 'EN';
+        }
+
+        function toggleLang() {
+            const current = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'id';
+            const next = current === 'en' ? 'id' : 'en';
+            localStorage.setItem('arsiva_lang', next);
+            applyLang(next);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            cacheOriginals();
+            applyLang(getInitialLang());
+        });
+    </script>
 
     <!-- ============================================================
          JAVASCRIPT INTERACTIVITY (Tab Switcher)
