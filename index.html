@@ -6,7 +6,7 @@
     <title>Arsiva — Compliance Engine for B2B SME Export (Certiva) &amp; RWA Tokenization</title>
     <meta name="description" content="Arsiva: Infrastructure AI LegalTech deterministik. Certiva untuk kepatuhan ekspor B2B UMKM (Accio Work Alibaba.com) & Arsiva On-Premise GraphRAG untuk Pra-Tokenisasi RWA." />
     <meta property="og:title" content="Arsiva — Compliance Engine for B2B SME Export (Certiva) & RWA Tokenization" />
-    <meta property="og:description" content="Dua mesin kepatuhan bisnis: Dual-Engine MCP Server v3.1 (Latensi 16.9ms, 100% Recall) & On-Premise GraphRAG (TSPV PT PMA + Singapore VCC)." />
+    <meta property="og:description" content="Dua mesin kepatuhan bisnis: Dual-Engine MCP Server v3.1 (Latensi 15.8–17.2ms, Recall@5 100%) & On-Premise GraphRAG (TSPV PT PMA + Singapore VCC)." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://arsiva.tech" />
     <link rel="canonical" href="https://arsiva.tech" />
@@ -56,7 +56,7 @@
 
             <!-- Navigation Links -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#impex" class="hover:text-brand-blue transition-colors">Certiva (Accio)</a>
+                <a href="#certiva" class="hover:text-brand-blue transition-colors">Certiva (Accio)</a>
                 <a href="#enterprise" class="hover:text-brand-gold transition-colors">Enterprise RWA</a>
                 <a href="#benchmarks" class="hover:text-white transition-colors">Benchmarks</a>
                 <a href="#architecture" class="hover:text-white transition-colors">Architecture</a>
@@ -109,7 +109,7 @@
 
             <!-- Hero Buttons -->
             <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <a href="#impex" class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-brand-blue hover:bg-blue-600 text-white transition-all shadow-lg shadow-blue-500/25 flex items-center gap-2">
+                <a href="#certiva" class="px-6 py-3.5 rounded-xl font-semibold text-sm bg-brand-blue hover:bg-blue-600 text-white transition-all shadow-lg shadow-blue-500/25 flex items-center gap-2">
                     <span>Explore Certiva Engine (Accio Work)</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
@@ -125,30 +125,30 @@
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-blue">
                     <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Search Latency</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span class="text-3xl font-bold font-mono text-white">16.9 ms</span>
+                        <span class="text-3xl font-bold font-mono text-white">15.8–17.2 ms</span>
                         <span class="text-emerald-400 text-xs font-semibold">⚡ Ultra-Fast</span>
                     </div>
-                    <p class="mt-1 text-slate-400 text-xs">Internal hybrid search average (12.6 – 29.5 ms range)</p>
+                    <p data-i18n="hero.latencyNote" class="mt-1 text-slate-400 text-xs">Rata-rata lintas 4 run benchmark produksi (26–28 Agustus 2026)</p>
                 </div>
 
                 <!-- Metric 2 -->
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-emerald-500">
                     <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Retrieval Accuracy</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span class="text-3xl font-bold font-mono text-emerald-400">100% Recall</span>
-                        <span class="text-xs text-slate-400 font-mono">31/31 PASS</span>
+                        <span class="text-3xl font-bold font-mono text-emerald-400">Recall@5 100%</span>
+                        <span class="text-xs text-slate-400 font-mono">37/37</span>
                     </div>
-                    <p class="mt-1 text-slate-400 text-xs">Verified across 31 test set regulatory queries</p>
+                    <p class="mt-1 text-slate-400 text-xs">Precision@1 36/37 (97.3%) · 37 test-set regulatory queries</p>
                 </div>
 
                 <!-- Metric 3 -->
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-teal">
                     <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Indexed Corpus</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span class="text-3xl font-bold font-mono text-white">11 Regs</span>
-                        <span class="text-teal-400 text-xs font-semibold">36 Articles</span>
+                        <span class="text-3xl font-bold font-mono text-white">13 Regs</span>
+                        <span class="text-teal-400 text-xs font-semibold">40 Articles</span>
                     </div>
-                    <p class="mt-1 text-slate-400 text-xs">13 relational edges (Verified Cross-Reference Graph)</p>
+                    <p class="mt-1 text-slate-400 text-xs">15 relational edges (Verified Cross-Reference Graph)</p>
                 </div>
 
                 <!-- Metric 4 -->
@@ -179,7 +179,7 @@
                 
                 <!-- Tab Selector Buttons -->
                 <div class="mt-8 inline-flex p-1.5 rounded-xl bg-slate-950 border border-slate-800">
-                    <button id="btn-tab-impex" onclick="switchTab('impex')" class="px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-brand-blue text-white shadow-md">
+                    <button id="btn-tab-certiva" onclick="switchTab('certiva')" class="px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-brand-blue text-white shadow-md">
                         ✦ Certiva (Accio Work B2B Export)
                     </button>
                     <button id="btn-tab-enterprise" onclick="switchTab('enterprise')" class="px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all">
@@ -189,15 +189,15 @@
             </div>
 
             <!-- TAB 1: Certiva CONTENT -->
-            <div id="tab-impex-content" class="grid lg:grid-cols-12 gap-8 items-center">
+            <div id="tab-certiva-content" class="grid lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-6 space-y-6">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950 border border-blue-500/30 text-blue-400 text-xs font-mono">
                         <span>COCREATE PITCH 2026 JAKARTA (ALIBABA.COM)</span>
                     </div>
-                    <h3 data-i18n="impex.heading" class="font-serif text-2xl sm:text-3xl font-bold text-white">
+                    <h3 data-i18n="certiva.heading" class="font-serif text-2xl sm:text-3xl font-bold text-white">
                         Infrastruktur MCP Server v3.1 untuk Ekspor B2B UMKM via Accio Work
                     </h3>
-                    <p data-i18n-html="impex.desc" class="text-slate-300 text-sm leading-relaxed">
+                    <p data-i18n-html="certiva.desc" class="text-slate-300 text-sm leading-relaxed">
                         Certiva memecahkan hambatan kepabeanan ekspor lintas batas bagi UMKM Indonesia. Terintegrasi secara langsung dengan platform agen cerdas <strong class="text-white">Accio Work</strong> menggunakan standar <strong class="text-white">Model Context Protocol (MCP)</strong> via transmisi JSON-RPC.
                     </p>
 
@@ -208,7 +208,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold text-sm">PMK No. 4/2025 Consignment Note (CN) Integration</h4>
-                                <p data-i18n="impex.card1" class="text-slate-400 text-xs mt-1">Mengunci skenario barang kiriman ekspor ≤ 30 kg dengan pembebasan Lartas otomatis untuk non-kegiatan usaha, selaras dengan pola transaksi B2B Alibaba.com.</p>
+                                <p data-i18n="certiva.card1" class="text-slate-400 text-xs mt-1">Mengunci skenario barang kiriman ekspor ≤ 30 kg dengan pembebasan Lartas otomatis untuk non-kegiatan usaha, selaras dengan pola transaksi B2B Alibaba.com.</p>
                             </div>
                         </div>
 
@@ -217,8 +217,8 @@
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <div>
-                                <h4 data-i18n="impex.card2title" class="text-white font-semibold text-sm">11 Regulasi Primer & Hybrid Search Engine</h4>
-                                <p data-i18n="impex.card2" class="text-slate-400 text-xs mt-1">Menggabungkan leksikal BM25 dan Dense Vector via Reciprocal Rank Fusion (RRF k=60) mencakup UU Kepabeanan 17/2006, PMK 155/2022, UU PDP, UU ITE, PP PSTE, & Permendag PMSE.</p>
+                                <h4 data-i18n="certiva.card2title" class="text-white font-semibold text-sm">13 Regulasi Primer & Hybrid Search Engine</h4>
+                                <p data-i18n="certiva.card2" class="text-slate-400 text-xs mt-1">Menggabungkan leksikal BM25 dan Dense Vector via Reciprocal Rank Fusion (RRF k=60) mencakup UU Kepabeanan 17/2006, PMK 155/2022, UU PDP, UU ITE, PP PSTE, Permendag PMSE, POJK Fintech, cakupan Importir (PP 29/2021, Permendag 16/2025), & PPN Impor (UU 8/1983, PMK 131/2024).</p>
                             </div>
                         </div>
                     </div>
@@ -233,12 +233,12 @@
                         <div class="p-3 rounded-lg bg-slate-950 text-slate-300">
                             <span class="text-blue-400">"server_version"</span>: <span class="text-emerald-300">"3.1-Production"</span>,<br/>
                             <span class="text-blue-400">"active_tools"</span>: [<span class="text-amber-300">"search_compliance"</span>, <span class="text-amber-300">"analyze_cross_regulation"</span>, <span class="text-amber-300">"analyze_article_relations"</span>],<br/>
-                            <span class="text-blue-400">"ram_footprint"</span>: <span class="text-emerald-300">"832 MB"</span>,<br/>
-                            <span class="text-blue-400">"avg_latency"</span>: <span class="text-emerald-300">"16.9 ms"</span>,<br/>
-                            <span class="text-blue-400">"regulatory_corpus"</span>: <span data-i18n="impex.corpusList" class="text-emerald-300">"11 regulasi: Kepabeanan, PDP, ITE, PSTE, PMSE, Fintech, Pajak, Impor"</span>
+                            <span class="text-blue-400">"ram_footprint"</span>: <span class="text-emerald-300">"845.3 MB"</span>,<br/>
+                            <span class="text-blue-400">"avg_latency"</span>: <span class="text-emerald-300">"17.2 ms"</span>,<br/>
+                            <span class="text-blue-400">"regulatory_corpus"</span>: <span data-i18n="certiva.corpusList" class="text-emerald-300">"13 regulasi: Kepabeanan, PDP, ITE, PSTE, PMSE, Fintech, Pajak, Impor, PPN Impor"</span>
                         </div>
                         <div class="p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
-                            ✓ Verified Test-Set: 31/31 PASS (100% Recall)<br/>
+                            ✓ Verified Test-Set: 37/37 PASS (Recall@5, 100%)<br/>
                             ✓ Guardrail P1-2 Injected: Citation Prohibition Enforced
                         </div>
                     </div>
@@ -307,7 +307,7 @@
     <!-- ============================================================
          4. ACCIO WORK MCP SIMULATOR UI CARD
          ============================================================ -->
-    <section id="impex" class="py-20 bg-slate-950">
+    <section id="certiva" class="py-20 bg-slate-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -350,7 +350,7 @@
                     <div class="ml-12 p-4 rounded-xl bg-slate-900 border border-blue-500/30 space-y-2 font-mono text-xs">
                         <div class="flex items-center justify-between text-blue-400">
                             <span class="font-semibold">⚡ [MCP Tool Execution] search_compliance()</span>
-                            <span class="text-slate-500">Execution Time: 16.9 ms</span>
+                            <span class="text-slate-500">Execution Time: 17.2 ms</span>
                         </div>
                         <div class="text-slate-400">
                             Query: <span data-i18n="sim.query" class="text-emerald-300">"PMK 4/2025 barang kiriman ekspor 25kg lartas non-kegiatan usaha"</span><br/>
@@ -373,8 +373,8 @@
                                 Pengiriman sampel tekstil Anda sebesar <strong>25 kg</strong> dikategorikan sebagai <strong>Barang Kiriman Ekspor</strong> dan mendapatkan fasilitas khusus:
                             </p>
                             <ul class="list-disc pl-5 space-y-1 text-xs text-slate-300">
-                                <li data-i18n-html="sim.point1"><strong>PMK No. 4/2025 (Pasal 3 & 5):</strong> Menggunakan dokumen kepabeanan sederhana berupa <em>Consignment Note (CN)</em> karena berat ≤ 30 kg.</li>
-                                <li data-i18n-html="sim.point2"><strong>Pengecualian Lartas (Pasal 8 PMK 4/2025):</strong> Barang kiriman untuk sampel non-kegiatan usaha dibebaskan dari persyaratan Larangan dan Pembatasan (Lartas) ekspor standar.</li>
+                                <li data-i18n-html="sim.point1"><strong>PMK No. 4/2025 (Pasal 43 ayat 1):</strong> Menggunakan dokumen kepabeanan sederhana berupa <em>Consignment Note (CN)</em> karena berat ≤ 30 kg.</li>
+                                <li data-i18n-html="sim.point2"><strong>Pengecualian Lartas (Pasal 47 ayat 1a PMK 4/2025):</strong> Barang kiriman untuk sampel non-kegiatan usaha dibebaskan dari persyaratan Larangan dan Pembatasan (Lartas) ekspor standar.</li>
                                 <li data-i18n-html="sim.point3"><strong>UU No. 17/2006 (Pasal 2 ayat 2):</strong> Pemberitahuan ekspor tetap wajib disampaikan secara elektronik via sistem PDE Kepabeanan.</li>
                             </ul>
                             
@@ -513,7 +513,7 @@
 
                         <ul class="mt-6 space-y-3 text-xs text-slate-300">
                             <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t1f1">20 query compliance / bulan</span></li>
-                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t1f2">Akses 9 Regulasi Ekspor & Digital</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t1f2">Akses 13 Regulasi Ekspor & Digital</span></li>
                             <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t1f3">Sitasi pasal terverifikasi</span></li>
                             <li class="flex items-center gap-2">✓ <span>Integrasi Accio Work Ready</span></li>
                         </ul>
@@ -615,7 +615,7 @@
                 <div class="space-y-2">
                     <h4 class="text-white font-semibold text-xs font-mono uppercase tracking-wider">Navigation</h4>
                     <ul class="space-y-1.5 text-slate-400">
-                        <li><a href="#impex" class="hover:text-white transition-colors">Certiva</a></li>
+                        <li><a href="#certiva" class="hover:text-white transition-colors">Certiva</a></li>
                         <li><a href="#enterprise" class="hover:text-white transition-colors">Arsiva Enterprise RWA</a></li>
                         <li><a href="#benchmarks" class="hover:text-white transition-colors">Benchmark Results</a></li>
                         <li><a href="#architecture" class="hover:text-white transition-colors">GraphRAG Architecture</a></li>
@@ -662,12 +662,12 @@
                 "hero.subheadline": 'One legal infrastructure, two specialized engines: <strong class="text-white">Certiva</strong> orchestrates SME export compliance via Accio Work (Alibaba.com) based on PMK 4/2025, while <strong class="text-brand-gold">Arsiva Enterprise</strong> provides On-Premise GraphRAG for cross-border RWA legal restructuring (PT PMA TSPV + Singapore VCC).',
                 "tabs.title": "Two Compliance Engines, One Standard of Reliability",
                 "tabs.subtitle": "Choose the Arsiva module built specifically for your business's operational scale and jurisdictional needs.",
-                "impex.heading": "MCP Server v3.1 Infrastructure for B2B SME Export via Accio Work",
-                "impex.desc": 'Certiva solves cross-border customs friction for Indonesian SMEs. Integrated directly with the <strong class="text-white">Accio Work</strong> intelligent-agent platform using the <strong class="text-white">Model Context Protocol (MCP)</strong> standard via JSON-RPC transmission.',
-                "impex.card1": "Locks in the ≤ 30 kg export consignment scenario with automatic Lartas (import/export restriction) exemption for non-commercial shipments, matching Alibaba.com's B2B transaction pattern.",
-                "impex.card2title": "11 Primary Regulations & Hybrid Search Engine",
-                "impex.card2": "Combines lexical BM25 and Dense Vector search via Reciprocal Rank Fusion (RRF k=60), covering Customs Law 17/2006, PMK 155/2022, PDP Law, ITE Law, PSTE Regulation, & PMSE Ministerial Regulation.",
-                "impex.corpusList": '"11 regulations: Customs, Data Protection, ITE, PSTE, PMSE, Fintech, Tax, Import"',
+                "certiva.heading": "MCP Server v3.1 Infrastructure for B2B SME Export via Accio Work",
+                "certiva.desc": 'Certiva solves cross-border customs friction for Indonesian SMEs. Integrated directly with the <strong class="text-white">Accio Work</strong> intelligent-agent platform using the <strong class="text-white">Model Context Protocol (MCP)</strong> standard via JSON-RPC transmission.',
+                "certiva.card1": "Locks in the ≤ 30 kg export consignment scenario with automatic Lartas (import/export restriction) exemption for non-commercial shipments, matching Alibaba.com's B2B transaction pattern.",
+                "certiva.card2title": "13 Primary Regulations & Hybrid Search Engine",
+                "certiva.card2": "Combines lexical BM25 and Dense Vector search via Reciprocal Rank Fusion (RRF k=60), covering Customs Law 17/2006, PMK 155/2022, PDP Law, ITE Law, PSTE Regulation, PMSE Ministerial Regulation, POJK Fintech, Importer coverage (PP 29/2021, Permendag 16/2025), & Import VAT (UU 8/1983, PMK 131/2024).",
+                "certiva.corpusList": '"13 regulations: Customs, Data Protection, ITE, PSTE, PMSE, Fintech, Tax, Import, Import VAT"',
                 "enterprise.heading": "Cross-Border Legal Orchestration: TSPV PT PMA & Singapore VCC HoldCo",
                 "enterprise.desc": "Unlocking dead capital in Indonesian property and land through a legal corporate structure that does not breach the nationality principle of Article 21 of the 1960 Basic Agrarian Law (UUPA).",
                 "enterprise.card1": "Physical assets in Indonesia are fully managed by a PT PMA (domestic legal entity) holding legal Hak Guna Bangunan (HGB) / Hak Pakai land-rights status in line with territorial sovereignty.",
@@ -679,8 +679,8 @@
                 "sim.userMsg": '"I want to send a sample of processed textile products to a B2B buyer in Europe via Alibaba.com, weighing about 25 kg. Is it subject to export Lartas procedures, and which regulations apply?"',
                 "sim.query": '"PMK 4/2025 export consignment 25kg lartas non-commercial use"',
                 "sim.responseIntro": "Your <strong>25 kg</strong> textile sample shipment is categorized as an <strong>Export Consignment</strong> and qualifies for special facilities:",
-                "sim.point1": "<strong>PMK No. 4/2025 (Article 3 & 5):</strong> Uses a simplified customs document in the form of a <em>Consignment Note (CN)</em> since weight is ≤ 30 kg.",
-                "sim.point2": "<strong>Lartas Exemption (Article 8, PMK 4/2025):</strong> Consignments of non-commercial samples are exempt from standard export Prohibition & Restriction (Lartas) requirements.",
+                "sim.point1": "<strong>PMK No. 4/2025 (Article 43, paragraph 1):</strong> Uses a simplified customs document in the form of a <em>Consignment Note (CN)</em> since weight is ≤ 30 kg.",
+                "sim.point2": "<strong>Lartas Exemption (Article 47, paragraph 1a, PMK 4/2025):</strong> Consignments of non-commercial samples are exempt from standard export Prohibition & Restriction (Lartas) requirements.",
                 "sim.point3": "<strong>Law No. 17/2006 (Article 2, paragraph 2):</strong> Export declarations must still be submitted electronically via the PDE Customs system.",
                 "arch.title": "GraphRAG Architecture & Legal Moat",
                 "arch.subtitle": "Why standard Vector RAG approaches fail at regulatory legal analysis, and how Arsiva protects your corporate data privacy.",
@@ -702,7 +702,7 @@
                 "pricing.t1period": "/ forever",
                 "pricing.t1desc": "For SMEs who want to try basic export compliance search via the MCP Server.",
                 "pricing.t1f1": "20 compliance queries / month",
-                "pricing.t1f2": "Access to 9 Export & Digital Regulations",
+                "pricing.t1f2": "Access to 13 Export & Digital Regulations",
                 "pricing.t1f3": "Verified article citations",
                 "pricing.t2period": "/ month",
                 "pricing.t2desc": "For active B2B exporters on international marketplaces (Alibaba.com).",
@@ -720,6 +720,7 @@
                 "cta.waFree": "https://wa.me/6285692904399?text=Hello%20Certiva%2C%20I%27d%20like%20to%20try%20Certiva%20Free.",
                 "cta.waPro": "https://wa.me/6285692904399?text=Hello%20Certiva%2C%20I%27d%20like%20to%20subscribe%20to%20Certiva%20Pro.",
                 "cta.waEnterprise": "https://wa.me/6580174461?text=Hello%20Arsiva%2C%20I%27d%20like%20to%20consult%20on%20Enterprise%20RWA.",
+                "hero.latencyNote": "Average across 4 production benchmark runs (26–28 August 2026)",
                 "meta.title": "Arsiva — Compliance Engine for B2B SME Export (Certiva) & RWA Tokenization",
                 "meta.description": "Arsiva: deterministic AI LegalTech infrastructure. Certiva for B2B SME export compliance (Accio Work, Alibaba.com) & Arsiva On-Premise GraphRAG for RWA pre-tokenization."
             }
@@ -794,21 +795,21 @@
          ============================================================ -->
     <script>
         function switchTab(tab) {
-            const impexContent = document.getElementById('tab-impex-content');
+            const certivaContent = document.getElementById('tab-certiva-content');
             const enterpriseContent = document.getElementById('tab-enterprise-content');
-            const btnImpEx = document.getElementById('btn-tab-impex');
+            const btnCertiva = document.getElementById('btn-tab-certiva');
             const btnEnterprise = document.getElementById('btn-tab-enterprise');
 
-            if (tab === 'impex') {
-                impexContent.classList.remove('hidden');
+            if (tab === 'certiva') {
+                certivaContent.classList.remove('hidden');
                 enterpriseContent.classList.add('hidden');
-                btnImpEx.className = 'px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-brand-blue text-white shadow-md';
+                btnCertiva.className = 'px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-brand-blue text-white shadow-md';
                 btnEnterprise.className = 'px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all';
             } else {
-                impexContent.classList.add('hidden');
+                certivaContent.classList.add('hidden');
                 enterpriseContent.classList.remove('hidden');
                 btnEnterprise.className = 'px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-brand-gold text-slate-950 shadow-md font-bold';
-                btnImpEx.className = 'px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all';
+                btnCertiva.className = 'px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold text-slate-400 hover:text-white transition-all';
             }
         }
     </script>
