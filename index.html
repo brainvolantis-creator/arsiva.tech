@@ -138,7 +138,7 @@
                         <span class="text-3xl font-bold font-mono text-emerald-400">Recall@5 100%</span>
                         <span class="text-xs text-slate-400 font-mono">37/37</span>
                     </div>
-                    <p class="mt-1 text-slate-400 text-xs">Precision@1 36/37 (97.3%) · 37 test-set regulatory queries</p>
+                    <p class="mt-1 text-slate-400 text-xs">Precision@1 37/37 (100%) · 37 test-set regulatory queries</p>
                 </div>
 
                 <!-- Metric 3 -->
@@ -146,14 +146,17 @@
                     <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Indexed Corpus</div>
                     <div class="mt-2 flex items-baseline gap-2">
                         <span class="text-3xl font-bold font-mono text-white">13 Regs</span>
-                        <span class="text-teal-400 text-xs font-semibold">40 Articles</span>
+                        <span class="text-teal-400 text-xs font-semibold">47 Articles</span>
                     </div>
-                    <p class="mt-1 text-slate-400 text-xs">15 relational edges (Verified Cross-Reference Graph)</p>
+                    <p class="mt-1 text-slate-400 text-xs">15 article-level relations · 11 document-level relations (Verified Cross-Reference Graph)</p>
                 </div>
 
                 <!-- Metric 4 -->
                 <div class="glass-card-gold p-5 rounded-2xl border-l-4 border-l-brand-gold">
-                    <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Ground-Truth Network</div>
+                    <div class="flex items-center justify-between">
+                        <div class="text-slate-400 text-xs font-mono uppercase tracking-wider">Ground-Truth Network</div>
+                        <span class="text-[9px] font-mono uppercase tracking-wider px-1.5 py-0.5 rounded bg-brand-gold/10 border border-brand-gold/30 text-brand-gold">Arsiva Enterprise</span>
+                    </div>
                     <div class="mt-2 flex items-baseline gap-2">
                         <span class="text-3xl font-bold font-mono text-brand-gold">10 Notaries</span>
                         <span class="text-xs text-slate-300 font-semibold">1 Law Firm</span>
@@ -235,7 +238,9 @@
                             <span class="text-blue-400">"active_tools"</span>: [<span class="text-amber-300">"search_compliance"</span>, <span class="text-amber-300">"analyze_cross_regulation"</span>, <span class="text-amber-300">"analyze_article_relations"</span>],<br/>
                             <span class="text-blue-400">"ram_footprint"</span>: <span class="text-emerald-300">"845.3 MB"</span>,<br/>
                             <span class="text-blue-400">"avg_latency"</span>: <span class="text-emerald-300">"17.2 ms"</span>,<br/>
-                            <span class="text-blue-400">"regulatory_corpus"</span>: <span data-i18n="certiva.corpusList" class="text-emerald-300">"13 regulasi: Kepabeanan, PDP, ITE, PSTE, PMSE, Fintech, Pajak, Impor, PPN Impor"</span>
+                            <span class="text-blue-400">"regulatory_corpus"</span>: <span data-i18n="certiva.corpusList" class="text-emerald-300">"13 regulasi: Kepabeanan, PDP, ITE, PSTE, PMSE, Fintech, Pajak, Impor, PPN Impor"</span>,<br/>
+                            <span class="text-blue-400">"verified_regulations"</span>: <span class="text-emerald-300">"13/13 (100% Fully Verified)"</span>,<br/>
+                            <span class="text-blue-400">"document_clusters"</span>: <span class="text-emerald-300">"3 connected clusters (merged from 4)"</span>
                         </div>
                         <div class="p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
                             ✓ Verified Test-Set: 37/37 PASS (Recall@5, 100%)<br/>
