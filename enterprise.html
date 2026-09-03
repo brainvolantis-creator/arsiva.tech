@@ -329,7 +329,7 @@
             if (metaDesc) metaDesc.setAttribute('content', dict && dict['meta.description'] ? dict['meta.description'] : originalMeta.description);
             document.documentElement.setAttribute('lang', lang);
             const label = document.getElementById('lang-toggle-label');
-            if (label) label.textContent = lang === 'en' ? 'ID' : 'EN';
+            if (label) label.textContent = lang === 'en' ? 'EN' : 'ID';
         }
 
         function toggleLang() {
