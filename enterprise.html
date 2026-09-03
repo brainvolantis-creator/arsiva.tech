@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arsiva Enterprise — On-Premise GraphRAG for Cross-Border RWA Structuring</title>
+    <meta name="description" content="Arsiva Enterprise: On-Premise GraphRAG untuk restrukturisasi hukum Real World Asset (RWA) lintas batas — TSPV PT PMA + Singapore VCC HoldCo, divalidasi 10 Notaris & 1 Firma Hukum." />
+    <meta property="og:title" content="Arsiva Enterprise — On-Premise GraphRAG for Cross-Border RWA Structuring" />
+    <meta property="og:description" content="Orkestrasi hukum lintas batas untuk pre-tokenisasi Real World Asset: TSPV PT PMA + Singapore VCC HoldCo, Knowledge Graph tervalidasi konsorsium notaris & firma hukum." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arsiva.tech/enterprise.html" />
+    <link rel="canonical" href="https://arsiva.tech/enterprise.html" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316233F'/%3E%3Cpath d='M16 8 L10 24 M16 8 L22 24' stroke='%2316233F' stroke-width='2.5' fill='none'/%3E%3Cpath d='M16 9 L10.5 23.3 M16 9 L21.5 23.3' stroke='%23C6992C' stroke-width='2.2' fill='none'/%3E%3Cline x1='12.2' y1='17' x2='19.8' y2='17' stroke='%23C6992C' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='8' r='2' fill='%23C6992C'/%3E%3Ccircle cx='10' cy='24' r='2' fill='%23C6992C'/%3E%3Ccircle cx='22' cy='24' r='2' fill='%23C6992C'/%3E%3C/svg%3E" />
+
+    <!-- Google Fonts & shared stylesheet (same design system as arsiva.tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- ============================================================
+         NAVIGATION BAR
+         ============================================================ -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-brand-gold/40 flex items-center justify-center shadow-lg shadow-brand-gold/10">
+                        <svg viewBox="0 0 32 32" class="w-6 h-6">
+                            <path d="M16 8 L10 24 M16 8 L22 24" stroke="#C6992C" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+                            <line x1="12.2" y1="17" x2="19.8" y2="17" stroke="#C6992C" stroke-width="2.6" stroke-linecap="round"/>
+                            <circle cx="16" cy="8" r="2.4" fill="#C6992C"/>
+                            <circle cx="10" cy="24" r="2.4" fill="#C6992C"/>
+                            <circle cx="22" cy="24" r="2.4" fill="#C6992C"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-xl tracking-tight text-white block leading-none">Arsiva</span>
+                        <span class="text-[10px] font-mono tracking-wider text-slate-400 uppercase">Enterprise</span>
+                    </div>
+                </a>
+                <div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950 border border-brand-gold/30 text-brand-gold text-xs font-medium">
+                    <span>On-Premise GraphRAG</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-brand-blue transition-colors">← Certiva (Accio)</a>
+                <a href="#structure" class="hover:text-brand-gold transition-colors">Struktur Hukum</a>
+                <a href="#ground-truth" class="hover:text-brand-gold transition-colors">Ground-Truth Network</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button id="lang-toggle" onclick="toggleLang()" type="button" class="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+                    <span id="lang-toggle-label">EN</span>
+                </button>
+                <a data-i18n-href="cta.waEnterprise" href="https://wa.me/6580174461?text=Halo%20Arsiva%2C%20saya%20ingin%20konsultasi%20Enterprise%20RWA." target="_blank" rel="noopener" class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-brand-gold border border-brand-gold/40 transition-all">
+                    Contact Sales Advisory
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="relative pt-16 pb-12 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950">
+        <div class="absolute top-1/3 right-10 w-[400px] h-[250px] bg-brand-gold/10 blur-[100px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-6">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-mono uppercase tracking-widest text-brand-gold">
+                    Real World Asset Pre-Tokenization Platform
+                </span>
+            </div>
+            <h1 class="text-center font-serif text-3xl sm:text-5xl leading-[1.15] font-bold tracking-tight text-white max-w-4xl mx-auto">
+                Orkestrasi Hukum Lintas Batas untuk <span class="gradient-text-gold">Real World Asset</span>
+            </h1>
+            <p data-i18n-html="enterprise.desc" class="mt-6 text-center text-slate-300 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
+                Mewujudkan pembebasan kapital mati (Dead Capital) properti dan tanah di Indonesia melalui struktur korporasi legal yang tidak membentur asas nasionalitas Pasal 21 UUPA 1960.
+            </p>
+            <p class="mt-4 text-center text-slate-500 text-sm">
+                Produk lain dari Arsiva — <a href="index.html" class="text-slate-300 hover:text-brand-blue transition-colors font-semibold">lihat Certiva, mesin kepatuhan ekspor UMKM →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         STRUCTURE + GRAPH
+         ============================================================ -->
+    <section id="structure" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-950 border border-amber-500/30 text-brand-gold text-xs font-mono">
+                    <span>REAL WORLD ASSET PRE-TOKENIZATION PLATFORM</span>
+                </div>
+                <h3 data-i18n="enterprise.heading" class="font-serif text-2xl sm:text-3xl font-bold text-white">
+                    Orkestrasi Hukum Lintas Batas: TSPV PT PMA & HoldCo Singapore VCC
+                </h3>
+
+                <div class="space-y-4">
+                    <div class="flex gap-4 p-4 rounded-xl bg-slate-850 border border-slate-800">
+                        <div class="w-10 h-10 rounded-lg bg-amber-900/40 border border-amber-500/40 flex items-center justify-center shrink-0 text-brand-gold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold text-sm">Target Special Purpose Vehicle (TSPV) PT PMA</h4>
+                            <p data-i18n="enterprise.card1" class="text-slate-400 text-xs mt-1">Aset fisik di Indonesia dikelola penuh oleh PT PMA (badan hukum domestik) yang memegang status legal Hak Guna Bangunan (HGB) / Hak Pakai sesuai kedaulatan teritorial.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 p-4 rounded-xl bg-slate-850 border border-slate-800">
+                        <div class="w-10 h-10 rounded-lg bg-blue-900/40 border border-blue-500/40 flex items-center justify-center shrink-0 text-blue-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5 5 0 006 0l-3-9eM6 7l6-2m6 2l3-1m-3 1l-3 9a5 5 0 006 0l-3-9m-6 2l6-2m-6 2v6a2 2 0 002 2h2a2 2 0 002-2v-6m-6 0H6"/></svg>
+                        </div>
+                        <div>
+                            <h4 data-i18n="enterprise.card2title" class="text-white font-semibold text-sm">Singapore VCC (Variable Capital Company) & Optimasi DTA</h4>
+                            <p data-i18n="enterprise.card2" class="text-slate-400 text-xs mt-1">Saham PT PMA dimiliki HoldCo VCC Singapura. Menikmati fasilitas pemotongan withholding tax dividen 10% (vs 20% Cayman non-DTA) dan statutory ring-fencing antar sub-dana.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 glass-card-gold p-6 rounded-2xl">
+                <h4 data-i18n="enterprise.graphTitle" class="text-brand-gold font-serif text-lg font-bold mb-4">Graf Ontologi Hukum (Triplet SPO)</h4>
+                <div class="space-y-3 font-mono text-xs">
+                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">
+                        <span class="text-amber-400">[Hak Guna Bangunan]</span> <span class="text-slate-400">--only_owned_by--></span> <span class="text-blue-400">[WNI / PT PMA Indonesia]</span>
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">
+                        <span class="text-amber-400">[PT PMA TSPV]</span> <span class="text-slate-400">--shares_owned_by--></span> <span class="text-blue-400">[Singapore HoldCo VCC]</span>
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">
+                        <span class="text-amber-400">[RWA Token Digital]</span> <span class="text-slate-400">--represents--></span> <span class="text-blue-400">[VCC Sub-Fund Participating Shares]</span>
+                    </div>
+                    <div class="p-3 rounded-lg bg-emerald-950/60 border border-emerald-500/40 text-emerald-300">
+                        ✓ Status: Clean & Clear Compliance Gate<br/>
+                        ✓ Ground Truth Verified by 10 Partner Notary Offices
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         GROUND-TRUTH VALIDATION CONSORTIUM
+         ============================================================ -->
+    <section id="ground-truth" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="p-8 rounded-2xl bg-gradient-to-r from-slate-950 via-slate-850 to-slate-950 border border-slate-800">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <h3 data-i18n="consortium.title" class="font-serif text-xl font-bold text-white">Konsorsium Validasi Data Hukum Ground-Truth</h3>
+                    <p data-i18n="consortium.desc" class="text-slate-400 text-xs">
+                        Knowledge Graph Arsiva Enterprise dipasok dan divalidasi secara langsung oleh ekosistem hukum perdata dan penataan aset terverifikasi di Indonesia:
+                    </p>
+                </div>
+                <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+                    <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                        <div class="text-2xl font-bold font-mono text-brand-gold">10</div>
+                        <div data-i18n="consortium.stat1" class="text-xs text-slate-300 mt-1">Kantor Notaris Partner</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                        <div class="text-2xl font-bold font-mono text-brand-blue">1</div>
+                        <div data-i18n="consortium.stat2" class="text-xs text-slate-300 mt-1">Firma Hukum (Satmoko Law Firm)</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                        <div class="text-2xl font-bold font-mono text-emerald-400">9</div>
+                        <div data-i18n="consortium.stat3" class="text-xs text-slate-300 mt-1">Perusahaan Aset (Pipeline RWA)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING
+         ============================================================ -->
+    <section id="pricing" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Model Pengadaan Enterprise</h2>
+                <p class="mt-4 text-slate-400 text-sm">Engagement langsung dengan tim hukum & teknis Arsiva.</p>
+            </div>
+            <div class="max-w-sm mx-auto">
+                <div class="glass-card-gold p-8 rounded-2xl flex flex-col justify-between border border-brand-gold/40">
+                    <div>
+                        <div class="text-xs font-mono uppercase tracking-wider text-brand-gold">Arsiva Enterprise</div>
+                        <h3 class="text-xl font-bold text-white mt-1">RWA Structuring OS</h3>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-4xl font-bold font-serif text-brand-gold">$ 25,000</span>
+                            <span data-i18n="pricing.t3period" class="text-slate-400 text-xs">/ 3 bulan engagement</span>
+                        </div>
+                        <p data-i18n="pricing.t3desc" class="mt-3 text-slate-300 text-xs">Untuk pengembang aset fisik, family office, dan firma hukum Web3.</p>
+
+                        <ul class="mt-6 space-y-3 text-xs text-slate-200">
+                            <li class="flex items-center gap-2">✓ <span>Full GraphRAG On-Premise Deployment</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t3f2">Struktur Hukum TSPV PT PMA + HoldCo VCC</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t3f3">Audit Due Diligence 10 Notaris Partner</span></li>
+                            <li class="flex items-center gap-2">✓ <span>Custom Knowledge Graph & Legal Triplet</span></li>
+                            <li class="flex items-center gap-2">✓ <span data-i18n="pricing.t3f5">Full Technical & Legal Counsel Dedicated</span></li>
+                        </ul>
+                    </div>
+                    <a data-i18n-href="cta.waEnterprise" href="https://wa.me/6580174461?text=Halo%20Arsiva%2C%20saya%20ingin%20konsultasi%20Enterprise%20RWA." target="_blank" rel="noopener" class="mt-8 block text-center py-3 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-brand-gold border border-brand-gold/40 transition-all">
+                        Contact Sales Advisory
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-slate-950 border-t border-slate-850 pt-16 pb-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-12 border-b border-slate-850">
+                <div class="space-y-3 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-slate-900 border border-brand-gold/40 flex items-center justify-center">
+                            <svg viewBox="0 0 32 32" class="w-5 h-5">
+                                <path d="M16 8 L10 24 M16 8 L22 24" stroke="#C6992C" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+                                <line x1="12.2" y1="17" x2="19.8" y2="17" stroke="#C6992C" stroke-width="2.6" stroke-linecap="round"/>
+                                <circle cx="16" cy="8" r="2.4" fill="#C6992C"/>
+                                <circle cx="10" cy="24" r="2.4" fill="#C6992C"/>
+                                <circle cx="22" cy="24" r="2.4" fill="#C6992C"/>
+                            </svg>
+                        </div>
+                        <span class="font-serif font-bold text-lg text-white">Arsiva Tech</span>
+                    </div>
+                    <p data-i18n-html="footer.brandNote" class="text-slate-500 text-[11px] max-w-sm leading-relaxed italic">
+                        Arsiva adalah entitas induk teknologi kepatuhan hukum kami — mencakup Arsiva Enterprise RWA. <strong class="text-white">Certiva</strong> adalah nama produk yang kami gunakan khusus untuk program CoCreate Pitch 2026 bersama Accio Work (Alibaba.com).
+                    </p>
+                    <div class="text-slate-300 pt-2">
+                        Legal Counsel & Advisory Partner: <a href="https://satmokolawfirm.id" target="_blank" rel="noopener" class="text-brand-gold hover:underline">Satmoko Law Firm</a> (Bambang Satmoko, S.T., S.H.)
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="text-white font-semibold text-xs font-mono uppercase tracking-wider">Contact & Verification</h4>
+                    <ul class="space-y-1.5 text-slate-400">
+                        <li>WhatsApp Arsiva (SG): <a href="https://wa.me/6580174461" target="_blank" rel="noopener" class="text-slate-200 hover:text-white">+65 8017 4461</a></li>
+                        <li><a href="index.html" class="hover:text-white transition-colors">← Kembali ke Certiva</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 space-y-3 text-[11px] text-slate-400 leading-relaxed">
+                <p data-i18n-html="footer.disclaimer">
+                    <strong>DISCLAIMER KEPATUHAN HUKUM:</strong> Seluruh informasi regulasi, sitasi pasal (termasuk UU Kepabeanan 17/2006, PMK 155/2022, PMK 4/2025, UUPA 1960, UU PDP 27/2022, dan POJK Fintech), serta analisis penataan aset lintas batas (TSPV PT PMA & Singapore VCC) pada platform ini disediakan untuk tujuan dokumentasi teknis dan kepatuhan sistem. Pengambilan keputusan investasi atau restrukturisasi korporat tetap disarankan melalui verifikasi firma hukum berlisensi.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 text-slate-400">
+                    <div>&copy; 2026 Arsiva Tech. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         I18N ENGINE (shared mechanism with index.html)
+         ============================================================ -->
+    <script>
+        const translations = {
+            en: {
+                "enterprise.desc": "Unlocking dead capital in Indonesian property and land through a legal corporate structure that does not breach the nationality principle of Article 21 of the 1960 Basic Agrarian Law (UUPA).",
+                "enterprise.heading": "Cross-Border Legal Orchestration: TSPV PT PMA & Singapore VCC HoldCo",
+                "enterprise.card1": "Physical assets in Indonesia are fully managed by a PT PMA (domestic legal entity) holding legal Hak Guna Bangunan (HGB) / Hak Pakai land-rights status in line with territorial sovereignty.",
+                "enterprise.card2title": "Singapore VCC (Variable Capital Company) & DTA Optimization",
+                "enterprise.card2": "PT PMA shares are held by a Singapore VCC HoldCo, benefiting from a 10% dividend withholding tax (vs. 20% for non-DTA Cayman structures) and statutory ring-fencing between sub-funds.",
+                "enterprise.graphTitle": "Legal Ontology Graph (SPO Triplet)",
+                "consortium.title": "Ground-Truth Legal Data Validation Consortium",
+                "consortium.desc": "Arsiva Enterprise's Knowledge Graph is supplied and directly validated by a verified civil-law and asset-structuring ecosystem in Indonesia:",
+                "consortium.stat1": "Partner Notary Offices",
+                "consortium.stat2": "Law Firm (Satmoko Law Firm)",
+                "consortium.stat3": "Asset Companies (RWA Pipeline)",
+                "pricing.t3period": "/ 3-month engagement",
+                "pricing.t3desc": "For physical asset developers, family offices, and Web3 law firms.",
+                "pricing.t3f2": "TSPV PT PMA + HoldCo VCC Legal Structure",
+                "pricing.t3f3": "Due Diligence Audit with 10 Partner Notaries",
+                "pricing.t3f5": "Full Technical & Legal Counsel Dedicated",
+                "footer.brandNote": 'Arsiva is our parent legal-compliance technology entity — encompassing Arsiva Enterprise RWA. <strong class="text-white">Certiva</strong> is the product name we use specifically for the CoCreate Pitch 2026 program with Accio Work (Alibaba.com).',
+                "footer.disclaimer": "<strong>LEGAL COMPLIANCE DISCLAIMER:</strong> All regulatory information, article citations (including Customs Law 17/2006, PMK 155/2022, PMK 4/2025, UUPA 1960, PDP Law 27/2022, and POJK Fintech regulations), and cross-border asset structuring analysis (TSPV PT PMA & Singapore VCC) on this platform are provided for technical documentation and system-compliance purposes. Investment or corporate restructuring decisions should still be verified through a licensed law firm.",
+                "cta.waEnterprise": "https://wa.me/6580174461?text=Hello%20Arsiva%2C%20I%27d%20like%20to%20consult%20on%20Enterprise%20RWA.",
+                "meta.title": "Arsiva Enterprise — On-Premise GraphRAG for Cross-Border RWA Structuring",
+                "meta.description": "Arsiva Enterprise: On-Premise GraphRAG for cross-border Real World Asset (RWA) legal restructuring — TSPV PT PMA + Singapore VCC HoldCo, validated by 10 Notaries & 1 Law Firm."
+            }
+        };
+        const originalMeta = {
+            title: document.title,
+            description: document.querySelector('meta[name="description"]')?.getAttribute('content') || ''
+        };
+
+        function getInitialLang() {
+            const saved = localStorage.getItem('arsiva_lang');
+            if (saved === 'id' || saved === 'en') return saved;
+            const nav = (navigator.language || 'id').toLowerCase();
+            return nav.startsWith('id') ? 'id' : 'en';
+        }
+
+        const originalStore = { text: {}, html: {}, href: {} };
+        function cacheOriginals() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                originalStore.text[el.getAttribute('data-i18n')] = el.textContent;
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                originalStore.html[el.getAttribute('data-i18n-html')] = el.innerHTML;
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                originalStore.href[el.getAttribute('data-i18n-href')] = el.getAttribute('href');
+            });
+        }
+
+        function applyLang(lang) {
+            const dict = lang === 'en' ? translations.en : null;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.textContent = dict && dict[key] ? dict[key] : originalStore.text[key];
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                el.innerHTML = dict && dict[key] ? dict[key] : originalStore.html[key];
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                const key = el.getAttribute('data-i18n-href');
+                el.setAttribute('href', dict && dict[key] ? dict[key] : originalStore.href[key]);
+            });
+            document.title = dict && dict['meta.title'] ? dict['meta.title'] : originalMeta.title;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', dict && dict['meta.description'] ? dict['meta.description'] : originalMeta.description);
+            document.documentElement.setAttribute('lang', lang);
+            const label = document.getElementById('lang-toggle-label');
+            if (label) label.textContent = lang === 'en' ? 'ID' : 'EN';
+        }
+
+        function toggleLang() {
+            const current = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'id';
+            const next = current === 'en' ? 'id' : 'en';
+            localStorage.setItem('arsiva_lang', next);
+            applyLang(next);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            cacheOriginals();
+            applyLang(getInitialLang());
+        });
+    </script>
+</body>
+</html>
