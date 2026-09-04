@@ -267,21 +267,21 @@
 
                 <div class="lg:col-span-6 glass-card p-6 rounded-2xl border border-slate-700">
                     <div class="flex items-center justify-between pb-4 border-b border-slate-800 font-mono text-xs text-slate-400">
-                        <span>mcp_server_status.json</span>
+                        <span data-i18n="status.label">Status Certiva</span>
                         <span class="text-emerald-400">● 100% Operational</span>
                     </div>
-                    <div class="mt-4 space-y-3 font-mono text-xs">
-                        <div class="p-3 rounded-lg bg-slate-950 text-slate-300">
-                            <span class="text-blue-400">"server_version"</span>: <span class="text-emerald-300">"3.1-Production"</span>,<br/>
-                            <span class="text-blue-400">"active_tools"</span>: [<span class="text-amber-300">"search_compliance"</span>, <span class="text-amber-300">"analyze_cross_regulation"</span>, <span class="text-amber-300">"analyze_article_relations"</span>],<br/>
-                            <span class="text-blue-400">"ram_footprint"</span>: <span class="text-emerald-300">"789.4 MB"</span>,<br/>
-                            <span class="text-blue-400">"avg_latency"</span>: <span class="text-emerald-300">"16.1 ms"</span>,<br/>
-                            <span class="text-blue-400">"regulatory_corpus"</span>: <span data-i18n="certiva.corpusList" class="text-emerald-300">"13 regulasi: Kepabeanan, PDP, ITE, PSTE, PMSE, Fintech, Pajak, Impor, PPN Impor"</span>,<br/>
-                            <span class="text-blue-400">"verified_regulations"</span>: <span class="text-emerald-300">"13/13 (100% Fully Verified)"</span>,<br/>
-                            <span class="text-blue-400">"document_clusters"</span>: <span class="text-emerald-300">"3 connected clusters (merged from 4)"</span>,<br/>
-                            <span class="text-blue-400">"article_relations"</span>: <span class="text-emerald-300">"41 total (22 verified_cross_ref · 6 verified_statutory · 13 inferred_topical)"</span>
+                    <div class="mt-4 space-y-3">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="p-4 rounded-lg bg-slate-950 text-center">
+                                <div class="text-2xl font-bold font-mono text-white">13</div>
+                                <div data-i18n="status.regCount" class="text-slate-400 text-xs mt-1">Regulasi tercakup penuh</div>
+                            </div>
+                            <div class="p-4 rounded-lg bg-slate-950 text-center">
+                                <div class="text-2xl font-bold font-mono text-white">54</div>
+                                <div data-i18n="status.articleCount" class="text-slate-400 text-xs mt-1">Pasal terindeks & terkurasi</div>
+                            </div>
                         </div>
-                        <div class="p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
+                        <div class="p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs">
                             ✓ Diuji pada 75 skenario regulasi nyata — 96% akurasi jawaban pertama<br/>
                             ✓ Setiap jawaban tertaut ke pasal asli — tidak pernah mengarang sumber<br/>
                             ✓ Terus diuji dan disempurnakan terhadap kasus tepi
@@ -606,7 +606,7 @@
                         Arsiva adalah entitas induk teknologi kepatuhan hukum kami — mencakup Arsiva Enterprise RWA. <strong class="text-white">Certiva</strong> adalah nama produk yang kami gunakan khusus untuk program CoCreate Pitch 2026 bersama Accio Work (Alibaba.com).
                     </p>
                     <div class="text-slate-300 pt-2">
-                        Legal Counsel & Advisory Partner: <a href="https://satmokolawfirm.id" target="_blank" rel="noopener" class="text-brand-gold hover:underline">Satmoko Law Firm</a> (Bambang Satmoko, S.T., S.H.)
+                        Legal Reviewer: <a href="https://satmokolawfirm.id" target="_blank" rel="noopener" class="text-brand-gold hover:underline">Bambang Satmoko, S.T., S.H.</a> — Founder of Certiva & Managing Partner, Satmoko Law Firm
                     </div>
                 </div>
 
@@ -684,7 +684,9 @@
                 "certiva.card1": "Locks in the ≤ 30 kg export consignment scenario with automatic Lartas (import/export restriction) exemption for non-commercial shipments, matching Alibaba.com's B2B transaction pattern.",
                 "certiva.card2title": "13 Key Regulations, One Clear Answer",
                 "certiva.card2": "Certiva understands everyday questions and links them straight to the right article — covering Customs Law 17/2006, PMK 155/2022, PDP Law, ITE Law, PSTE Regulation, PMSE Ministerial Regulation, POJK Fintech, Importer coverage (PP 29/2021, Permendag 16/2025), & Import VAT (UU 8/1983, PMK 131/2024).",
-                "certiva.corpusList": '"13 regulations: Customs, Data Protection, ITE, PSTE, PMSE, Fintech, Tax, Import, Import VAT"',
+                "status.label": "Certiva Status",
+                "status.regCount": "Regulations fully covered",
+                "status.articleCount": "Articles indexed & curated",
                 "sim.title": "Live Simulation: Certiva MCP Server Execution on Accio Work",
                 "sim.subtitle": "See how the Accio Work AI agent calls Certiva's tools in real time to produce verified legal answers without hallucination.",
                 "sim.userMsg": '"I want to send a sample of processed textile products to a B2B buyer in Europe via Alibaba.com, weighing about 25 kg. Is it subject to export Lartas procedures, and which regulations apply?"',
