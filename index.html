@@ -315,10 +315,10 @@
                     <!-- User Prompt Message -->
                     <div class="flex gap-4 items-start">
                         <div data-i18n="sim.avatarLabel" class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center shrink-0 text-white font-bold text-xs">
-                            UMKM
+                            Sari
                         </div>
                         <div data-i18n="sim.userMsg" class="bg-slate-800 p-4 rounded-2xl rounded-tl-none text-slate-200 max-w-2xl border border-slate-700">
-                            "Saya mau kirim sampel produk tekstil olahan ke pembeli B2B di Eropa lewat Alibaba.com beratnya sekitar 25 kg. Apakah kena prosedur Lartas ekspor dan regulasi apa yang berlaku?"
+                            "Saya Sari, usaha keripik rumahan. Ada pembeli di Malaysia mau order 20 kg lewat Alibaba.com — ini ekspor pertama saya. Apa saja yang harus saya penuhi?"
                         </div>
                     </div>
 
@@ -328,7 +328,7 @@
                             <span class="font-semibold">⚡ [MCP Tool Execution] search_compliance()</span>
                         </div>
                         <div class="text-slate-400">
-                            Query: <span data-i18n="sim.query" class="text-emerald-300">"PMK 4/2025 barang kiriman ekspor 25kg lartas non-kegiatan usaha"</span><br/>
+                            Query: <span data-i18n="sim.query" class="text-emerald-300">"PMK 4/2025 barang kiriman ekspor 20kg UMKM consignment note"</span><br/>
                             Corpus: <span class="text-slate-300">UU 17/2006 (Kepabeanan), PMK 155/2022, PMK 4/2025</span><br/>
                             Fusion: <span class="text-slate-300" data-i18n="sim.fusion">Bahasa sehari-hari → pasal resmi</span>
                         </div>
@@ -345,11 +345,11 @@
                                 <span data-i18n="sim.verifiedBadge">RESPONS TERVERIFIKASI SESUAI HUKUM</span>
                             </div>
                             <p data-i18n-html="sim.responseIntro" class="text-slate-300">
-                                Pengiriman sampel tekstil Anda sebesar <strong>25 kg</strong> dikategorikan sebagai <strong>Barang Kiriman Ekspor</strong> dan mendapatkan fasilitas khusus:
+                                Pengiriman keripik Anda sebesar <strong>20 kg</strong> dikategorikan sebagai <strong>Barang Kiriman Ekspor</strong> dan bisa memakai jalur dokumen yang lebih sederhana:
                             </p>
                             <ul class="list-disc pl-5 space-y-1 text-xs text-slate-300">
-                                <li data-i18n-html="sim.point1"><strong>PMK No. 4/2025 (Pasal 43 ayat 1):</strong> Menggunakan dokumen kepabeanan sederhana berupa <em>Consignment Note (CN)</em> karena berat ≤ 30 kg.</li>
-                                <li data-i18n-html="sim.point2"><strong>Pengecualian Lartas (Pasal 47 ayat 1a PMK 4/2025):</strong> Barang kiriman untuk sampel non-kegiatan usaha dibebaskan dari persyaratan Larangan dan Pembatasan (Lartas) ekspor standar.</li>
+                                <li data-i18n-html="sim.point1"><strong>PMK No. 4/2025 (Pasal 43 ayat 1):</strong> Menggunakan dokumen kepabeanan sederhana berupa <em>Consignment Note (CN)</em>, bukan PEB penuh, karena berat ≤ 30 kg.</li>
+                                <li data-i18n-html="sim.point2"><strong>Cek Status Lartas per Kode HS:</strong> Karena ini penjualan komersial (bukan sampel), status Larangan &amp; Pembatasan tetap dicek berdasarkan kode HS keripik Anda — Certiva menandai otomatis jika produk termasuk kategori terbatas.</li>
                                 <li data-i18n-html="sim.point3"><strong>UU No. 17/2006 (Pasal 2 ayat 2):</strong> Pemberitahuan ekspor tetap wajib disampaikan secara elektronik via sistem PDE Kepabeanan.</li>
                             </ul>
                             
@@ -738,7 +738,7 @@
                 "footer.badge1": "Local-First & On-Premise Architecture",
                 "footer.badge2": "UU PDP Compliant",
                 "footer.founderLabel": "Founder & Legal Counsel",
-                "sim.avatarLabel": "SME",
+                "sim.avatarLabel": "Sari",
                 "cocreate.badge": "APPLYING TO COCREATE PITCH 2026 — JAKARTA (0-TO-1 STARTUP TRACK)",
                 "nav.roadmap": "Roadmap",
                 "roadmap.eyebrow": "Transparency & What's Next",
@@ -811,11 +811,11 @@
                 "certiva.card2": "Certiva understands everyday questions and links them straight to the right article — covering Customs Law 17/2006, PMK 155/2022, PDP Law 27/2022, ITE Law 1/2024, PSTE Regulation 71/2019, PMSE Ministerial Regulation 19/2026, Marketplace Tax PMK 37/2025, POJK Fintech 8/2026, Importer coverage (PP 29/2021, Permendag 16/2025), & Import VAT (UU 8/1983, PMK 131/2024).",
                 "sim.title": "Live Simulation: Certiva MCP Server Execution on Accio Work",
                 "sim.subtitle": "See how the Accio Work AI agent calls Certiva's tools to produce verified legal answers without hallucination.",
-                "sim.userMsg": '"I want to send a sample of processed textile products to a B2B buyer in Europe via Alibaba.com, weighing about 25 kg. Is it subject to export Lartas procedures, and which regulations apply?"',
-                "sim.query": '"PMK 4/2025 export consignment 25kg lartas non-commercial use"',
-                "sim.responseIntro": "Your <strong>25 kg</strong> textile sample shipment is categorized as an <strong>Export Consignment</strong> and qualifies for special facilities:",
-                "sim.point1": "<strong>PMK No. 4/2025 (Article 43, paragraph 1):</strong> Uses a simplified customs document in the form of a <em>Consignment Note (CN)</em> since weight is ≤ 30 kg.",
-                "sim.point2": "<strong>Lartas Exemption (Article 47, paragraph 1a, PMK 4/2025):</strong> Consignments of non-commercial samples are exempt from standard export Prohibition & Restriction (Lartas) requirements.",
+                "sim.userMsg": '"I\u2019m Sari, I run a home-based chips business. A buyer in Malaysia wants to order 20 kg via Alibaba.com \u2014 it\u2019s my first export. What do I need to sort out?"',
+                "sim.query": '"PMK 4/2025 export consignment 20kg SME consignment note"',
+                "sim.responseIntro": "Your <strong>20 kg</strong> chips shipment is categorized as an <strong>Export Consignment</strong> and can use a simpler documentation track:",
+                "sim.point1": "<strong>PMK No. 4/2025 (Article 43, paragraph 1):</strong> Uses a simplified customs document in the form of a <em>Consignment Note (CN)</em>, not a full PEB, since weight is ≤ 30 kg.",
+                "sim.point2": "<strong>Check Lartas Status by HS Code:</strong> Since this is a commercial sale (not a sample), Prohibition & Restriction (Lartas) status is still checked against your chips' HS code — Certiva flags it automatically if the product falls into a restricted category.",
                 "sim.point3": "<strong>Law No. 17/2006 (Article 2, paragraph 2):</strong> Export declarations must still be submitted electronically via the PDE Customs system.",
                 "sim.fusion": "Everyday language → official article",
                 "sim.guardrailBanner": "🔒 Every answer is linked to an official source — citations are never fabricated",
