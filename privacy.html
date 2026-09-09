@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy & Terms of Service — Certiva | Arsiva</title>
+    <meta name="description" content="Kebijakan Privasi dan Ketentuan Layanan Certiva — bagaimana data kueri kepatuhan diproses secara lokal (on-premise), zero data egress, dan ketentuan penggunaan layanan." />
+    <meta property="og:title" content="Privacy Policy & Terms of Service — Certiva" />
+    <meta property="og:description" content="Bagaimana Certiva memproses data Anda secara lokal, dan ketentuan penggunaan layanan." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arsiva.tech/privacy.html" />
+    <link rel="canonical" href="https://arsiva.tech/privacy.html" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316233F'/%3E%3Cpath d='M16 8 L10 24 M16 8 L22 24' stroke='%2316233F' stroke-width='2.5' fill='none'/%3E%3Cpath d='M16 9 L10.5 23.3 M16 9 L21.5 23.3' stroke='%23C6992C' stroke-width='2.2' fill='none'/%3E%3Cline x1='12.2' y1='17' x2='19.8' y2='17' stroke='%23C6992C' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='8' r='2' fill='%23C6992C'/%3E%3Ccircle cx='10' cy='24' r='2' fill='%23C6992C'/%3E%3Ccircle cx='22' cy='24' r='2' fill='%23C6992C'/%3E%3C/svg%3E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- ============================================================
+         NAVIGATION BAR
+         ============================================================ -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-brand-gold/40 flex items-center justify-center shadow-lg shadow-brand-gold/10">
+                    <svg viewBox="0 0 32 32" class="w-6 h-6">
+                        <path d="M16 8 L10 24 M16 8 L22 24" stroke="#C6992C" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+                        <line x1="12.2" y1="17" x2="19.8" y2="17" stroke="#C6992C" stroke-width="2.6" stroke-linecap="round"/>
+                        <circle cx="16" cy="8" r="2.4" fill="#C6992C"/>
+                        <circle cx="10" cy="24" r="2.4" fill="#C6992C"/>
+                        <circle cx="22" cy="24" r="2.4" fill="#C6992C"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-xl tracking-tight text-white block leading-none">Arsiva</span>
+                    <span class="text-[10px] font-mono tracking-wider text-slate-400 uppercase">Trust, verified.</span>
+                </div>
+            </a>
+            <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-white transition-colors" data-i18n="nav.backToCertiva">← Kembali ke Certiva</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button onclick="toggleLang()" class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 hover:border-brand-gold/40 transition-colors">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+                    <span id="lang-toggle-label">ID</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         DRAFT NOTICE
+         ============================================================ -->
+    <div class="bg-amber-950/60 border-b border-amber-500/30">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <p data-i18n="draft.notice" class="text-amber-300 text-xs sm:text-sm text-center leading-relaxed">
+                <strong>Draf — belum ditinjau final.</strong> Halaman ini menjelaskan praktik privasi &amp; ketentuan layanan Certiva secara ringkas dan jujur, tapi belum menjalani tinjauan hukum formal. Ada pertanyaan? Hubungi <a href="mailto:certiva@arsiva.tech" class="underline hover:text-amber-200">certiva@arsiva.tech</a>.
+            </p>
+        </div>
+    </div>
+
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <div class="mb-12">
+            <div data-i18n="header.eyebrow" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950 text-brand-blue text-xs font-mono uppercase tracking-widest mb-3">Legal &amp; Privasi</div>
+            <h1 data-i18n="header.title" class="font-serif text-3xl sm:text-4xl font-bold text-white">Privacy Policy &amp; Terms of Service</h1>
+            <p data-i18n="header.updated" class="mt-3 text-slate-500 text-xs font-mono">Terakhir diperbarui: 7 September 2026 · Berlaku untuk Certiva (arsiva.tech)</p>
+        </div>
+
+        <!-- ============================================================
+             PRIVACY POLICY
+             ============================================================ -->
+        <section class="mb-16">
+            <h2 data-i18n="pp.title" class="font-serif text-2xl font-bold text-white border-b border-slate-800 pb-3 mb-6">1. Kebijakan Privasi</h2>
+
+            <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
+                <div>
+                    <h3 data-i18n="pp.s1.title" class="text-white font-semibold mb-2">1.1 Data Apa yang Kami Proses</h3>
+                    <p data-i18n="pp.s1.body">Certiva memproses <strong>pertanyaan kepatuhan</strong> yang Anda ketik (mis. "syarat ekspor keripik ke Malaysia") untuk mencari pasal dan regulasi yang relevan. Kami tidak mewajibkan pendaftaran akun, nama, atau data identitas untuk memakai fitur pencarian dasar. Untuk paket berbayar (Pro/B2B), kami memproses data kontak minimal yang diperlukan untuk penagihan (nomor WhatsApp/email).</p>
+                </div>
+                <div>
+                    <h3 data-i18n="pp.s2.title" class="text-white font-semibold mb-2">1.2 Bagaimana Data Diproses — On-Premise, Lokal</h3>
+                    <p data-i18n="pp.s2.body">Mesin pencarian Certiva (BM25/SQLite FTS5 + semantic embedding multibahasa) berjalan sepenuhnya di infrastruktur yang kami kendalikan. Kueri Anda <strong>tidak dikirim ke API model bahasa pihak ketiga</strong> untuk diproses — tidak ada panggilan ke penyedia cloud AI eksternal untuk menjalankan pencarian inti. Ini yang kami maksud dengan <em>zero data egress</em>: data usaha Anda tidak keluar ke server pihak ketiga di luar sistem yang kami operasikan.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="pp.s3.title" class="text-white font-semibold mb-2">1.3 Yang TIDAK Kami Lakukan</h3>
+                    <ul class="list-disc list-inside space-y-1 text-slate-300">
+                        <li data-i18n="pp.s3.li1">Kami tidak menjual atau menyewakan data kueri Anda ke pihak ketiga mana pun.</li>
+                        <li data-i18n="pp.s3.li2">Kami tidak membagikan isi pertanyaan Anda ke penyedia AI cloud eksternal (OpenAI, dsb.) untuk pemrosesan inti pencarian.</li>
+                        <li data-i18n="pp.s3.li3">Kami tidak menggunakan data kueri Anda untuk melatih model milik pihak ketiga.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="pp.s4.title" class="text-white font-semibold mb-2">1.4 Retensi Data</h3>
+                    <p data-i18n="pp.s4.body">Log kueri disimpan sementara untuk keperluan peningkatan akurasi &amp; deteksi masalah (mis. guardrail), dan dapat dihapus atas permintaan. Untuk pengguna berbayar, data penagihan disimpan selama akun aktif dan sesuai ketentuan perpajakan yang berlaku.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="pp.s5.title" class="text-white font-semibold mb-2">1.5 Hak Anda (sesuai UU PDP No. 27/2022)</h3>
+                    <p data-i18n="pp.s5.body">Anda berhak meminta akses, koreksi, atau penghapusan data pribadi yang kami proses, serta mengajukan keberatan atas pemrosesan tertentu. Ajukan permintaan ke <strong>certiva@arsiva.tech</strong> — kami akan merespons dalam waktu yang wajar.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="pp.s6.title" class="text-white font-semibold mb-2">1.6 Perubahan Kebijakan</h3>
+                    <p data-i18n="pp.s6.body">Kebijakan ini dapat diperbarui seiring perkembangan produk. Perubahan material akan ditandai dengan tanggal pembaruan di bagian atas halaman ini.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             TERMS OF SERVICE
+             ============================================================ -->
+        <section class="mb-16">
+            <h2 data-i18n="tos.title" class="font-serif text-2xl font-bold text-white border-b border-slate-800 pb-3 mb-6">2. Ketentuan Layanan</h2>
+
+            <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
+                <div>
+                    <h3 data-i18n="tos.s1.title" class="text-white font-semibold mb-2">2.1 Penerimaan Ketentuan</h3>
+                    <p data-i18n="tos.s1.body">Dengan menggunakan Certiva (via arsiva.tech atau melalui agen AI di Accio Work), Anda menyetujui ketentuan ini.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="tos.s2.title" class="text-white font-semibold mb-2">2.2 Status Layanan</h3>
+                    <p data-i18n="tos.s2.body">Certiva berada pada <strong>tahap awal (pre-revenue), terus diuji dan disempurnakan</strong>. Akurasi diukur secara berkala melalui benchmark internal (ringkasan metodologi tersedia atas permintaan) — kami tidak mengklaim akurasi sempurna 100%, dan mendorong verifikasi tambahan untuk keputusan hukum yang kritis.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-amber-950/40 border border-amber-500/30">
+                    <h3 data-i18n="tos.s3.title" class="text-amber-300 font-semibold mb-2">2.3 Bukan Nasihat Hukum Final</h3>
+                    <p data-i18n="tos.s3.body" class="text-amber-100/90">Certiva menyediakan informasi kepatuhan berbasis sumber resmi, <strong>bukan nasihat hukum final</strong>. Untuk keputusan ekspor atau bisnis yang kritis, verifikasi dengan pejabat berwenang atau praktisi hukum. Jawaban Certiva adalah alat bantu pencarian regulasi, bukan pengganti konsultasi hukum profesional.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="tos.s4.title" class="text-white font-semibold mb-2">2.4 Paket Berlangganan</h3>
+                    <p data-i18n="tos.s4.body">Certiva tersedia dalam tiga paket: Gratis (20 kueri/bulan), Pro (Rp99.000/bulan, kueri tanpa batas), dan B2B (Rp10.000.000/bulan, untuk notaris/firma hukum/konsultan). Pembayaran dilakukan sesuai kanal yang tertera di halaman Harga. Anda dapat membatalkan langganan kapan saja; kami tidak mengunci kontrak jangka panjang pada tahap ini.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="tos.s5.title" class="text-white font-semibold mb-2">2.5 Batasan Tanggung Jawab</h3>
+                    <p data-i18n="tos.s5.body">Certiva disediakan "sebagaimana adanya" (as-is) pada tahap pengembangan ini. Kami berupaya keras menjaga akurasi lewat guardrail sitasi &amp; verifikasi manual, namun tidak bertanggung jawab atas kerugian yang timbul dari keputusan bisnis yang diambil semata-mata berdasarkan keluaran Certiva tanpa verifikasi tambahan.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="tos.s6.title" class="text-white font-semibold mb-2">2.6 Kekayaan Intelektual</h3>
+                    <p data-i18n="tos.s6.body">Nama "Certiva" dan "Arsiva", metodologi kurasi korpus, dan graf relasi pasal terverifikasi adalah milik Arsiva Technology. Konten regulasi bersumber dari sumber resmi pemerintah (JDIH) yang bersifat publik.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="tos.s7.title" class="text-white font-semibold mb-2">2.7 Hukum yang Berlaku</h3>
+                    <p data-i18n="tos.s7.body">Ketentuan ini tunduk pada hukum Republik Indonesia.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 text-center">
+            <p data-i18n="contact.note" class="text-slate-400 text-sm">Ada pertanyaan soal privasi atau ketentuan layanan?</p>
+            <a href="mailto:certiva@arsiva.tech" class="mt-2 inline-block text-brand-gold font-semibold hover:underline">certiva@arsiva.tech</a>
+        </div>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-slate-950 border-t border-slate-850 pt-10 pb-8 text-slate-400 text-xs">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div data-i18n="footer.copyright">&copy; 2026 Arsiva Tech. Seluruh hak cipta dilindungi. Certiva — CoCreate Pitch Jakarta 2026 (Alibaba.com).</div>
+            <a href="index.html" class="hover:text-white transition-colors" data-i18n="footer.backHome">← Kembali ke arsiva.tech</a>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "nav.backToCertiva": "← Back to Certiva",
+                "draft.notice": '<strong>Draft — not yet finalized.</strong> This page summarizes Certiva\u2019s privacy practices & terms of service honestly and concisely, but has not undergone formal legal review. Questions? Contact <a href="mailto:certiva@arsiva.tech" class="underline hover:text-amber-200">certiva@arsiva.tech</a>.',
+                "header.eyebrow": "Legal & Privacy",
+                "header.title": "Privacy Policy & Terms of Service",
+                "header.updated": "Last updated: September 7, 2026 · Applies to Certiva (arsiva.tech)",
+
+                "pp.title": "1. Privacy Policy",
+                "pp.s1.title": "1.1 What Data We Process",
+                "pp.s1.body": 'Certiva processes the <strong>compliance questions</strong> you type (e.g. "export requirements for chips to Malaysia") to find relevant articles and regulations. We do not require account registration, name, or identity data to use basic search. For paid plans (Pro/B2B), we process minimal contact data needed for billing (WhatsApp number/email).',
+                "pp.s2.title": "1.2 How Data Is Processed — On-Premise, Local",
+                "pp.s2.body": "Certiva's search engine (BM25/SQLite FTS5 + multilingual semantic embedding) runs entirely on infrastructure we control. Your queries are <strong>not sent to third-party language model APIs</strong> for processing \u2014 there is no call to an external cloud AI provider to run the core search. This is what we mean by <em>zero data egress</em>: your business data doesn't leave to third-party servers outside the system we operate.",
+                "pp.s3.title": "1.3 What We Do NOT Do",
+                "pp.s3.li1": "We do not sell or rent your query data to any third party.",
+                "pp.s3.li2": "We do not share the content of your questions with external cloud AI providers (OpenAI, etc.) for core search processing.",
+                "pp.s3.li3": "We do not use your query data to train third-party models.",
+                "pp.s4.title": "1.4 Data Retention",
+                "pp.s4.body": "Query logs are stored temporarily for accuracy improvement and issue detection (e.g. guardrails), and can be deleted on request. For paying users, billing data is retained while the account is active and as required by applicable tax regulations.",
+                "pp.s5.title": "1.5 Your Rights (per PDP Law No. 27/2022)",
+                "pp.s5.body": "You have the right to request access, correction, or deletion of personal data we process, and to object to certain processing. Submit requests to <strong>certiva@arsiva.tech</strong> \u2014 we will respond within a reasonable time.",
+                "pp.s6.title": "1.6 Policy Changes",
+                "pp.s6.body": "This policy may be updated as the product evolves. Material changes will be marked with an updated date at the top of this page.",
+
+                "tos.title": "2. Terms of Service",
+                "tos.s1.title": "2.1 Acceptance of Terms",
+                "tos.s1.body": "By using Certiva (via arsiva.tech or through an AI agent on Accio Work), you agree to these terms.",
+                "tos.s2.title": "2.2 Service Status",
+                "tos.s2.body": "Certiva is at an <strong>early stage (pre-revenue), continuously tested and refined</strong>. Accuracy is measured periodically through internal benchmarks (methodology summary available on request) \u2014 we do not claim 100% perfect accuracy, and encourage additional verification for critical legal decisions.",
+                "tos.s3.title": "2.3 Not Final Legal Advice",
+                "tos.s3.body": "Certiva provides compliance information based on official sources, <strong>not final legal advice</strong>. For critical export or business decisions, verify with a competent official or legal practitioner. Certiva's answers are a regulation search aid, not a substitute for professional legal consultation.",
+                "tos.s4.title": "2.4 Subscription Plans",
+                "tos.s4.body": "Certiva is available in three plans: Free (20 queries/month), Pro (Rp99,000/month, unlimited queries), and B2B (Rp10,000,000/month, for notaries/law firms/consultants). Payment is made via the channels listed on the Pricing page. You may cancel anytime; we do not lock in long-term contracts at this stage.",
+                "tos.s5.title": "2.5 Limitation of Liability",
+                "tos.s5.body": "Certiva is provided \"as-is\" at this stage of development. We work hard to maintain accuracy through citation guardrails & manual verification, but are not liable for losses arising from business decisions made solely on Certiva's output without additional verification.",
+                "tos.s6.title": "2.6 Intellectual Property",
+                "tos.s6.body": "The names \"Certiva\" and \"Arsiva\", the corpus curation methodology, and the verified article-relation graph belong to Arsiva Technology. Regulatory content is sourced from official government sources (JDIH), which are public.",
+                "tos.s7.title": "2.7 Governing Law",
+                "tos.s7.body": "These terms are governed by the laws of the Republic of Indonesia.",
+
+                "contact.note": "Questions about privacy or terms of service?",
+                "footer.copyright": "&copy; 2026 Arsiva Tech. All rights reserved. Certiva — CoCreate Pitch Jakarta 2026 (Alibaba.com).",
+                "footer.backHome": "← Back to arsiva.tech",
+                "meta.title": "Privacy Policy & Terms of Service — Certiva | Arsiva",
+                "meta.description": "Certiva's Privacy Policy and Terms of Service — how compliance query data is processed locally (on-premise), zero data egress, and terms of use."
+            }
+        };
+        const originalMeta = {
+            title: document.title,
+            description: document.querySelector('meta[name="description"]')?.getAttribute('content') || ''
+        };
+
+        function getInitialLang() {
+            const saved = localStorage.getItem('arsiva_lang');
+            if (saved === 'id' || saved === 'en') return saved;
+            const nav = (navigator.language || 'id').toLowerCase();
+            return nav.startsWith('id') ? 'id' : 'en';
+        }
+
+        const originalStore = { text: {}, html: {}, href: {} };
+        function cacheOriginals() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                originalStore.text[el.getAttribute('data-i18n')] = el.textContent;
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                originalStore.html[el.getAttribute('data-i18n-html')] = el.innerHTML;
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                originalStore.href[el.getAttribute('data-i18n-href')] = el.getAttribute('href');
+            });
+        }
+
+        function applyLang(lang) {
+            const dict = lang === 'en' ? translations.en : null;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.textContent = dict && dict[key] ? dict[key] : originalStore.text[key];
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                el.innerHTML = dict && dict[key] ? dict[key] : originalStore.html[key];
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                const key = el.getAttribute('data-i18n-href');
+                el.setAttribute('href', dict && dict[key] ? dict[key] : originalStore.href[key]);
+            });
+            document.title = dict && dict['meta.title'] ? dict['meta.title'] : originalMeta.title;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', dict && dict['meta.description'] ? dict['meta.description'] : originalMeta.description);
+            document.documentElement.setAttribute('lang', lang);
+            const label = document.getElementById('lang-toggle-label');
+            if (label) label.textContent = lang === 'en' ? 'EN' : 'ID';
+        }
+
+        function toggleLang() {
+            const current = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'id';
+            const next = current === 'en' ? 'id' : 'en';
+            localStorage.setItem('arsiva_lang', next);
+            applyLang(next);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            cacheOriginals();
+            applyLang(getInitialLang());
+        });
+    </script>
+</body>
+</html>
