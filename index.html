@@ -869,10 +869,12 @@
         };
 
         function getInitialLang() {
+            // Always default to Indonesian regardless of browser/device locale.
+            // Only switch to English if the user explicitly chose it before
+            // (stored in localStorage from a manual toggle click).
             const saved = localStorage.getItem('arsiva_lang');
             if (saved === 'id' || saved === 'en') return saved;
-            const nav = (navigator.language || 'id').toLowerCase();
-            return nav.startsWith('id') ? 'id' : 'en';
+            return 'id';
         }
 
         // Cache original Indonesian content on first load so we can always
