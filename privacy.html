@@ -51,17 +51,6 @@
         </div>
     </header>
 
-    <!-- ============================================================
-         DRAFT NOTICE
-         ============================================================ -->
-    <div class="bg-amber-950/60 border-b border-amber-500/30">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <p data-i18n="draft.notice" class="text-amber-300 text-xs sm:text-sm text-center leading-relaxed">
-                <strong>Draf — belum ditinjau final.</strong> Halaman ini menjelaskan praktik privasi &amp; ketentuan layanan Certiva secara ringkas dan jujur, tapi belum menjalani tinjauan hukum formal. Ada pertanyaan? Hubungi <a href="mailto:certiva@arsiva.tech" class="underline hover:text-amber-200">certiva@arsiva.tech</a>.
-            </p>
-        </div>
-    </div>
-
     <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         <div class="mb-12">
@@ -167,7 +156,6 @@
         const translations = {
             en: {
                 "nav.backToCertiva": "← Back to Certiva",
-                "draft.notice": '<strong>Draft — not yet finalized.</strong> This page summarizes Certiva\u2019s privacy practices & terms of service honestly and concisely, but has not undergone formal legal review. Questions? Contact <a href="mailto:certiva@arsiva.tech" class="underline hover:text-amber-200">certiva@arsiva.tech</a>.',
                 "header.eyebrow": "Legal & Privacy",
                 "header.title": "Privacy Policy & Terms of Service",
                 "header.updated": "Last updated: September 7, 2026 · Applies to Certiva (arsiva.tech)",
@@ -217,10 +205,12 @@
         };
 
         function getInitialLang() {
+            // Always default to Indonesian regardless of browser/device locale.
+            // Only switch to English if the user explicitly chose it before
+            // (stored in localStorage from a manual toggle click).
             const saved = localStorage.getItem('arsiva_lang');
             if (saved === 'id' || saved === 'en') return saved;
-            const nav = (navigator.language || 'id').toLowerCase();
-            return nav.startsWith('id') ? 'id' : 'en';
+            return 'id';
         }
 
         const originalStore = { text: {}, html: {}, href: {} };
