@@ -111,12 +111,12 @@
             </div>
 
             <!-- PROOF METRICS (snapshot, not a live feed) -->
-            <div id="benchmarks" class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div id="benchmarks" class="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
                 <!-- Metric 1 -->
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-blue">
                     <div data-i18n="hero.latencyLabel" class="text-slate-400 text-xs font-mono uppercase tracking-wider">Latensi Pencarian</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span data-i18n="hero.latencyValue" class="text-3xl font-bold font-mono text-white">16,1 ms</span>
+                        <span data-i18n="hero.latencyValue" class="text-3xl font-bold font-mono text-white">~15–16 ms</span>
                         <span data-i18n="hero.latencyTag" class="text-emerald-400 text-xs font-semibold">⚡ Sangat Cepat</span>
                     </div>
                     <p data-i18n="hero.latencyNote" class="mt-1 text-slate-400 text-xs">Respons dalam hitungan milidetik — rata-rata dari 103 skenario uji</p>
@@ -124,15 +124,35 @@
 
                 <!-- Metric 2 -->
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-emerald-500">
-                    <div data-i18n="hero.accuracyLabel" class="text-slate-400 text-xs font-mono uppercase tracking-wider">Akurasi Pencarian</div>
+                    <div data-i18n="hero.accuracyLabel" class="text-slate-400 text-xs font-mono uppercase tracking-wider">Precision@1</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span class="text-3xl font-bold font-mono text-emerald-400">96%</span>
+                        <span data-i18n="hero.accuracyValue" class="text-3xl font-bold font-mono text-emerald-400">97,3%</span>
                         <span data-i18n="hero.accuracyTag" class="text-xs text-slate-400 font-mono">Jawaban Pertama Tepat</span>
                     </div>
-                    <p data-i18n="hero.accuracyNote" class="mt-1 text-slate-400 text-xs">Hampir selalu menemukan pasal yang relevan pada percobaan pertama, dari 75 skenario regulasi nyata</p>
+                    <p data-i18n="hero.accuracyNote" class="mt-1 text-slate-400 text-xs">Regulasi benar ditemukan pada percobaan pertama (73/75 skenario regulasi nyata)</p>
                 </div>
 
-                <!-- Metric 3 -->
+                <!-- Metric 3 (new) -->
+                <div class="glass-card p-5 rounded-2xl border-l-4 border-l-cyan-400">
+                    <div data-i18n="hero.recallLabel" class="text-slate-400 text-xs font-mono uppercase tracking-wider">Recall@5</div>
+                    <div class="mt-2 flex items-baseline gap-2">
+                        <span data-i18n="hero.recallValue" class="text-3xl font-bold font-mono text-white">98,7%</span>
+                        <span data-i18n="hero.recallTag" class="text-xs text-slate-400 font-mono">Ditemukan di 5 Teratas</span>
+                    </div>
+                    <p data-i18n="hero.recallNote" class="mt-1 text-slate-400 text-xs">Regulasi yang benar muncul di 5 hasil teratas (74/75 skenario regulasi nyata)</p>
+                </div>
+
+                <!-- Metric 4 (new) -->
+                <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-gold">
+                    <div data-i18n="hero.guardrailLabel" class="text-slate-400 text-xs font-mono uppercase tracking-wider">Guardrail Pass</div>
+                    <div class="mt-2 flex items-baseline gap-2">
+                        <span data-i18n="hero.guardrailValue" class="text-3xl font-bold font-mono text-white">96,4%</span>
+                        <span data-i18n="hero.guardrailTag" class="text-xs text-slate-400 font-mono">Menolak Pertanyaan Luar Domain</span>
+                    </div>
+                    <p data-i18n="hero.guardrailNote" class="mt-1 text-slate-400 text-xs">Menyaring pertanyaan di luar domain hukum dengan benar (27/28 query uji)</p>
+                </div>
+
+                <!-- Metric 5 -->
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-teal">
                     <div data-i18n="hero.corpusLabel" class="text-slate-400 text-xs font-mono uppercase tracking-wider">Korpus Teregulasi</div>
                     <div class="mt-2 flex items-baseline gap-2">
@@ -143,7 +163,7 @@
                 </div>
 
             </div>
-            <p data-i18n-html="hero.snapshotNote" class="mt-3 text-center text-[11px] text-slate-500 font-mono">Benchmark produksi tambahan: 37/37 skenario lulus (Recall@5 &amp; Precision@1 100%). Snapshot benchmark internal · <a href="Certiva-Benchmark-Summary.pdf" target="_blank" rel="noopener" class="text-brand-gold hover:underline">baca metodologi lengkap (PDF)</a></p>
+            <p data-i18n-html="hero.snapshotNote" class="mt-3 text-center text-[11px] text-slate-500 font-mono">Snapshot benchmark internal · 103 skenario uji (75 skenario berlabel + 28 query guardrail), dijalankan 11 September 2026 · <a href="Certiva-Benchmark-Summary.pdf" target="_blank" rel="noopener" class="text-brand-gold hover:underline">baca metodologi lengkap (PDF)</a></p>
 
         </div>
     </section>
@@ -707,13 +727,24 @@
             en: {
                 "hero.latencyLabel": "Search Latency",
                 "hero.latencyTag": "⚡ Ultra-Fast",
-                "hero.accuracyLabel": "Retrieval Accuracy",
+                "hero.latencyValue": "~15–16 ms",
+                "hero.accuracyLabel": "Precision@1",
+                "hero.accuracyValue": "97.3%",
                 "hero.accuracyTag": "First-Try Correct",
-                "hero.accuracyNote": "Almost always finds the relevant article on the first try, across 75 real-world regulatory scenarios",
+                "hero.accuracyNote": "Correct regulation found on the first try (73/75 real-world regulatory scenarios)",
+                "hero.recallLabel": "Recall@5",
+                "hero.recallValue": "98.7%",
+                "hero.recallTag": "Found in Top 5",
+                "hero.recallNote": "Correct regulation appears in the top 5 results (74/75 real-world regulatory scenarios)",
+                "hero.guardrailLabel": "Guardrail Pass",
+                "hero.guardrailValue": "96.4%",
+                "hero.guardrailTag": "Rejects Out-of-Domain Queries",
+                "hero.guardrailNote": "Correctly filters out questions outside the legal domain (27/28 test queries)",
                 "hero.corpusLabel": "Indexed Corpus",
                 "hero.corpusValue": "13 Regulations",
                 "hero.corpusTag": "54 Articles",
                 "hero.corpusNote": "41 article-level relations · 11 document-level relations (verified cross-reference graph)",
+                "hero.snapshotNote": "Internal benchmark snapshot · 103 test scenarios (75 labeled scenarios + 28 guardrail queries), run on September 11, 2026 \u00b7 <a href=\"Certiva-Benchmark-Summary.pdf\" target=\"_blank\" rel=\"noopener\" class=\"text-brand-gold hover:underline\">read the full methodology (PDF)</a>",
                 "certiva.card1title": "PMK No. 4/2025 Integration (Consignment Note / CN)",
                 "certiva.card3title": "Obligation Checklist",
                 "certiva.card3tag": "(Coming Soon)",
@@ -773,8 +804,6 @@
                 "founder.desc4": "Designed & built a compliance search engine for SME exporters, callable by AI agents on Accio Work (Alibaba.com).",
                 "founder.note": "Architected through structured technical discussions with senior software engineers, then built independently using an AI-assisted engineering approach. B.Eng in Telecommunications (ITS, 1999) · Bachelor of Law (Universitas Bung Karno, 2016) · Master of Law candidate (Universitas Ngudi Waluyo, thesis phase).",
                 "nav.integrationBadge": "MCP Server v3.1 · Callable by AI Agents on Accio Work",
-                "hero.snapshotNote": "Additional production benchmark: 37/37 scenarios passed (Recall@5 & Precision@1 100%). Internal benchmark snapshot \u00b7 <a href=\"Certiva-Benchmark-Summary.pdf\" target=\"_blank\" rel=\"noopener\" class=\"text-brand-gold hover:underline\">read the full methodology (PDF)</a>",
-                "hero.latencyValue": "16.1 ms",
                 "trust.heading": "Why the Answers Can Be Trusted",
                 "trust.point1": "Every answer is linked to the original article — citations are never fabricated",
                 "trust.point2": "Continuously tested and refined against edge cases",
