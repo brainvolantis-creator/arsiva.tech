@@ -1,8 +1,8 @@
-# Arsiva / Certiva ImpEx — arsiva.tech (GitHub Pages ready)
+# Arsiva / Certiva — arsiva.tech (GitHub Pages ready)
 
 ## Struktur brand di situs ini
-- **Arsiva** — nama induk perusahaan. Dipakai untuk: logo utama, header, footer, lini "Arsiva Enterprise RWA" (GraphRAG on-premise, RWA tokenization), dan arsitektur inti (Legal Moat).
-- **Certiva** — nama produk khusus untuk lini "ImpEx" (kepatuhan ekspor UMKM via Accio Work), dipakai khusus untuk program CoCreate Pitch 2026 bersama Alibaba.com.
+- **Arsiva** — nama induk perusahaan. Dipakai untuk: logo utama, header, footer, lini "Arsiva Enterprise RWA" (GraphRAG on-premise, Pra-RWA tokenization tools), dan arsitektur inti (Legal Moat).
+- **Certiva** — nama produk khusus untuk lini (kepatuhan ekspor UMKM via Accio Work), dipakai khusus untuk program CoCreate Pitch 2026 bersama Alibaba.com.
 
 ## Struktur file
 - `index.html` — halaman utama (sudah tanpa dependensi CDN Tailwind)
