@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Certiva — Regulatory Retrieval Engine · Dubai Rental Rules</title>
+<meta name="description" content="Deterministic regulatory retrieval with article-level citations. Live in production; Dubai rental-rules corpus in build.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Certiva — Regulatory Retrieval Engine">
+<meta property="og:description" content="97.3% Precision@1 on 75 labelled regulatory scenarios. Cites the article or declines.">
+<meta property="og:image" content="https://arsiva.tech/assets/dubai/og-dubai.png">
+<meta property="og:url" content="https://arsiva.tech/dubai.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://arsiva.tech/dubai.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--slate-850:#111C2E;--slate-900:#0F172A;--slate-950:#080D1A;--brand-blue:#2563EB;--brand-blue-dark:#1E40AF;--brand-gold:#D4A62B;--brand-gold-light:#F3E5AB;--brand-emerald:#059669;--brand-teal:#0D9488;--font-sans:'Inter',system-ui,sans-serif;--font-serif:'Fraunces',Georgia,serif;--font-mono:'Fira Code','Consolas',monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--slate-950);color:#E2E8F0;font-family:var(--font-sans);line-height:1.6}
+main{max-width:880px;margin:0 auto;padding:56px 24px 40px}
+h1{font-family:var(--font-serif);font-size:clamp(1.9rem,4vw,2.6rem);color:#fff;margin:0 0 6px}
+.sub{color:#94A3B8;margin:0 0 28px}
+.engine{font-size:1.05rem;margin:0 0 32px}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:0 0 10px}
+.metric{background:var(--slate-900);border:1px solid #1E293B;border-radius:12px;padding:18px}
+.metric b{display:block;font-size:1.9rem;color:var(--brand-gold);line-height:1.1}
+.metric span{font-size:.85rem;color:#94A3B8}
+.metrics-note{font-size:.85rem;color:#94A3B8;margin:0 0 32px}
+a{color:var(--brand-blue)} a:hover{color:var(--brand-gold-light)}
+figure.demo{margin:0 0 32px}
+figure.demo video,figure.demo img{width:100%;max-width:800px;border-radius:12px;border:1px solid #1E293B;display:block}
+figcaption{font-size:.9rem;color:#94A3B8;margin-top:8px}
+.status{display:grid;gap:10px;margin:0 0 32px}
+.status div{background:var(--slate-900);border-left:4px solid;border-radius:8px;padding:12px 16px}
+.live{border-color:var(--brand-emerald)}
+.build{border-color:var(--brand-teal)}
+.status small{display:block;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.live small{color:var(--brand-emerald)} .build small{color:var(--brand-teal)}
+.founder{color:#CBD5E1;margin:0 0 24px}
+footer{border-top:1px solid #1E293B;padding-top:20px;font-size:.85rem;color:#64748B}
+</style>
+</head>
+<body>
+<main>
+<!-- Block 1 -->
+<h1>Certiva — Regulatory Retrieval Engine</h1>
+<p class="sub">Dubai Rental Rules corpus · Deterministic retrieval with article-level citations</p>
+
+<!-- Block 2 -->
+<p class="engine">Certiva retrieves the exact regulatory article that answers a question — and declines when it cannot. Hybrid retrieval (BM25 + semantic embeddings) is fused with Reciprocal Rank Fusion; every answer carries a source label and an article-level citation. When confidence falls below threshold, the engine returns no answer rather than a guess.</p>
+
+<!-- Block 3 -->
+<div class="metrics">
+  <div class="metric"><b>97.3%</b><span>Precision@1</span></div>
+  <div class="metric"><b>98.7%</b><span>Recall@5</span></div>
+  <div class="metric"><b>15.1 ms</b><span>Latency (avg)</span></div>
+  <div class="metric"><b>96.4%</b><span>Guardrail pass</span></div>
+</div>
+<p class="metrics-note">Precision@1 / Recall@5 on 75 labelled regulatory scenarios · Guardrail pass on 28 in-sample queries (27/28) · Internal benchmark snapshot · 11 September 2026 · <a href="https://arsiva.tech/Certiva-Benchmark-Summary-EN.pdf" target="_blank" rel="noopener">Methodology PDF →</a></p>
+
+<!-- Block 4 -->
+<figure class="demo">
+  <video autoplay muted loop playsinline poster="assets/dubai/og-dubai.png" width="800">
+    <source src="assets/dubai/certiva-query.mp4" type="video/mp4">
+    <img src="assets/dubai/certiva-query.gif" width="800" alt="Certiva returning the governing article and citation for a regulatory question">
+  </video>
+  <figcaption>A real query against the production corpus: question in → article + citation out.</figcaption>
+</figure>
+
+<!-- Block 5 -->
+<div class="status">
+  <div class="live"><small>In production</small>Indonesian export &amp; digital-commerce regulation (13 regulations, 54 articles).</div>
+  <div class="build"><small>In build</small>Dubai rental rules: RERA rent index, Decree 43/2013, Ejari procedure (Build Sprint 30 Sep – 14 Oct 2026).</div>
+</div>
+
+<!-- Block 6 -->
+<p class="founder">Built by Bambang Satmoko — telecom engineer (25 yrs) and Managing Partner, Satmoko Law Firm (S.T., S.H.).</p>
+
+<!-- Block 7 -->
+<footer>
+  <a href="mailto:satmoko@arsiva.tech">satmoko@arsiva.tech</a><br>
+  © 2026 Arsiva. Certiva is a product of Arsiva.
+</footer>
+</main>
+</body>
+</html>
