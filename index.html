@@ -47,7 +47,7 @@
                 <!-- Integration Badge (static — not a live status monitor) -->
                 <div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                    <span data-i18n="nav.integrationBadge">MCP Server v3.1 · Dapat Dipanggil Agen AI di Accio Work</span>
+                    <span data-i18n="nav.integrationBadge">MCP Server v3.3 · Dapat Dipanggil Agen AI di Accio Work</span>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-blue">
                     <div data-i18n="hero.latencyLabel" class="text-slate-400 text-xs font-mono uppercase tracking-wider">Latensi Pencarian</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span data-i18n="hero.latencyValue" class="text-3xl font-bold font-mono text-white">~15–16 ms</span>
+                        <span data-i18n="hero.latencyValue" class="text-3xl font-bold font-mono text-white">~6–7 ms</span>
                         <span data-i18n="hero.latencyTag" class="text-emerald-400 text-xs font-semibold">⚡ Sangat Cepat</span>
                     </div>
                     <p data-i18n="hero.latencyNote" class="mt-1 text-slate-400 text-xs">Respons dalam hitungan milidetik — rata-rata dari 103 skenario uji</p>
@@ -146,10 +146,10 @@
                 <div class="glass-card p-5 rounded-2xl border-l-4 border-l-brand-gold">
                     <div data-i18n="hero.guardrailLabel" class="text-slate-400 text-xs font-mono uppercase tracking-wider">Guardrail Pass</div>
                     <div class="mt-2 flex items-baseline gap-2">
-                        <span data-i18n="hero.guardrailValue" class="text-3xl font-bold font-mono text-white">96,4%</span>
+                        <span data-i18n="hero.guardrailValue" class="text-3xl font-bold font-mono text-white">100%</span>
                         <span data-i18n="hero.guardrailTag" class="text-xs text-slate-400 font-mono">Menolak Pertanyaan Luar Domain</span>
                     </div>
-                    <p data-i18n="hero.guardrailNote" class="mt-1 text-slate-400 text-xs">Menyaring pertanyaan di luar domain hukum dengan benar (27/28 query uji)</p>
+                    <p data-i18n="hero.guardrailNote" class="mt-1 text-slate-400 text-xs">Menyaring pertanyaan di luar domain hukum dengan benar (28/28 query uji)</p>
                 </div>
 
                 <!-- Metric 5 -->
@@ -163,7 +163,7 @@
                 </div>
 
             </div>
-            <p data-i18n-html="hero.snapshotNote" class="mt-3 text-center text-[11px] text-slate-500 font-mono">Snapshot benchmark internal · 103 skenario uji (75 skenario berlabel + 28 query guardrail), dijalankan 11 September 2026 · <a href="Certiva-Benchmark-Summary.pdf" target="_blank" rel="noopener" class="text-brand-gold hover:underline">baca metodologi lengkap (PDF)</a></p>
+            <p data-i18n-html="hero.snapshotNote" class="mt-3 text-center text-[11px] text-slate-500 font-mono">Snapshot benchmark internal · 103 skenario uji (75 skenario berlabel + 28 query guardrail), dijalankan ulang 9 Okt 2026 (commit f5c1ba1) · <a href="Certiva-Benchmark-Summary.pdf" target="_blank" rel="noopener" class="text-brand-gold hover:underline">baca metodologi lengkap (PDF)</a></p>
 
         </div>
     </section>
@@ -226,7 +226,7 @@
                         <span data-i18n="cocreate.badge">MENDAFTAR COCREATE PITCH 2026 — JAKARTA (TRACK 0-TO-1 STARTUP)</span>
                     </div>
                     <h3 data-i18n="certiva.heading" class="font-serif text-2xl sm:text-3xl font-bold text-white">
-                        Infrastruktur MCP Server v3.1 untuk Ekspor B2B UMKM via Accio Work
+                        Infrastruktur MCP Server v3.3 untuk Ekspor B2B UMKM via Accio Work
                     </h3>
                     <p data-i18n-html="certiva.desc" class="text-slate-300 text-sm leading-relaxed">
                         Certiva memecahkan hambatan kepabeanan ekspor lintas batas bagi UMKM Indonesia. Server MCP kami dapat dipanggil oleh agen AI di platform <strong class="text-white">Accio Work</strong> menggunakan standar <strong class="text-white">Model Context Protocol (MCP)</strong> via transmisi JSON-RPC.
@@ -276,9 +276,9 @@
                             <div>✓ <span data-i18n="trust.point2">Terus diuji dan disempurnakan terhadap kasus tepi</span></div>
                             <div>✓ <span data-i18n="trust.point3">Data tetap di mesin Anda — tidak pernah dikirim keluar (on-premise)</span></div>
                             <div>✓ <span data-i18n="trust.point4">Kontribusi lapisan semantic secara independen masih dalam validasi aktif — kami laporkan secara transparan</span></div>
-                            <div>✓ <span data-i18n="trust.point5">Sedang menutup celah guardrail (query di luar domain kini lebih ketat tersaring) sambil menstabilkan ulang akurasi peringkat — angka final dipublikasikan setelah iterasi ini selesai</span></div>
+                            <div>✓ <span data-i18n="trust.point5">Celah guardrail telah tertutup: 28/28 (100%) query di luar domain tersaring penuh — divalidasi ulang lewat re-run resmi 103 query, 9 Okt 2026 (commit f5c1ba1)</span></div>
                         </div>
-                        <p data-i18n-html="trust.methodNote" class="text-slate-500 text-[11px] leading-relaxed">Mencakup 13 regulasi inti ekspor, pajak, dan perlindungan data (54 pasal) — 6 di antaranya telah diverifikasi end-to-end terhadap sumber resmi, perluasan berjalan. <a href="Certiva-Benchmark-Summary.pdf" target="_blank" rel="noopener" class="text-brand-gold hover:underline">Baca ringkasan metodologi lengkap (PDF) →</a></p>
+                        <p data-i18n-html="trust.methodNote" class="text-slate-500 text-[11px] leading-relaxed">Mencakup 13 regulasi inti ekspor, pajak, dan perlindungan data (54 pasal) — seluruhnya berstatus VERIFIED terhadap sumber resmi (JDIH BPK / Kementerian Keuangan), dengan URL sumber per pasal; cakupan regulasi terus diperluas. <a href="Certiva-Benchmark-Summary.pdf" target="_blank" rel="noopener" class="text-brand-gold hover:underline">Baca ringkasan metodologi lengkap (PDF) →</a></p>
                         <div class="mt-3 flex flex-wrap gap-1.5">
                             <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-400 text-[10px] font-mono">UU 17/2006</span>
                             <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-400 text-[10px] font-mono">UU 27/2022</span>
@@ -325,7 +325,7 @@
                         <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                         <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                         <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                        <span data-i18n="sim.windowTitle" class="ml-2 font-mono text-xs text-slate-400">Ruang Kerja Agen Accio Work — Ditenagai Certiva MCP v3.1</span>
+                        <span data-i18n="sim.windowTitle" class="ml-2 font-mono text-xs text-slate-400">Ruang Kerja Agen Accio Work — Ditenagai Certiva MCP v3.3</span>
                     </div>
                     <span class="font-mono text-[10px] text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">MCP · JSON-RPC</span>
                 </div>
@@ -346,7 +346,7 @@
                     <!-- Agent Tool Calling Box -->
                     <div class="ml-12 p-4 rounded-xl bg-slate-900 border border-blue-500/30 space-y-2 font-mono text-xs">
                         <div class="flex items-center justify-between text-blue-400">
-                            <span class="font-semibold">⚡ [MCP Tool Execution] search_compliance()</span>
+                            <span class="font-semibold">⚡ [MCP Tool Execution] search_compliance_hybrid()</span>
                         </div>
                         <div class="text-slate-400">
                             Query: <span data-i18n="sim.query" class="text-emerald-300">"PMK 4/2025 barang kiriman ekspor 20kg UMKM consignment note"</span><br/>
@@ -371,7 +371,7 @@
                             <ul class="list-disc pl-5 space-y-1 text-xs text-slate-300">
                                 <li data-i18n-html="sim.point1"><strong>PMK No. 4/2025 (Pasal 43 ayat 1):</strong> Menggunakan dokumen kepabeanan sederhana berupa <em>Consignment Note (CN)</em>, bukan PEB penuh, karena berat ≤ 30 kg.</li>
                                 <li data-i18n-html="sim.point2"><strong>Cek Status Lartas per Kode HS:</strong> Karena ini penjualan komersial (bukan sampel), status Larangan &amp; Pembatasan tetap dicek berdasarkan kode HS keripik Anda — Certiva menandai otomatis jika produk termasuk kategori terbatas.</li>
-                                <li data-i18n-html="sim.point3"><strong>UU No. 17/2006 (Pasal 2 ayat 2):</strong> Pemberitahuan ekspor tetap wajib disampaikan secara elektronik via sistem PDE Kepabeanan.</li>
+                                <li data-i18n-html="sim.point3"><strong>UU No. 17/2006 (Pasal 2 ayat 2):</strong> Barang yang telah dimuat ke sarana pengangkut untuk dikeluarkan dari Daerah Pabean dianggap telah diekspor (fiksi hukum) — dasar hukum proses ekspor Anda.</li>
                             </ul>
                             
                             <!-- Guardrail Banner -->
@@ -727,7 +727,7 @@
             en: {
                 "hero.latencyLabel": "Search Latency",
                 "hero.latencyTag": "⚡ Ultra-Fast",
-                "hero.latencyValue": "~15–16 ms",
+                "hero.latencyValue": "~6–7 ms",
                 "hero.accuracyLabel": "Precision@1",
                 "hero.accuracyValue": "97.3%",
                 "hero.accuracyTag": "First-Try Correct",
@@ -737,20 +737,20 @@
                 "hero.recallTag": "Found in Top 5",
                 "hero.recallNote": "Correct regulation appears in the top 5 results (74/75 real-world regulatory scenarios)",
                 "hero.guardrailLabel": "Guardrail Pass",
-                "hero.guardrailValue": "96.4%",
+                "hero.guardrailValue": "100%",
                 "hero.guardrailTag": "Rejects Out-of-Domain Queries",
-                "hero.guardrailNote": "Correctly filters out questions outside the legal domain (27/28 test queries)",
+                "hero.guardrailNote": "Correctly filters out questions outside the legal domain (28/28 test queries)",
                 "hero.corpusLabel": "Indexed Corpus",
                 "hero.corpusValue": "13 Regulations",
                 "hero.corpusTag": "54 Articles",
                 "hero.corpusNote": "41 article-level relations · 11 document-level relations (verified cross-reference graph)",
-                "hero.snapshotNote": "Internal benchmark snapshot · 103 test scenarios (75 labeled scenarios + 28 guardrail queries), run on September 11, 2026 \u00b7 <a href=\"Certiva-Benchmark-Summary-EN.pdf\" target=\"_blank\" rel=\"noopener\" class=\"text-brand-gold hover:underline\">read the full methodology (PDF)</a>",
+                "hero.snapshotNote": "Internal benchmark snapshot · 103 test scenarios (75 labeled scenarios + 28 guardrail queries), re-run on October 9, 2026 (commit f5c1ba1) \u00b7 <a href=\"Certiva-Benchmark-Summary-EN.pdf\" target=\"_blank\" rel=\"noopener\" class=\"text-brand-gold hover:underline\">read the full methodology (PDF)</a>",
                 "certiva.card1title": "PMK No. 4/2025 Integration (Consignment Note / CN)",
                 "certiva.card3title": "Obligation Checklist",
                 "certiva.card3tag": "(Coming Soon)",
                 "certiva.card3": "Turns \u201cwhat rules apply?\u201d into a concrete task list: what to do, when it's due, and what it costs — with an article citation for every item.",
                 "trust.badge": "Verified",
-                "sim.windowTitle": "Accio Work Agent Workspace — Powered by Certiva MCP v3.1",
+                "sim.windowTitle": "Accio Work Agent Workspace — Powered by Certiva MCP v3.3",
                 "sim.verifiedBadge": "VERIFIED LEGAL COMPLIANCE RESPONSE",
                 "sim.provenance": "Source: JDIH Kemenkeu",
                 "case.eyebrow": "Case Study",
@@ -803,14 +803,14 @@
                 "founder.role4": "Founder, Certiva & Arsiva",
                 "founder.desc4": "Designed & built a compliance search engine for SME exporters, callable by AI agents on Accio Work (Alibaba.com).",
                 "founder.note": "Architected through structured technical discussions with senior software engineers, then built independently using an AI-assisted engineering approach. B.Eng in Telecommunications (ITS, 1999) · Bachelor of Law (Universitas Bung Karno, 2016) · Master of Law candidate (Universitas Ngudi Waluyo, thesis phase).",
-                "nav.integrationBadge": "MCP Server v3.1 · Callable by AI Agents on Accio Work",
+                "nav.integrationBadge": "MCP Server v3.3 · Callable by AI Agents on Accio Work",
                 "trust.heading": "Why the Answers Can Be Trusted",
                 "trust.point1": "Every answer is linked to the original article — citations are never fabricated",
                 "trust.point2": "Continuously tested and refined against edge cases",
                 "trust.point3": "Data stays on your machine — never sent out (on-premise)",
                 "trust.point4": "The semantic layer\u2019s independent contribution is still under active validation — we report this transparently",
-                "trust.point5": "We're actively closing guardrail gaps (out-of-domain queries are now filtered more strictly) while re-stabilizing ranking accuracy — final numbers will be published once this iteration is complete",
-                "trust.methodNote": "Covers 13 core export, tax, and data-protection regulations (54 articles) \u2014 6 of which have been verified end-to-end against official sources, with expansion ongoing. <a href=\"Certiva-Benchmark-Summary-EN.pdf\" target=\"_blank\" rel=\"noopener\" class=\"text-brand-gold hover:underline\">Read the full methodology summary (PDF) \u2192</a>",
+                "trust.point5": "Guardrail gap closed: 28/28 (100%) of out-of-domain queries fully filtered — re-validated via an official 103-query re-run, October 9, 2026 (commit f5c1ba1)",
+                "trust.methodNote": "Covers 13 core export, tax, and data-protection regulations (54 articles) \u2014 all 54 articles VERIFIED against official sources (JDIH BPK / Ministry of Finance), with a source URL per article; regulatory coverage continuously expanding. <a href=\"Certiva-Benchmark-Summary-EN.pdf\" target=\"_blank\" rel=\"noopener\" class=\"text-brand-gold hover:underline\">Read the full methodology summary (PDF) \u2192</a>",
                 "sim.eyebrow": "SAMPLE MCP INTERACTION",
                 "arch.proSub": "Local BM25 + Semantic Embedding, Fused with RRF",
                 "arch.proTitle": "Arsiva On-Premise Hybrid Retrieval",
@@ -837,7 +837,7 @@
                 "hero.subheadline": 'A compliance answer that usually needs a lawyer at Rp500,000&ndash;2 million per hour, now takes seconds. <strong class="text-white">Certiva</strong> is an export compliance assistant for Indonesian SMEs, callable by AI agents on Accio Work (Alibaba.com) via the MCP protocol, under PMK 4/2025 — turning regulations into grounded compliance answers with article citations, never fabricated.',
                 "tabs.title": "Certiva, Arsiva's Main Focus",
                 "tabs.subtitle": "Our primary focus is Certiva for SME export compliance.",
-                "certiva.heading": "MCP Server v3.1 Infrastructure for B2B SME Export via Accio Work",
+                "certiva.heading": "MCP Server v3.3 Infrastructure for B2B SME Export via Accio Work",
                 "certiva.desc": 'Certiva solves cross-border customs friction for Indonesian SMEs. Its MCP server can be called by AI agents on the <strong class="text-white">Accio Work</strong> intelligent-agent platform using the <strong class="text-white">Model Context Protocol (MCP)</strong> standard via JSON-RPC transmission.',
                 "certiva.card1": "Locks in the ≤ 30 kg export consignment scenario with automatic Lartas (import/export restriction) exemption for non-commercial shipments, matching Alibaba.com's B2B transaction pattern.",
                 "certiva.card2title": "13 Key Regulations, One Clear Answer",
@@ -849,7 +849,7 @@
                 "sim.responseIntro": "Your <strong>20 kg</strong> chips shipment is categorized as an <strong>Export Consignment</strong> and can use a simpler documentation track:",
                 "sim.point1": "<strong>PMK No. 4/2025 (Article 43, paragraph 1):</strong> Uses a simplified customs document in the form of a <em>Consignment Note (CN)</em>, not a full PEB, since weight is ≤ 30 kg.",
                 "sim.point2": "<strong>Check Lartas Status by HS Code:</strong> Since this is a commercial sale (not a sample), Prohibition & Restriction (Lartas) status is still checked against your chips' HS code — Certiva flags it automatically if the product falls into a restricted category.",
-                "sim.point3": "<strong>Law No. 17/2006 (Article 2, paragraph 2):</strong> Export declarations must still be submitted electronically via the PDE Customs system.",
+                "sim.point3": "<strong>Law No. 17/2006 (Article 2, paragraph 2):</strong> Goods loaded onto a means of transport for export out of the Customs Territory are deemed to have been exported (legal fiction) — the legal basis of your export process.",
                 "sim.fusion": "Everyday language → official article",
                 "sim.guardrailBanner": "🔒 Every answer is linked to an official source — citations are never fabricated",
                 "arch.title": "Why Certiva Doesn't Just Make Up Answers",
