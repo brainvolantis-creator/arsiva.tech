@@ -5,7 +5,10 @@
 - **Certiva** — nama produk khusus untuk lini (kepatuhan ekspor UMKM via Accio Work), dipakai khusus untuk program CoCreate Pitch 2026 bersama Alibaba.com.
 
 ## Struktur file
-- `index.html` — halaman utama (sudah tanpa dependensi CDN Tailwind)
+- `index.html` — landing page (sementara diisi isi enterprise.html sampai situs London siap)
+- `certiva.html` — halaman produk Certiva (isi penuh index.html lama)
+- `enterprise.html` — halaman Arsiva Enterprise RWA (tetap ada sebagai halaman tersendiri)
+- `dubai.html` — halaman studi kasus Certiva Dubai
 - `css/styles.css` — CSS hasil build produksi (minified)
 - `tailwind.config.js`, `input.css`, `package.json` — sumber build, untuk rebuild CSS kapan pun diperlukan
 
@@ -24,4 +27,4 @@ npx tailwindcss -i ./input.css -o ./css/styles.css --minify
    - atau CNAME ke: <username>.github.io
 
 ## Update konten selanjutnya
-Untuk perubahan teks/link/kontak yang memakai class yang sudah ada — cukup timpa `index.html`, tidak perlu rebuild CSS. Rebuild CSS hanya diperlukan kalau menambah class Tailwind yang belum pernah dipakai di halaman manapun sebelumnya.
+Untuk perubahan teks/link/kontak yang memakai class yang sudah ada — cukup timpa `index.html` / `certiva.html`, tidak perlu rebuild CSS. Rebuild CSS hanya diperlukan kalau menambah class Tailwind yang belum pernah dipakai di halaman manapun sebelumnya.
