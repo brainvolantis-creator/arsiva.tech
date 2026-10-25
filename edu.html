@@ -26,8 +26,11 @@
   .brand span{color:var(--gold)}
   nav a{color:#cfd9e6;text-decoration:none;margin-left:16px;font-size:14px}
   nav a:hover{color:#fff}
-  #lang-toggle{background:transparent;border:1.5px solid #ffffff44;color:#cfd9e6;font-size:12px;font-weight:700;padding:4px 11px;border-radius:999px;cursor:pointer;margin-left:16px;letter-spacing:.5px}
-  #lang-toggle:hover{color:#fff;border-color:#ffffff99}
+  #lang-toggle{display:inline-flex;align-items:center;gap:2px;background:transparent;border:1.5px solid #ffffff44;border-radius:999px;padding:1px;margin-left:16px}
+  #lang-toggle span{color:#cfd9e6;font-size:12px;font-weight:700;letter-spacing:.5px;padding:3px 10px;border-radius:999px;cursor:pointer}
+  #lang-toggle span:hover{color:#fff}
+  #lang-toggle span.on{background:var(--teal);color:#fff}
+  #lang-toggle span.on:hover{color:#fff}
   .btn{display:inline-block;background:var(--teal);color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px}
   .btn:hover{filter:brightness(1.1)}
   .btn.ghost{background:transparent;border:1.5px solid #ffffff55;color:#fff}
@@ -90,7 +93,7 @@
       <a href="#tingkat" data-i18n="nav.tingkat">Tingkat</a>
       <a href="#instruktur" data-i18n="nav.instruktur">Instruktur</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
-      <button id="lang-toggle" type="button" aria-label="Ganti bahasa / Switch language">EN</button>
+      <button id="lang-toggle" type="button" aria-label="Ganti bahasa / Switch language"><span data-lang-opt="id" class="on">ID</span><span data-lang-opt="en">EN</span></button>
       <button class="btn" t;cursor:pointer" data-track data-i18n="nav.cta" type="button" onclick="openEnrollModal()">Ambil Basic Gratis</button>
     </nav>
   </div>
@@ -463,16 +466,19 @@ function applyLang(lang) {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', dict && dict['meta.description'] ? dict['meta.description'] : originalMeta.description);
   document.documentElement.setAttribute('lang', lang);
-  const label = document.getElementById('lang-toggle');
-  if (label) label.textContent = lang === 'en' ? 'ID' : 'EN';
+  document.querySelectorAll('#lang-toggle span[data-lang-opt]').forEach(el => {
+    el.classList.toggle('on', el.getAttribute('data-lang-opt') === lang);
+  });
 }
-function toggleLang() {
-  const current = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'id';
-  const next = current === 'en' ? 'id' : 'en';
-  localStorage.setItem('arsiva_lang', next);
-  applyLang(next);
-}
-document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+document.querySelectorAll('#lang-toggle span[data-lang-opt]').forEach(el => {
+  el.addEventListener('click', () => {
+    const next = el.getAttribute('data-lang-opt');
+    const current = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'id';
+    if (next === current) return;
+    localStorage.setItem('arsiva_lang', next);
+    applyLang(next);
+  });
+});
 document.addEventListener('DOMContentLoaded', () => {
   cacheOriginals();
   applyLang(getInitialLang());
