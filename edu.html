@@ -26,6 +26,8 @@
   .brand span{color:var(--gold)}
   nav a{color:#cfd9e6;text-decoration:none;margin-left:16px;font-size:14px}
   nav a:hover{color:#fff}
+  #lang-toggle{background:transparent;border:1.5px solid #ffffff44;color:#cfd9e6;font-size:12px;font-weight:700;padding:4px 11px;border-radius:999px;cursor:pointer;margin-left:16px;letter-spacing:.5px}
+  #lang-toggle:hover{color:#fff;border-color:#ffffff99}
   .btn{display:inline-block;background:var(--teal);color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px}
   .btn:hover{filter:brightness(1.1)}
   .btn.ghost{background:transparent;border:1.5px solid #ffffff55;color:#fff}
@@ -67,192 +69,193 @@
   <div class="wrap">
     <div class="brand">ARSIVA<span>·EDU</span> — Techno Legal Architect</div>
     <nav>
-      <a href="#kurikulum">Kurikulum</a>
-      <a href="#tingkat">Tingkat</a>
-      <a href="#instruktur">Instruktur</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn" style="padding:8px 16px;font-size:13.5px" data-track href="{{MAYAR_BASIC_URL}}">Ambil Basic Gratis</a>
+      <a href="#kurikulum" data-i18n="nav.kurikulum">Kurikulum</a>
+      <a href="#tingkat" data-i18n="nav.tingkat">Tingkat</a>
+      <a href="#instruktur" data-i18n="nav.instruktur">Instruktur</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <button id="lang-toggle" type="button" aria-label="Ganti bahasa / Switch language">EN</button>
+      <a class="btn" style="padding:8px 16px;font-size:13.5px" data-track data-i18n="nav.cta" href="https://wa.me/6285692904399?text=Halo%20Arsiva-Edu%2C%20saya%20mau%20ambil%20kelas%20Basic%20%28gratis%29.%20Mohon%20kirim%20tautannya.%20Terima%20kasih.">Ambil Basic Gratis</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <h1>Wawasan hukum <em>era digital</em> yang bisa kamu pakai untuk skripsi, karier, dan praktik.</h1>
-    <p class="sub">Kelas video Techno Legal Architect — disusun oleh advokat PERADI yang juga membangun produk legal-tech. Untuk mahasiswa S1 Hukum tingkat akhir yang tidak mau lulus dengan pengetahuan yang berhenti di buku teks.</p>
+    <h1 data-i18n-html="hero.h1">Wawasan hukum <em>era digital</em> yang bisa kamu pakai untuk skripsi, karier, dan praktik.</h1>
+    <p class="sub" data-i18n="hero.sub">Kelas video Techno Legal Architect — disusun oleh advokat PERADI yang juga membangun produk legal-tech. Untuk mahasiswa S1 Hukum tingkat akhir yang tidak mau lulus dengan pengetahuan yang berhenti di buku teks.</p>
     <div class="badges">
-      <span class="badge">Oleh Satmoko Law Firm × Arsiva Technology</span>
-      <span class="badge">Basic GRATIS — tanpa prasyarat</span>
-      <span class="badge">Materi berbasis sumber — bukan opini tanpa dasar</span>
+      <span class="badge" data-i18n="hero.badge1">Oleh Satmoko Law Firm × Arsiva Technology</span>
+      <span class="badge" data-i18n="hero.badge2">Basic GRATIS — tanpa prasyarat</span>
+      <span class="badge" data-i18n="hero.badge3">Materi berbasis sumber — bukan opini tanpa dasar</span>
     </div>
     <div class="cta-row">
-      <a class="btn gold" data-track href="{{MAYAR_BASIC_URL}}">Ambil Basic Gratis →</a>
-      <a class="btn ghost" href="#kurikulum">Lihat Kurikulum 5 Tingkat</a>
+      <a class="btn gold" data-track data-i18n="hero.cta" href="https://wa.me/6285692904399?text=Halo%20Arsiva-Edu%2C%20saya%20mau%20ambil%20kelas%20Basic%20%28gratis%29.%20Mohon%20kirim%20tautannya.%20Terima%20kasih.">Ambil Basic Gratis →</a>
+      <a class="btn ghost" href="#kurikulum" data-i18n="hero.cta2">Lihat Kurikulum 5 Tingkat</a>
     </div>
   </div>
 </section>
 
 <div class="strip">
-  <div class="wrap">Instruktur: <b>Bambang Satmoko, S.T., S.H.</b> — Managing Partner Satmoko Law Firm · Advokat PERADI (NIA 19.02393) · Pendiri Arsiva Technology &amp; Certiva · Pimpinan Divisi Tokenisasi (sejak Jan 2025)</div>
+  <div class="wrap" data-i18n-html="strip.instructor">Instruktur: <b>Bambang Satmoko, S.T., S.H.</b> — Managing Partner Satmoko Law Firm · Advokat PERADI (NIA 19.02393) · Pendiri Arsiva Technology &amp; Certiva · Pimpinan Divisi Tokenisasi (sejak Jan 2025)</div>
 </div>
 
 <section id="kurikulum">
   <div class="wrap">
-    <h2>Kenapa kelas ini berbeda: semuanya dapat diverifikasi</h2>
-    <p class="lead">Prinsip firma kami berlaku juga untuk kelas ini: <b>klaim harus bisa ditelusuri ke sumbernya.</b> Setiap modul mengakhirmu pada satu format kerja — <b>memo terverifikasi</b>: klaim → dasar hukum → sumber → tanggal akses. Ini skill yang tidak diajarkan sebagai keterampilan tersendiri di sebagian besar kampus, dan justru itu yang dicari firma dan tim legal saat ini.</p>
+    <h2 data-i18n="kul.h2">Kenapa kelas ini berbeda: semuanya dapat diverifikasi</h2>
+    <p class="lead" data-i18n-html="kul.lead">Prinsip firma kami berlaku juga untuk kelas ini: <b>klaim harus bisa ditelusuri ke sumbernya.</b> Setiap modul mengakhirmu pada satu format kerja — <b>memo terverifikasi</b>: klaim → dasar hukum → sumber → tanggal akses. Ini skill yang tidak diajarkan sebagai keterampilan tersendiri di sebagian besar kampus, dan justru itu yang dicari firma dan tim legal saat ini.</p>
     <div class="grid3">
-      <div class="card"><h3>Bukan kelas motivasi AI</h3><p>Setiap topik berangkat dari regulasi yang berlaku dan berita yang sedang berjalan — PDP, keuangan digital, tokenisasi, sengketa elektronik — dengan status tertanggal yang jujur: materi menandai kapan diverifikasi.</p></div>
-      <div class="card"><h3>Praktik sebagai laboratorium</h3><p>Kamu membedah pekerjaan nyata: struktur aset digital di sandbox OJK, sistem kepatuhan yang menolak 28/28 kueri di luar domain, model kerja hukum bertahap yang transparan biaya.</p></div>
-      <div class="card"><h3>Portofolio, bukan sekadar sertifikat</h3><p>Naik tingkat = menambah dokumen nyata: memo, design brief, paket kepatuhan, hingga berkas perkara simulasi — bahan yang bisa kamu kirim saat melamar kerja.</p></div>
+      <div class="card"><h3 data-i18n="kul.c1t">Bukan kelas motivasi AI</h3><p data-i18n="kul.c1d">Setiap topik berangkat dari regulasi yang berlaku dan berita yang sedang berjalan — PDP, keuangan digital, tokenisasi, sengketa elektronik — dengan status tertanggal yang jujur: materi menandai kapan diverifikasi.</p></div>
+      <div class="card"><h3 data-i18n="kul.c2t">Praktik sebagai laboratorium</h3><p data-i18n="kul.c2d">Kamu membedah pekerjaan nyata: struktur aset digital di sandbox OJK, sistem kepatuhan yang menolak 28/28 kueri di luar domain, model kerja hukum bertahap yang transparan biaya.</p></div>
+      <div class="card"><h3 data-i18n="kul.c3t">Portofolio, bukan sekadar sertifikat</h3><p data-i18n="kul.c3d">Naik tingkat = menambah dokumen nyata: memo, design brief, paket kepatuhan, hingga berkas perkara simulasi — bahan yang bisa kamu kirim saat melamar kerja.</p></div>
     </div>
   </div>
 </section>
 <section id="tingkat">
   <div class="wrap">
-    <h2>Lima tingkat. Satu benang merah: memo terverifikasi.</h2>
-    <p class="lead">Format kelas: video pendek 7–12 menit per konsep, dipecah dalam modul 30–45 menit. Bisa diambil per tingkat; setiap tingkat punya output yang jelas. Status kurikulum: snapshot Oktober 2026.</p>
+    <h2 data-i18n="tng.h2">Lima tingkat. Satu benang merah: memo terverifikasi.</h2>
+    <p class="lead" data-i18n="tng.lead">Format kelas: video pendek 7–12 menit per konsep, dipecah dalam modul 30–45 menit. Bisa diambil per tingkat; setiap tingkat punya output yang jelas. Status kurikulum: snapshot Oktober 2026.</p>
     <div class="grid3">
 
       <div class="card lvl">
-        <span class="tagline free">BASIC · GRATIS</span>
-        <h3>Wawasan Hukum Era Digital</h3>
+        <span class="tagline free" data-i18n="bsl.tag">BASIC · GRATIS</span>
+        <h3 data-i18n="bsl.title">Wawasan Hukum Era Digital</h3>
         <ul class="modul">
-          <li>B1 Hukum &amp; teknologi tak bisa dipisah</li>
-          <li>B2 Data pribadimu adalah aset</li>
-          <li>B3 Dari kontrak elektronik ke sidang digital</li>
-          <li>B4 Uang digital &amp; siapa menjaganya</li>
-          <li>B5 Radar informasimu sendiri</li>
+          <li data-i18n="bsl.m1">B1 Hukum &amp; teknologi tak bisa dipisah</li>
+          <li data-i18n="bsl.m2">B2 Data pribadimu adalah aset</li>
+          <li data-i18n="bsl.m3">B3 Dari kontrak elektronik ke sidang digital</li>
+          <li data-i18n="bsl.m4">B4 Uang digital &amp; siapa menjaganya</li>
+          <li data-i18n="bsl.m5">B5 Radar informasimu sendiri</li>
         </ul>
-        <p>±75 menit · tanpa prasyarat · output: peta bidang + kebiasaan verifikasi.</p>
-        <div class="harga">Gratis — cukup daftar.</div>
-        <p style="margin-top:10px"><a class="btn" style="font-size:13.5px;padding:8px 16px" data-track href="{{MAYAR_BASIC_URL}}">Ambil Basic</a></p>
+        <p data-i18n="bsl.meta">±75 menit · tanpa prasyarat · output: peta bidang + kebiasaan verifikasi.</p>
+        <div class="harga" data-i18n="bsl.price">Gratis — cukup daftar.</div>
+        <p style="margin-top:10px"><a class="btn" style="font-size:13.5px;padding:8px 16px" data-track data-i18n="bsl.cta" href="https://wa.me/6285692904399?text=Halo%20Arsiva-Edu%2C%20saya%20mau%20ambil%20kelas%20Basic%20%28gratis%29.%20Mohon%20kirim%20tautannya.%20Terima%20kasih.">Ambil Basic</a></p>
       </div>
 
       <div class="card lvl">
-        <span class="tagline">MENENGAH · CORE</span>
-        <h3>Membedah Masalah Hukum Digital</h3>
+        <span class="tagline" data-i18n="itg.tag">MENENGAH · CORE</span>
+        <h3 data-i18n="itg.title">Membedah Masalah Hukum Digital</h3>
         <ul class="modul">
-          <li>M1 Pelindungan Data Pribadi (UU 27/2022 + PP 33/2026)</li>
-          <li>M2 AI &amp; hukum — tanggung jawab, karya, audit</li>
-          <li>M3 Fintech, pinjol &amp; pembayaran digital</li>
-          <li>M4 E-commerce &amp; tanggung jawab platform</li>
-          <li>M5 Kejahatan siber &amp; bukti digital</li>
-          <li>M6 HKI ekonomi digital · M7 Peta perizinan &amp; pengawas</li>
+          <li data-i18n="itg.m1">M1 Pelindungan Data Pribadi (UU 27/2022 + PP 33/2026)</li>
+          <li data-i18n="itg.m2">M2 AI &amp; hukum — tanggung jawab, karya, audit</li>
+          <li data-i18n="itg.m3">M3 Fintech, pinjol &amp; pembayaran digital</li>
+          <li data-i18n="itg.m4">M4 E-commerce &amp; tanggung jawab platform</li>
+          <li data-i18n="itg.m5">M5 Kejahatan siber &amp; bukti digital</li>
+          <li data-i18n="itg.m6">M6 HKI ekonomi digital · M7 Peta perizinan &amp; pengawas</li>
         </ul>
-        <p>7 modul ±4,5 jam · output: memo terverifikasi per isu.</p>
-        <div class="harga">[Harga menyusul — batch founding member]</div>
-        <p style="margin-top:10px"><a class="btn" style="font-size:13.5px;padding:8px 16px" data-track href="{{MAYAR_MENENGAH_URL}}">Daftar Menengah</a></p>
+        <p data-i18n="itg.meta">7 modul ±4,5 jam · output: memo terverifikasi per isu.</p>
+        <div class="harga" data-i18n="itg.price">[Harga menyusul — batch founding member]</div>
+        <p style="margin-top:10px"><a class="btn" style="font-size:13.5px;padding:8px 16px" data-track data-i18n="itg.cta" href="{{MAYAR_MENENGAH_URL}}">Daftar Menengah</a></p>
       </div>
 
       <div class="card lvl">
         <span class="tagline">ADVANCE</span>
-        <h3>Structuring &amp; Sistem Kepatuhan</h3>
+        <h3 data-i18n="adv.title">Structuring &amp; Sistem Kepatuhan</h3>
         <ul class="modul">
-          <li>A1 Berpikir arsitek: masalah → struktur</li>
-          <li>A2 SPV / TSPV / HoldCo untuk aset digital</li>
-          <li>A3 Compliance by design (pasal → alur → jejak audit)</li>
-          <li>A4 KYC/AML &amp; PDP bekerja bersama</li>
-          <li>A5 RegTech yang dapat diaudit · A6 Sandbox &amp; jalur inovasi</li>
+          <li data-i18n="adv.m1">A1 Berpikir arsitek: masalah → struktur</li>
+          <li data-i18n="adv.m2">A2 SPV / TSPV / HoldCo untuk aset digital</li>
+          <li data-i18n="adv.m3">A3 Compliance by design (pasal → alur → jejak audit)</li>
+          <li data-i18n="adv.m4">A4 KYC/AML &amp; PDP bekerja bersama</li>
+          <li data-i18n="adv.m5">A5 RegTech yang dapat diaudit · A6 Sandbox &amp; jalur inovasi</li>
         </ul>
-        <p>6 modul ±4 jam · output: design brief berformat auditor.</p>
-        <div class="harga">[Harga menyusul — waitlist founding member dibuka segera]</div>
+        <p data-i18n="adv.meta">6 modul ±4 jam · output: design brief berformat auditor.</p>
+        <div class="harga" data-i18n="adv.price">[Harga menyusul — waitlist founding member dibuka segera]</div>
       </div>
 
       <div class="card lvl">
-        <span class="tagline">TERAPAN</span>
-        <h3>Proyek Portofolio</h3>
+        <span class="tagline" data-i18n="apl.tag">TERAPAN</span>
+        <h3 data-i18n="apl.title">Proyek Portofolio</h3>
         <ul class="modul">
-          <li>P1 Paket kepatuhan PDP untuk startup</li>
-          <li>P2 Jalur tokenisasi satu aset (opini mini)</li>
-          <li>P3 Berkas perkara bukti digital (mock)</li>
-          <li>P4 Legal health-check platform</li>
-          <li>P5 Capstone: dossier layak-kirim</li>
+          <li data-i18n="apl.m1">P1 Paket kepatuhan PDP untuk startup</li>
+          <li data-i18n="apl.m2">P2 Jalur tokenisasi satu aset (opini mini)</li>
+          <li data-i18n="apl.m3">P3 Berkas perkara bukti digital (mock)</li>
+          <li data-i18n="apl.m4">P4 Legal health-check platform</li>
+          <li data-i18n="apl.m5">P5 Capstone: dossier layak-kirim</li>
         </ul>
-        <p>4 proyek + capstone ±8–12 jam kerja · output: 3 dokumen portofolio.</p>
-        <div class="harga">[Harga menyusul — dibuka setelah batch Menengah pertama]</div>
+        <p data-i18n="apl.meta">4 proyek + capstone ±8–12 jam kerja · output: 3 dokumen portofolio.</p>
+        <div class="harga" data-i18n="apl.price">[Harga menyusul — dibuka setelah batch Menengah pertama]</div>
       </div>
 
       <div class="card lvl">
-        <span class="tagline pro">PROFESIONAL</span>
-        <h3>Praktik, Produk &amp; Karier</h3>
+        <span class="tagline pro" data-i18n="pro.tag">PROFESIONAL</span>
+        <h3 data-i18n="pro.title">Praktik, Produk &amp; Karier</h3>
         <ul class="modul">
-          <li>PR1 Peta profesi hukum digital</li>
-          <li>PR2 Stack teknologi firma hukum modern</li>
-          <li>PR3 PFII, family office &amp; trust</li>
-          <li>PR4 Pasar RWA &amp; aset ditokenisasi</li>
-          <li>PR5 Menjual kepastian: desain jasa hukum + capstone</li>
+          <li data-i18n="pro.m1">PR1 Peta profesi hukum digital</li>
+          <li data-i18n="pro.m2">PR2 Stack teknologi firma hukum modern</li>
+          <li data-i18n="pro.m3">PR3 PFII, family office &amp; trust</li>
+          <li data-i18n="pro.m4">PR4 Pasar RWA &amp; aset ditokenisasi</li>
+          <li data-i18n="pro.m5">PR5 Menjual kepastian: desain jasa hukum + capstone</li>
         </ul>
-        <p>Untuk praktisi, notaris, firma &amp; fresh grad serius · output: satu kapabilitas yang bisa dijual.</p>
-        <div class="harga">[Harga menyusul — tersedia jalur korporat/B2B]</div>
+        <p data-i18n="pro.meta">Untuk praktisi, notaris, firma &amp; fresh grad serius · output: satu kapabilitas yang bisa dijual.</p>
+        <div class="harga" data-i18n="pro.price">[Harga menyusul — tersedia jalur korporat/B2B]</div>
       </div>
 
       <div class="card lvl" style="border-top-color:var(--gold)">
         <span class="tagline" style="background:#fdf3dd;color:#8a5a00">BUNDLE</span>
         <h3>Founding Member</h3>
-        <p>Kombinasi Menengah → Advance → Terapan dengan harga batch pertama + akses prioritas Q&amp;A bulanan + nama di daftar alumni terverifikasi. Kuota batch pertama dibatasi agar review proyek tetap personal.</p>
-        <div class="harga">[Harga founding member menyusul]</div>
-        <p style="margin-top:10px"><a class="btn gold" style="font-size:13.5px;padding:8px 16px" data-track href="{{MAYAR_BUNDLE_URL}}">Gabung Waitlist Bundle</a></p>
+        <p data-i18n="bnd.desc">Kombinasi Menengah → Advance → Terapan dengan harga batch pertama + akses prioritas Q&amp;A bulanan + nama di daftar alumni terverifikasi. Kuota batch pertama dibatasi agar review proyek tetap personal.</p>
+        <div class="harga" data-i18n="bnd.price">[Harga founding member menyusul]</div>
+        <p style="margin-top:10px"><a class="btn gold" style="font-size:13.5px;padding:8px 16px" data-track data-i18n="bnd.cta" href="{{MAYAR_BUNDLE_URL}}">Gabung Waitlist Bundle</a></p>
       </div>
 
     </div>
-    <div class="note">Catatan transparansi regulasi: kerangka OJK atas aset ditokenisasi, UU PFII (disahkan DPR 21 Juli 2026), dan PP 33/2026 (berlaku 16 Januari 2027; Badan PDP sedang dibentuk) bergerak cepat. Semua materi kami beri tanggal verifikasi dan di-update mengikuti perubahan — persis cara kami bekerja di praktik. Sumber &amp; status per Oktober 2026.</div>
+    <div class="note" data-i18n="tng.note">Catatan transparansi regulasi: kerangka OJK atas aset ditokenisasi, UU PFII (disahkan DPR 21 Juli 2026), dan PP 33/2026 (berlaku 16 Januari 2027; Badan PDP sedang dibentuk) bergerak cepat. Semua materi kami beri tanggal verifikasi dan di-update mengikuti perubahan — persis cara kami bekerja di praktik. Sumber &amp; status per Oktober 2026.</div>
   </div>
 </section>
 
 <section id="instruktur" style="background:#eef3f8">
   <div class="wrap">
-    <h2>Siapa di depan kelas</h2>
+    <h2 data-i18n="ins.h2">Siapa di depan kelas</h2>
     <div class="card" style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start">
       <div style="flex:1;min-width:260px">
         <h3>Bambang Satmoko, S.T., S.H.</h3>
-        <p style="font-size:14.5px;color:var(--ink);margin-bottom:10px">Sarjana Teknik sekaligus Sarjana Hukum — advokat PERADI (NIA 19.02393, DPC Jakarta Selatan), memimpin Satmoko Law Firm sejak 2019, dan pendiri Arsiva Technology serta Certiva. Memimpin Divisi Tokenisasi firma sejak Januari 2025: opini hukum, struktur SPV/TSPV, dan pendampingan Regulatory Sandbox OJK.</p>
-        <p style="font-size:14px;color:var(--mut)">Kelas ini diajarkan dari dua sisi meja: sisi advokat yang menangani perkara dan sisi builder yang menulis kodenya sendiri — termasuk mesin kepatuhan yang jawabannya selalu mencantumkan sumber.</p>
+        <p style="font-size:14.5px;color:var(--ink);margin-bottom:10px" data-i18n="ins.bio1">Sarjana Teknik sekaligus Sarjana Hukum — advokat PERADI (NIA 19.02393, DPC Jakarta Selatan), memimpin Satmoko Law Firm sejak 2019, dan pendiri Arsiva Technology serta Certiva. Memimpin Divisi Tokenisasi firma sejak Januari 2025: opini hukum, struktur SPV/TSPV, dan pendampingan Regulatory Sandbox OJK.</p>
+        <p style="font-size:14px;color:var(--mut)" data-i18n="ins.bio2">Kelas ini diajarkan dari dua sisi meja: sisi advokat yang menangani perkara dan sisi builder yang menulis kodenya sendiri — termasuk mesin kepatuhan yang jawabannya selalu mencantumkan sumber.</p>
       </div>
       <ul style="flex:0 0 240px;font-size:13.5px;color:var(--mut);padding-left:18px">
-        <li>Firma advokat terdaftar (akta No. 01/2020, NIB terbit via OSS)</li>
-        <li>Praktik: pajak, kepabeanan, litigasi, korporasi, tokenisasi, family office</li>
-        <li>Produk nyata: Certiva (mesin kepatuhan ekspor, benchmark internal Okt 2026), Arsiva Shield (KYC/AML selaras UU PDP), VaultOS</li>
-        <li>Model kerja: bayar per tahap, keluaran terukur, tahap gate jelas</li>
+        <li data-i18n="ins.c1">Firma advokat terdaftar (akta No. 01/2020, NIB terbit via OSS)</li>
+        <li data-i18n="ins.c2">Praktik: pajak, kepabeanan, litigasi, korporasi, tokenisasi, family office</li>
+        <li data-i18n="ins.c3">Produk nyata: Certiva (mesin kepatuhan ekspor, benchmark internal Okt 2026), Arsiva Shield (KYC/AML selaras UU PDP), VaultOS</li>
+        <li data-i18n="ins.c4">Model kerja: bayar per tahap, keluaran terukur, tahap gate jelas</li>
       </ul>
     </div>
-    <p style="margin-top:18px;font-size:13.5px;color:var(--mut)">Profil lengkap: <a href="https://satmokolawfirm.id" rel="noopener">satmokolawfirm.id</a> · <a href="https://arsiva.tech" rel="noopener">arsiva.tech</a></p>
+    <p style="margin-top:18px;font-size:13.5px;color:var(--mut)" data-i18n-html="ins.profile">Profil lengkap: <a href="https://satmokolawfirm.id" rel="noopener">satmokolawfirm.id</a> · <a href="https://arsiva.tech" rel="noopener">arsiva.tech</a></p>
   </div>
 </section>
 
 <section id="faq">
   <div class="wrap">
-    <h2>Pertanyaan yang sering masuk</h2>
-    <details><summary>Saya belum semester akhir / bukan mahasiswa hukum, bisa ikut?</summary><p>Bisa. Basic dirancang untuk semua kalangan. Untuk tingkat berbayar, mahasiswa S1 Hukum semester 6–7 adalah audiens utama, tetapi fresh graduate, mahasiswa lintas minat, dan praktisi muda menjadi peserta yang sama seriusnya — jalur Profesional justru dirancang untuk praktisi.</p></details>
-    <details><summary>Kenapa videonya pendek-pendek, bukan kuliah 60 menit?</summary><p>Karena cara kerja firma juga begitu: satu masalah, satu keluaran, satu keputusan. Retensi belajar naik, dan setiap konsep bisa kami update cepat ketika regulasi bergerak tanpa merekam ulang seluruh kelas.</p></details>
-    <details><summary>Ada sertifikatnya?</summary><p>Ada, untuk tingkat berbayar. Sejak awal konsepnya kami buat "sertifikat terverifikasi": tiap sertifikat bernomor seri dan statusnya dapat dicek publik — cara kami mempraktikan prinsip auditabilitas pada produk pendidikan kami sendiri. Halaman pengecekannya menyusul.</p></details>
-    <details><summary>Bagaimana kebijan refund?</summary><p>Ringkas: refund penuh dalam 7 hari sejak pembelian selama progres aksesmu belum melewati 25% materi, tanpa perlu alasan panjang. Ketentuan lengkap (dan jujur) ada di Syarat &amp; Ketentuan — sebagai firma hukum: apa yang kami tulis di dokumen, itu yang kami jalankan.</p></details>
-    <details><summary>Data saya diapakan?</summary><p>Kami hanya menyimpan yang dibutuhkan untuk administrasi kelas (nama, kontak, status pembayaran) sesuai UU Pelindungan Data Pribadi, tidak menjual atau membagikan, dan menghapus atas permintaan wajar. Ringkasan di bawah; kebijakan privasi lengkap menyusul tertaut di sini.</p></details>
+    <h2 data-i18n="faq.h2">Pertanyaan yang sering masuk</h2>
+    <details><summary data-i18n="faq.q1">Saya belum semester akhir / bukan mahasiswa hukum, bisa ikut?</summary><p data-i18n="faq.a1">Bisa. Basic dirancang untuk semua kalangan. Untuk tingkat berbayar, mahasiswa S1 Hukum semester 6–7 adalah audiens utama, tetapi fresh graduate, mahasiswa lintas minat, dan praktisi muda menjadi peserta yang sama seriusnya — jalur Profesional justru dirancang untuk praktisi.</p></details>
+    <details><summary data-i18n="faq.q2">Kenapa videonya pendek-pendek, bukan kuliah 60 menit?</summary><p data-i18n="faq.a2">Karena cara kerja firma juga begitu: satu masalah, satu keluaran, satu keputusan. Retensi belajar naik, dan setiap konsep bisa kami update cepat ketika regulasi bergerak tanpa merekam ulang seluruh kelas.</p></details>
+    <details><summary data-i18n="faq.q3">Ada sertifikatnya?</summary><p data-i18n="faq.a3">Ada, untuk tingkat berbayar. Sejak awal konsepnya kami buat "sertifikat terverifikasi": tiap sertifikat bernomor seri dan statusnya dapat dicek publik — cara kami mempraktikan prinsip auditabilitas pada produk pendidikan kami sendiri. Halaman pengecekannya menyusul.</p></details>
+    <details><summary data-i18n="faq.q4">Bagaimana kebijakan refund?</summary><p data-i18n="faq.a4">Ringkas: refund penuh dalam 7 hari sejak pembelian selama progres aksesmu belum melewati 25% materi, tanpa perlu alasan panjang. Ketentuan lengkap (dan jujur) ada di Syarat &amp; Ketentuan — sebagai firma hukum: apa yang kami tulis di dokumen, itu yang kami jalankan.</p></details>
+    <details><summary data-i18n="faq.q5">Data saya diapakan?</summary><p data-i18n="faq.a5">Kami hanya menyimpan yang dibutuhkan untuk administrasi kelas (nama, kontak, status pembayaran) sesuai UU Pelindungan Data Pribadi, tidak menjual atau membagikan, dan menghapus atas permintaan wajar. Ringkasan di bawah; kebijakan privasi lengkap menyusul tertaut di sini.</p></details>
   </div>
 </section>
 
 <section id="legal" style="padding-top:0">
   <div class="wrap">
-    <h2>Syarat, refund &amp; privasi — versi singkat yang jujur</h2>
+    <h2 data-i18n="leg.h2">Syarat, refund &amp; privasi — versi singkat yang jujur</h2>
     <div class="grid3">
-      <div class="card"><h3>Syarat &amp; Ketentuan</h3><p>Materi untuk edukasi, bukan nasihat hukum untuk kasus spesifik; hubungan advokat-klien tidak lahir dari pembelian kelas. Dokumen lengkap: <a href="{{TC_URL}}">Syarat &amp; Ketentuan</a>.</p></div>
-      <div class="card"><h3>Refund</h3><p>7 hari, progres &lt;25%, tanpa alasan wajib. Detail mekanisme &amp; jangka waktu pengembalian: <a href="{{REFUND_URL}}">Kebijakan Refund</a>.</p></div>
-      <div class="card"><h3>Privasi (UU PDP)</h3><p>Minimisasi data, tanpa penjualan data, hapus atas permintaan. Pemberitahuan lengkap: <a href="{{PRIVACY_URL}}">Kebijakan Privasi</a>.</p></div>
+      <div class="card"><h3 data-i18n="leg.tc.t">Syarat &amp; Ketentuan</h3><p data-i18n-html="leg.tc.d">Materi untuk edukasi, bukan nasihat hukum untuk kasus spesifik; hubungan advokat-klien tidak lahir dari pembelian kelas. Dokumen lengkap: <a href="{{TC_URL}}">Syarat &amp; Ketentuan</a>.</p></div>
+      <div class="card"><h3 data-i18n="leg.rfd.t">Refund</h3><p data-i18n-html="leg.rfd.d">7 hari, progres &lt;25%, tanpa alasan wajib. Detail mekanisme &amp; jangka waktu pengembalian: <a href="{{REFUND_URL}}">Kebijakan Refund</a>.</p></div>
+      <div class="card"><h3 data-i18n="leg.prv.t">Privasi (UU PDP)</h3><p data-i18n-html="leg.prv.d">Minimisasi data, tanpa penjualan data, hapus atas permintaan. Pemberitahuan lengkap: <a href="{{PRIVACY_URL}}">Kebijakan Privasi</a>.</p></div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <b style="color:#fff">ARSIVA·EDU — Program edukasi Techno Legal Architect</b><br>
-    Program edukasi Arsiva Technology bekerja sama dengan Satmoko Law Firm · bukan jasa hukum dan bukan hubungan advokat-klien.<br>
-    Pendaftaran &amp; pertanyaan: <a href="{{WA_URL}}">WhatsApp [nomor menyusul]</a> · <a href="mailto:edu@arsiva.tech">edu@arsiva.tech</a><br>
-    Status kurikulum &amp; snapshot regulasi: Oktober 2026 — verifikasi ulang status terbaru sebelum keputusan penting.<br>
+    <b style="color:#fff" data-i18n="ftr.brand">ARSIVA·EDU — Program edukasi Techno Legal Architect</b><br>
+    <span data-i18n="ftr.line2">Program edukasi Arsiva Technology bekerja sama dengan Satmoko Law Firm · bukan jasa hukum dan bukan hubungan advokat-klien.</span><br>
+    <span data-i18n-html="ftr.line3">Pendaftaran &amp; pertanyaan: <a href="https://wa.me/6285692904399">WhatsApp 0856-9290-4399</a> · <a href="mailto:edu@arsiva.tech">edu@arsiva.tech</a></span><br>
+    <span data-i18n="ftr.line4">Status kurikulum &amp; snapshot regulasi: Oktober 2026 — verifikasi ulang status terbaru sebelum keputusan penting.</span><br>
     © 2026 Arsiva Technology · <a href="https://arsiva.tech">arsiva.tech</a> · <a href="https://satmokolawfirm.id">satmokolawfirm.id</a>
   </div>
 </footer>
 
 <script>
-// UTM/atribusi: teruskan parameter kampanye (utm_*) ke link Mayar agar url_konten_pemicu tercatat
+// UTM/atribusi: teruskan parameter kampanye (utm_*) ke link ber-tracking (WA & Mayar) agar url_konten_pemicu tercatat
 (function(){
   var q = location.search.replace(/^\?/, '');
   if (!q) return;
@@ -262,6 +265,166 @@
     a.href = a.href + (a.href.indexOf('?') > -1 ? '&' : '?') + q;
   }
 })();
+</script>
+
+<script>
+// i18n: pattern identik arsiva.tech (index.html) — key bersama 'arsiva_lang' sehingga bahasa tersinkron antar halaman
+const translations = { en: {
+"meta.title": "Techno Legal Architect Course — Digital-Era Legal Insight for Law Students | Arsiva Edu",
+"meta.description": "The Techno Legal Architect video course by Satmoko Law Firm × Arsiva Technology. Five levels from Basic (free) to Professional, for final-year law students. Source-based material that can be verified.",
+"nav.kurikulum": "Curriculum",
+"nav.tingkat": "Levels",
+"nav.instruktur": "Instructor",
+"nav.faq": "FAQ",
+"nav.cta": "Get Basic Free",
+"hero.h1": "Legal insight for the <em>digital era</em> you can use for your thesis, career, and practice.",
+"hero.sub": "The Techno Legal Architect video course — built by a PERADI-registered advocate who also builds legal-tech products. For final-year law students who refuse to graduate with knowledge that stops at the textbook.",
+"hero.badge1": "By Satmoko Law Firm × Arsiva Technology",
+"hero.badge2": "Basic FREE — no prerequisites",
+"hero.badge3": "Source-based material — not groundless opinion",
+"hero.cta": "Get Basic Free →",
+"hero.cta2": "See the 5-Level Curriculum",
+"strip.instructor": "Instructor: <b>Bambang Satmoko, S.T., S.H.</b> — Managing Partner, Satmoko Law Firm · PERADI-registered advocate (NIA 19.02393) · Founder of Arsiva Technology & Certiva · Head of Tokenization Division (since Jan 2025)",
+"kul.h2": "What makes this course different: everything is verifiable",
+"kul.lead": "Our firm's principle applies here too: <b>claims must be traceable to their source.</b> Every module ends with one working format — <b>the verified memo</b>: claim → legal basis → source → access date. A skill most law schools never teach on its own — and exactly what firms and legal teams are looking for now.",
+"kul.c1t": "Not an AI hype class",
+"kul.c1d": "Every topic starts from regulations in force and ongoing news — PDP, digital finance, tokenization, electronic disputes — with an honest, dated status: the material marks when it was verified.",
+"kul.c2t": "Practice as the laboratory",
+"kul.c2d": "You dissect real work: digital asset structures in the OJK sandbox, a compliance system that rejected 28/28 out-of-domain queries, a phased legal working model with transparent costs.",
+"kul.c3t": "Portfolio, not just a certificate",
+"kul.c3d": "Leveling up = adding real documents: memos, design briefs, compliance packages, even simulated case files — material you can send when applying for jobs.",
+"tng.h2": "Five levels. One thread: the verified memo.",
+"tng.lead": "Course format: short 7–12 minute videos per concept, grouped into 30–45 minute modules. Take it level by level; every level has a clear output. Curriculum status: October 2026 snapshot.",
+"bsl.tag": "BASIC · FREE",
+"bsl.title": "Digital-Era Legal Insight",
+"bsl.m1": "B1 Law & technology are inseparable",
+"bsl.m2": "B2 Your personal data is an asset",
+"bsl.m3": "B3 From e-contracts to digital courtrooms",
+"bsl.m4": "B4 Digital money & who protects it",
+"bsl.m5": "B5 Your own information radar",
+"bsl.meta": "±75 minutes · no prerequisites · output: domain map + verification habits.",
+"bsl.price": "Free — just sign up.",
+"bsl.cta": "Get Basic",
+"itg.tag": "INTERMEDIATE · CORE",
+"itg.title": "Dissecting Digital Legal Issues",
+"itg.m1": "M1 Personal Data Protection (Law 27/2022 + PP 33/2026)",
+"itg.m2": "M2 AI & law — liability, works, audit",
+"itg.m3": "M3 Fintech, online lending & digital payments",
+"itg.m4": "M4 E-commerce & platform liability",
+"itg.m5": "M5 Cybercrime & digital evidence",
+"itg.m6": "M6 Digital-economy IP rights · M7 Licensing map & regulators",
+"itg.meta": "7 modules ±4.5 hours · output: a verified memo per issue.",
+"itg.price": "[Price TBA — founding member batch]",
+"itg.cta": "Join Intermediate",
+"adv.title": "Structuring & Compliance Systems",
+"adv.m1": "A1 Architect thinking: problem → structure",
+"adv.m2": "A2 SPV / TSPV / HoldCo for digital assets",
+"adv.m3": "A3 Compliance by design (provision → flow → audit trail)",
+"adv.m4": "A4 KYC/AML & PDP working together",
+"adv.m5": "A5 Auditable RegTech · A6 Sandbox & innovation pathways",
+"adv.meta": "6 modules ±4 hours · output: an auditor-formatted design brief.",
+"adv.price": "[Price TBA — founding member waitlist opens soon]",
+"apl.tag": "APPLIED",
+"apl.title": "Portfolio Projects",
+"apl.m1": "P1 PDP compliance package for a startup",
+"apl.m2": "P2 One-asset tokenization pathway (mini opinion)",
+"apl.m3": "P3 Digital-evidence case file (mock)",
+"apl.m4": "P4 Platform legal health-check",
+"apl.m5": "P5 Capstone: send-ready dossier",
+"apl.meta": "4 projects + capstone ±8–12 working hours · output: 3 portfolio documents.",
+"apl.price": "[Price TBA — opens after the first Intermediate batch]",
+"pro.tag": "PROFESSIONAL",
+"pro.title": "Practice, Product & Career",
+"pro.m1": "PR1 Map of the digital legal profession",
+"pro.m2": "PR2 The tech stack of a modern law firm",
+"pro.m3": "PR3 PFII, family office & trust",
+"pro.m4": "PR4 The RWA & tokenized-asset market",
+"pro.m5": "PR5 Selling certainty: legal service design + capstone",
+"pro.meta": "For practitioners, notaries, firms & serious fresh grads · output: one sellable capability.",
+"pro.price": "[Price TBA — corporate/B2B track available]",
+"bnd.desc": "Intermediate → Advance → Applied combined at first-batch pricing + priority monthly Q&amp;A access + your name on the verified alumni list. First-batch quota is limited so project review stays personal.",
+"bnd.price": "[Founding member price TBA]",
+"bnd.cta": "Join the Bundle Waitlist",
+"tng.note": "Regulatory transparency note: the OJK framework for tokenized assets, the PFII Law (enacted by the DPR 21 July 2026), and PP 33/2026 (effective 16 January 2027; the PDP Agency is being formed) are moving fast. All our material carries verification dates and is updated as things change — exactly how we work in practice. Sources & status as of October 2026.",
+"ins.h2": "Who's in front of the class",
+"ins.bio1": "Engineering and law graduate — PERADI-registered advocate (NIA 19.02393, South Jakarta DPC), leading Satmoko Law Firm since 2019, and founder of Arsiva Technology and Certiva. Leading the firm's Tokenization Division since January 2025: legal opinions, SPV/TSPV structures, and OJK Regulatory Sandbox support.",
+"ins.bio2": "This course is taught from both sides of the table: the advocate who handles the cases and the builder who writes the code — including the compliance engine whose answers always cite their sources.",
+"ins.c1": "Registered law firm (deed No. 01/2020, NIB issued via OSS)",
+"ins.c2": "Practice: tax, customs, litigation, corporate, tokenization, family office",
+"ins.c3": "Real products: Certiva (export compliance engine, internal benchmark Oct 2026), Arsiva Shield (PDP-aligned KYC/AML), VaultOS",
+"ins.c4": "Working model: pay per stage, measurable outputs, clear gate stages",
+"ins.profile": "Full profile: <a href=\"https://satmokolawfirm.id\" rel=\"noopener\">satmokolawfirm.id</a> · <a href=\"https://arsiva.tech\" rel=\"noopener\">arsiva.tech</a>",
+"faq.h2": "Frequently asked questions",
+"faq.q1": "I'm not in my final semester / not a law student — can I join?",
+"faq.a1": "Yes. Basic is designed for everyone. For the paid levels, final-year (semester 6–7) law students are the primary audience, but fresh graduates, cross-discipline students, and young practitioners are equally serious participants — the Professional track is in fact designed for practitioners.",
+"faq.q2": "Why are the videos short, not 60-minute lectures?",
+"faq.a2": "Because a firm works the same way: one issue, one output, one decision. Learning retention goes up, and we can update any concept quickly when regulation moves — without re-recording the whole class.",
+"faq.q3": "Is there a certificate?",
+"faq.a3": "Yes, for the paid levels. From the start the concept is a \"verified certificate\": each one carries a serial number and its status is publicly checkable — us practicing the auditability principle on our own education product. The verification page follows.",
+"faq.q4": "What's the refund policy?",
+"faq.a4": "In short: a full refund within 7 days of purchase as long as your access progress hasn't passed 25% of the material, no long explanation needed. The full (and honest) terms are in the Terms & Conditions — as a law firm: what we write in the documents is what we run.",
+"faq.q5": "What happens to my data?",
+"faq.a5": "We only keep what's needed for course administration (name, contact, payment status) in line with the Personal Data Protection Law, we don't sell or share it, and we delete it on reasonable request. Summary below; the full privacy policy will link here.",
+"leg.h2": "Terms, refunds & privacy — the short, honest version",
+"leg.tc.t": "Terms & Conditions",
+"leg.tc.d": "Material is for education, not legal advice for a specific case; an advocate-client relationship is not created by purchasing the course. Full document: <a href=\"{{TC_URL}}\">Terms &amp; Conditions</a>.",
+"leg.rfd.t": "Refund",
+"leg.rfd.d": "7 days, progress &lt;25%, no reason required. Refund mechanism & timeline details: <a href=\"{{REFUND_URL}}\">Refund Policy</a>.",
+"leg.prv.t": "Privacy (PDP Law)",
+"leg.prv.d": "Data minimization, no data sale, deletion on request. Full notice: <a href=\"{{PRIVACY_URL}}\">Privacy Policy</a>.",
+"ftr.brand": "ARSIVA·EDU — Techno Legal Architect education program",
+"ftr.line2": "An Arsiva Technology education program in collaboration with Satmoko Law Firm · not a legal service and not an advocate-client relationship.",
+"ftr.line3": "Registration & questions: <a href=\"https://wa.me/6285692904399\">WhatsApp 0856-9290-4399</a> · <a href=\"mailto:edu@arsiva.tech\">edu@arsiva.tech</a>",
+"ftr.line4": "Curriculum status & regulatory snapshot: October 2026 — re-verify the latest status before important decisions."
+}
+};
+const originalMeta = {
+  title: document.title,
+  description: document.querySelector('meta[name="description"]')?.getAttribute('content') || ''
+};
+function getInitialLang() {
+  // Default to Indonesian; switch to English only on explicit user choice.
+  const saved = localStorage.getItem('arsiva_lang');
+  if (saved === 'id' || saved === 'en') return saved;
+  return 'id';
+}
+const originalStore = { text: {}, html: {} };
+function cacheOriginals() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    originalStore.text[el.getAttribute('data-i18n')] = el.textContent;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    originalStore.html[el.getAttribute('data-i18n-html')] = el.innerHTML;
+  });
+}
+function applyLang(lang) {
+  const dict = lang === 'en' ? translations.en : null;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    el.textContent = dict && dict[key] ? dict[key] : originalStore.text[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    el.innerHTML = dict && dict[key] ? dict[key] : originalStore.html[key];
+  });
+  document.title = dict && dict['meta.title'] ? dict['meta.title'] : originalMeta.title;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', dict && dict['meta.description'] ? dict['meta.description'] : originalMeta.description);
+  document.documentElement.setAttribute('lang', lang);
+  const label = document.getElementById('lang-toggle');
+  if (label) label.textContent = lang === 'en' ? 'ID' : 'EN';
+}
+function toggleLang() {
+  const current = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'id';
+  const next = current === 'en' ? 'id' : 'en';
+  localStorage.setItem('arsiva_lang', next);
+  applyLang(next);
+}
+document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+document.addEventListener('DOMContentLoaded', () => {
+  cacheOriginals();
+  applyLang(getInitialLang());
+});
 </script>
 
 </body>
