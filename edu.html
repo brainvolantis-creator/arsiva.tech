@@ -61,6 +61,23 @@
   footer{background:var(--navy);color:#9fb2c6;font-size:12.5px;padding:34px 0 44px;line-height:1.8}
   footer a{color:#cfd9e6}
   .note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:14px 18px;font-size:13px;color:var(--mut);margin-top:26px}
+  .modal-overlay{display:none;position:fixed;inset:0;background:#0e1a2bd9;z-index:100;align-items:center;justify-content:center;padding:20px}
+  .modal-overlay.open{display:flex}
+  .modal{background:#fff;border-radius:14px;max-width:440px;width:100%;padding:28px;position:relative;box-shadow:0 20px 60px #00000044}
+  .modal h3{color:var(--navy);font-size:19px;margin-bottom:4px;padding-right:24px}
+  .modal .m-sub{font-size:13.5px;color:var(--mut);margin-bottom:6px}
+  .modal .m-close{position:absolute;top:10px;right:12px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--mut);line-height:1;padding:4px}
+  .modal label{display:block;font-size:12.5px;font-weight:600;color:var(--navy);margin:12px 0 4px}
+  .modal input{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:14.5px;box-sizing:border-box}
+  .modal input:focus{outline:none;border-color:var(--teal)}
+  .modal .m-err{font-size:12px;color:#c0392b;min-height:14px;margin-top:3px}
+  .modal .m-submit{display:block;width:100%;margin-top:16px;background:var(--teal);color:#fff;border:none;padding:12px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;text-decoration:none;text-align:center}
+  .modal .m-submit:hover{filter:brightness(1.1)}
+  .modal .m-pdp{font-size:11.5px;color:var(--mut);margin-top:12px;text-align:center}
+  .modal .m-done{text-align:center;padding:6px 0}
+  .modal .m-ico{font-size:42px;color:var(--teal)}
+  .modal .m-done p{font-size:14px;color:var(--mut);margin:10px 0 16px}
+  .modal .m-edit{background:none;border:1.5px solid var(--line);color:var(--navy);padding:9px 16px;border-radius:8px;cursor:pointer;font-size:13.5px;margin-top:12px}
 </style>
 </head>
 <body>
@@ -74,7 +91,7 @@
       <a href="#instruktur" data-i18n="nav.instruktur">Instruktur</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
       <button id="lang-toggle" type="button" aria-label="Ganti bahasa / Switch language">EN</button>
-      <a class="btn" style="padding:8px 16px;font-size:13.5px" data-track data-i18n="nav.cta" href="https://wa.me/6285692904399?text=Halo%20Arsiva-Edu%2C%20saya%20mau%20ambil%20kelas%20Basic%20%28gratis%29.%20Mohon%20kirim%20tautannya.%20Terima%20kasih.">Ambil Basic Gratis</a>
+      <button class="btn" t;cursor:pointer" data-track data-i18n="nav.cta" type="button" onclick="openEnrollModal()">Ambil Basic Gratis</button>
     </nav>
   </div>
 </header>
@@ -89,7 +106,7 @@
       <span class="badge" data-i18n="hero.badge3">Materi berbasis sumber — bukan opini tanpa dasar</span>
     </div>
     <div class="cta-row">
-      <a class="btn gold" data-track data-i18n="hero.cta" href="https://wa.me/6285692904399?text=Halo%20Arsiva-Edu%2C%20saya%20mau%20ambil%20kelas%20Basic%20%28gratis%29.%20Mohon%20kirim%20tautannya.%20Terima%20kasih.">Ambil Basic Gratis →</a>
+      <button class="btn gold" style="cursor:pointer" data-track data-i18n="hero.cta" type="button" onclick="openEnrollModal()">Ambil Basic Gratis →</button>
       <a class="btn ghost" href="#kurikulum" data-i18n="hero.cta2">Lihat Kurikulum 5 Tingkat</a>
     </div>
   </div>
@@ -128,7 +145,7 @@
         </ul>
         <p data-i18n="bsl.meta">±75 menit · tanpa prasyarat · output: peta bidang + kebiasaan verifikasi.</p>
         <div class="harga" data-i18n="bsl.price">Gratis — cukup daftar.</div>
-        <p style="margin-top:10px"><a class="btn" style="font-size:13.5px;padding:8px 16px" data-track data-i18n="bsl.cta" href="https://wa.me/6285692904399?text=Halo%20Arsiva-Edu%2C%20saya%20mau%20ambil%20kelas%20Basic%20%28gratis%29.%20Mohon%20kirim%20tautannya.%20Terima%20kasih.">Ambil Basic</a></p>
+        <p t;cursor:pointer"><button class="btn" style="font-size:13.5px;padding:8px 16px" data-track data-i18n="bsl.cta" type="button" onclick="openEnrollModal()">Ambil Basic</button></p>
       </div>
 
       <div class="card lvl">
@@ -254,6 +271,31 @@
   </div>
 </footer>
 
+<div class="modal-overlay" id="enroll-modal" role="dialog" aria-modal="true" aria-labelledby="enroll-title">
+  <div class="modal">
+    <button class="m-close" type="button" aria-label="Tutup / Close" onclick="closeEnrollModal()">&times;</button>
+    <div id="enroll-form-view">
+      <h3 id="enroll-title" data-i18n="enr.title">Daftar Basic — Gratis</h3>
+      <p class="m-sub" data-i18n="enr.sub">Isi data di bawah — tautan materi &amp; konfirmasi dikirim lewat WhatsApp.</p>
+      <label for="enr-email" data-i18n="enr.email">Email</label>
+      <input id="enr-email" type="email" autocomplete="email" placeholder="nama@email.com">
+      <div class="m-err" id="enr-email-err"></div>
+      <label for="enr-hp" data-i18n="enr.hp">Nomor HP / WhatsApp</label>
+      <input id="enr-hp" type="tel" autocomplete="tel" placeholder="08xx-xxxx-xxxx">
+      <div class="m-err" id="enr-hp-err"></div>
+      <button class="m-submit" type="button" onclick="submitEnroll()" data-i18n="enr.submit">Daftar via WhatsApp</button>
+      <p class="m-pdp" data-i18n="enr.pdp">Data hanya untuk administrasi kelas — lihat Kebijakan Privasi. Tidak dijual, tidak dibagikan.</p>
+    </div>
+    <div class="m-done" id="enroll-done-view" style="display:none">
+      <div class="m-ico">✓</div>
+      <h3 data-i18n="enr.done.title">WhatsApp terbuka</h3>
+      <p data-i18n="enr.done.body">Kirim pesan di WhatsApp untuk menyelesaikan pendaftaran. Kalau tidak terbuka otomatis, pakai tombol di bawah.</p>
+      <a class="m-submit" id="enr-wa-link" href="#" target="_blank" rel="noopener" data-i18n="enr.done.link">Buka WhatsApp</a>
+      <button class="m-edit" type="button" onclick="resetEnroll()" data-i18n="enr.done.edit">Ubah data</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // UTM/atribusi: teruskan parameter kampanye (utm_*) ke link ber-tracking (WA & Mayar) agar url_konten_pemicu tercatat
 (function(){
@@ -375,7 +417,17 @@ const translations = { en: {
 "ftr.brand": "ARSIVA·EDU — Techno Legal Architect education program",
 "ftr.line2": "An Arsiva Technology education program in collaboration with Satmoko Law Firm · not a legal service and not an advocate-client relationship.",
 "ftr.line3": "Registration & questions: <a href=\"https://wa.me/6285692904399\">WhatsApp 0856-9290-4399</a> · <a href=\"mailto:edu@arsiva.tech\">edu@arsiva.tech</a>",
-"ftr.line4": "Curriculum status & regulatory snapshot: October 2026 — re-verify the latest status before important decisions."
+"ftr.line4": "Curriculum status & regulatory snapshot: October 2026 — re-verify the latest status before important decisions.",
+"enr.title": "Sign up for Basic — Free",
+"enr.sub": "Fill in the form below — the course link and confirmation are sent via WhatsApp.",
+"enr.email": "Email",
+"enr.hp": "Mobile / WhatsApp number",
+"enr.submit": "Sign up via WhatsApp",
+"enr.pdp": "Data is used for course administration only — see the Privacy Policy. Never sold or shared.",
+"enr.done.title": "WhatsApp is opening",
+"enr.done.body": "Send the message in WhatsApp to finish enrolling. If it didn't open automatically, use the button below.",
+"enr.done.link": "Open WhatsApp",
+"enr.done.edit": "Edit my data"
 }
 };
 const originalMeta = {
@@ -425,6 +477,73 @@ document.addEventListener('DOMContentLoaded', () => {
   cacheOriginals();
   applyLang(getInitialLang());
 });
+</script>
+
+<script>
+// Pendaftaran Basic: form email + HP -> handoff WhatsApp.
+// Tanpa backend; data TIDAK disimpan di situs (minimisasi data, selaras Kebijakan Privasi).
+const WA_NUMBER = '6285692904399';
+function openEnrollModal() {
+  document.getElementById('enroll-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  const e = document.getElementById('enr-email');
+  if (e) { setTimeout(function () { e.focus(); }, 60); }
+}
+function closeEnrollModal() {
+  document.getElementById('enroll-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function resetEnroll() {
+  document.getElementById('enroll-done-view').style.display = 'none';
+  document.getElementById('enroll-form-view').style.display = '';
+  document.getElementById('enr-email-err').textContent = '';
+  document.getElementById('enr-hp-err').textContent = '';
+  const e = document.getElementById('enr-email');
+  if (e) { e.value = ''; e.focus(); }
+  const h = document.getElementById('enr-hp');
+  if (h) { h.value = ''; }
+}
+function validateEnroll() {
+  const email = document.getElementById('enr-email').value.trim();
+  const hpRaw = document.getElementById('enr-hp').value.trim();
+  const lang = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'id';
+  let ok = true;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+    document.getElementById('enr-email-err').textContent =
+      lang === 'en' ? 'Enter a valid email address.' : 'Masukkan email yang valid.';
+    ok = false;
+  } else { document.getElementById('enr-email-err').textContent = ''; }
+  const hp = hpRaw.replace(/[\s.\-()]/g, '');
+  if (!/^(\+62|62|0)8\d{7,12}$/.test(hp)) {
+    document.getElementById('enr-hp-err').textContent =
+      lang === 'en' ? 'Enter a valid Indonesian number (08xx or +62 8xx).'
+                    : 'Masukkan nomor Indonesia yang valid (08xx atau +62 8xx).';
+    ok = false;
+  } else { document.getElementById('enr-hp-err').textContent = ''; }
+  if (!ok) { return null; }
+  return { email: email, hp: hp };
+}
+function submitEnroll() {
+  const d = validateEnroll();
+  if (!d) { return; }
+  const msg = 'Halo Arsiva-Edu, saya mau daftar kelas Basic (gratis). Email: '
+            + d.email + ' | HP: ' + d.hp;
+  const url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+  const utm = location.search ? '&' + location.search.replace(/^\?/, '') : '';
+  document.getElementById('enr-wa-link').href = url + utm;
+  document.getElementById('enroll-form-view').style.display = 'none';
+  document.getElementById('enroll-done-view').style.display = '';
+  window.open(url + utm, '_blank');
+}
+document.addEventListener('keydown', function (ev) {
+  if (ev.key === 'Escape') { closeEnrollModal(); }
+});
+(function () {
+  const ov = document.getElementById('enroll-modal');
+  ov.addEventListener('click', function (ev) {
+    if (ev.target === ov) { closeEnrollModal(); }
+  });
+})();
 </script>
 
 </body>
